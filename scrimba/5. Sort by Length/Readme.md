@@ -14,8 +14,8 @@ the output should be
 - `sort()`
 
 ```
-function printName(name) {
-    console.log(name)
+function sortByLength(str) {
+    function logic
 }
 
 ```
