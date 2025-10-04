@@ -12,3 +12,10 @@ the output should be
 **_ Hits _**
 
 - `sort()`
+
+```
+function printName(name) {
+    console.log(name)
+}
+
+```
