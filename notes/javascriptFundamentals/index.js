@@ -31,5 +31,37 @@ let num = 7;
 
 // Unary Operator
 let str = "42";
-console.log(typeof +str);
-console.log(typeof -str);
+//console.log(typeof +str);
+//console.log(typeof -str);
+
+// Falsy values
+//console.log(Boolean(""));
+//console.log(Boolean(0));
+//console.log(Boolean(false));
+//console.log(Boolean(null));
+//console.log(Boolean(undefined));
+//console.log(Boolean(NaN));
+
+// Conditionals with falsy values
+if (null) {
+  console.log("wont run");
+} else {
+  //console.log("null: this will run");
+}
+
+if (false) {
+  console.log("Won't run");
+} else {
+  //console.log("False: This will run");
+}
+
+if (NaN) {
+  console.log("Won't operate");
+} else {
+  //console.log("NaN: This will run");
+}
+
+// Ternary Operator
+let temp = 23;
+const weather = temp > 25 ? "sunny" : "cold";
+//console.log(`The weather is ${weather}`);
