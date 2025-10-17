@@ -65,3 +65,62 @@ if (NaN) {
 let temp = 23;
 const weather = temp > 25 ? "sunny" : "cold";
 //console.log(`The weather is ${weather}`);
+
+// logical OR
+let userInput;
+
+if (userInput || "Guest") {
+  //console.log("A user is present");
+} else {
+  console.log("No user detected");
+}
+
+// Nullish Coalescing Operator
+//console.log(null ?? "default value");
+//console.log(undefined ?? "start value");
+
+const userSetting = {
+  theme: null,
+  volume: 0,
+  notification: false,
+};
+
+const theme = userSetting.theme ?? "light";
+//console.log(theme);
+
+//Not a Number (NaN);
+//console.log(NaN === NaN);
+
+// isNan()
+//console.log(isNaN(NaN));
+//console.log(isNaN(undefined));
+//console.log(isNaN(null));
+//console.log(isNaN({}));
+//console.log(isNaN(34));
+//console.log(isNaN("sifiso"));
+//console.log(isNaN("37"));
+//console.log(Number.isNaN("37"));
+
+// check number in function
+
+function division(a, b) {
+  let result = a / b;
+  if (Number.isNaN(result)) {
+    return `Error: ${result} not a number`;
+  }
+  return result;
+}
+
+//console.log(division(10, 2));
+
+// parseFloat
+//console.log(parseFloat("3.14"));
+//console.log(parseFloat("3.14 abc"));
+//console.log(parseFloat("3.14.5"));
+//console.log(parseFloat("abc 3.14"));
+
+// parseInt()
+console.log(parseInt("42"));
+console.log(parseInt("42.2"));
+console.log(parseInt("42px"));
+console.log(parseInt("abc123"));
