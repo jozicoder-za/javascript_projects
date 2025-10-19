@@ -136,3 +136,15 @@ let price = 19.99;
 let taxRate = 0.08;
 let total = price + price * taxRate;
 //console.log(`Total: $${total.toFixed(2)}`);
+
+//Null Behaviour
+console.log(null == 0);
+console.log(null == "");
+console.log(undefined == 0);
+console.log((undefined = ""));
+
+console.log(null > 0);
+console.log(null === 0);
+console.log(null >= 0);
+
+// Null Behavior;
