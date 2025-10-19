@@ -147,4 +147,7 @@ console.log(null > 0);
 console.log(null === 0);
 console.log(null >= 0);
 
-// Null Behavior;
+// undefined behaviour
+console.log(undefined > 0);
+console.log(undefined < 0);
+console.log(undefined == 0);
