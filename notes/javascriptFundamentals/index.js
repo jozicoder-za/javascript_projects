@@ -120,7 +120,19 @@ function division(a, b) {
 //console.log(parseFloat("abc 3.14"));
 
 // parseInt()
-console.log(parseInt("42"));
-console.log(parseInt("42.2"));
-console.log(parseInt("42px"));
-console.log(parseInt("abc123"));
+//console.log(parseInt("42"));
+//console.log(parseInt("42.2"));
+//console.log(parseInt("42px"));
+//console.log(parseInt("abc123"));
+
+// toFixed()
+let nuM = 3.14159;
+//console.log(nuM.toFixed(1));
+//console.log(nuM.toFixed(3));
+//console.log((5.4123).toFixed());
+
+// Financial Calculation
+let price = 19.99;
+let taxRate = 0.08;
+let total = price + price * taxRate;
+//console.log(`Total: $${total.toFixed(2)}`);
