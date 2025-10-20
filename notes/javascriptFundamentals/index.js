@@ -138,16 +138,37 @@ let total = price + price * taxRate;
 //console.log(`Total: $${total.toFixed(2)}`);
 
 //Null Behaviour
-console.log(null == 0);
-console.log(null == "");
-console.log(undefined == 0);
-console.log((undefined = ""));
+//console.log(null == 0);
+//console.log(null == "");
+//console.log(undefined == 0);
+//console.log((undefined = ""));
 
-console.log(null > 0);
-console.log(null === 0);
-console.log(null >= 0);
+//console.log(null > 0);
+//console.log(null === 0);
+//console.log(null >= 0);
 
 // undefined behaviour
-console.log(undefined > 0);
-console.log(undefined < 0);
-console.log(undefined == 0);
+//console.log(undefined > 0);
+//console.log(undefined < 0);
+//console.log(undefined == 0);
+
+//Functions
+function greet() {
+  //console.log("Hello World");
+}
+
+//greet();
+
+// Function Parameters
+function greet(name) {
+  //console.log(`Hello ${name}`);
+}
+
+//greet("Dhlamini");
+
+function calculateSum(num1, num2) {
+  return num1 + num2;
+}
+
+let result = calculateSum(10, 10);
+//console.log(result);
