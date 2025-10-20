@@ -172,3 +172,25 @@ function calculateSum(num1, num2) {
 
 let result = calculateSum(10, 10);
 //console.log(result);
+
+// default parameters
+function greetings(name = "Guest") {
+  return `Hello ${"Bethuel"}`;
+}
+
+let defaultName = greetings();
+//console.log(defaultName);
+
+// Arrow Functions
+const calculateArea = (width, height) => width * height;
+//console.log(calculateArea(5, 3));
+
+// Global Variable
+
+let globalVar = "Global Variable";
+
+function printGlobal() {
+  console.log(globalVar);
+}
+
+//printGlobal();
