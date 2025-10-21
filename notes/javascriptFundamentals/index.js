@@ -194,3 +194,28 @@ function printGlobal() {
 }
 
 //printGlobal();
+function printLocal() {
+  let localVar = "Local Variable";
+  // console.log(localVar);
+}
+
+printLocal();
+//console.log(localVar);
+
+if (true) {
+  var blockAv = "Block Variable";
+  //console.log(blockAv);
+}
+
+//console.log(blockAv);
+
+// Arrays
+let fruits = ["apple", "banana", "orange"];
+
+fruits[1] = "pineapple";
+fruits[fruits.length] = "kiwi";
+const lastItem = fruits.pop();
+//console.log(lastItem);
+
+// add beginning
+fruits.unshift("mango");
