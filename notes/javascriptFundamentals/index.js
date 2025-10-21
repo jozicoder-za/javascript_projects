@@ -219,3 +219,21 @@ const lastItem = fruits.pop();
 
 // add beginning
 fruits.unshift("mango");
+
+// two-dimensional array
+const grid = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+//console.log(grid[0][1])
+
+// Destructuring
+let fruit = ["berries", "kiwi", "pear"];
+let [first, second] = fruit;
+//console.log(first, second);
+
+// Destructuring with default values
+let nub = [1, 2];
+let [num1, num2, num3 = 4] = nub;
+console.log(num1, num2, num3);
