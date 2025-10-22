@@ -277,5 +277,9 @@ let indexToRemove = fruts.indexOf("orange");
 if (indexToRemove !== -1) {
   fruts.splice(indexToRemove, 1);
 }
+//console.log(fruts);
 
-console.log(fruts);
+// Clearing the array
+let noMb = [1, 2, 3, 4, 5];
+noMb.splice(0);
+console.log(noMb);
