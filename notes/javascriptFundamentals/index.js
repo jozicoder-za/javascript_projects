@@ -252,3 +252,10 @@ let frut = ["apple", "banana", "orange", "banana"];
 // specific index number
 let colour = ["red", "green", "blue", "yellow", "green"];
 console.log(colour.indexOf("green", "3"));
+
+// splice method
+let fuit = ["apple", "banana", "orange", "mango", "kiwi"];
+console.log(`Original array: ${fuit}`);
+let removedFuit = fuit.splice(2, 2);
+console.log(`Original modified Array: ${fuit}`);
+console.log(`removed array: ${removedFuit}`);
