@@ -268,4 +268,14 @@ let colours = ["red", "green", "blue"];
 // Adding and removing items with splice
 let inamba = [1, 2, 3, 4, 5];
 inamba.splice(1, 2, 6, 7, 8);
-console.log(inamba);
+//console.log(inamba);
+
+// Remove an item when you know the index
+let fruts = ["apple", "banana", "orange", "mango"];
+let indexToRemove = fruts.indexOf("orange");
+
+if (indexToRemove !== -1) {
+  fruts.splice(indexToRemove, 1);
+}
+
+console.log(fruts);
