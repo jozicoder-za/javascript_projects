@@ -251,7 +251,7 @@ let frut = ["apple", "banana", "orange", "banana"];
 
 // specific index number
 let colour = ["red", "green", "blue", "yellow", "green"];
-console.log(colour.indexOf("green", "3"));
+//console.log(colour.indexOf("green", "3"));
 
 // splice method
 let fuit = ["apple", "banana", "orange", "mango", "kiwi"];
@@ -262,5 +262,10 @@ let removedFuit = fuit.splice(2, 2);
 
 // adding items with splice
 let colours = ["red", "green", "blue"];
-colours.splice(1, 0, "yellow", "purple");
-console.log(colours);
+//colours.splice(1, 0, "yellow", "purple");
+//console.log(colours);
+
+// Adding and removing items with splice
+let inamba = [1, 2, 3, 4, 5];
+inamba.splice(1, 2, 6, 7, 8);
+console.log(inamba);
