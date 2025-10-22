@@ -247,4 +247,8 @@ let strN = "hello";
 
 // indexOf()
 let frut = ["apple", "banana", "orange", "banana"];
-console.log(frut.indexOf("banana"));
+//console.log(frut.indexOf("banana"));
+
+// specific index number
+let colour = ["red", "green", "blue", "yellow", "green"];
+console.log(colour.indexOf("green", "3"));
