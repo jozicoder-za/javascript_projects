@@ -255,7 +255,12 @@ console.log(colour.indexOf("green", "3"));
 
 // splice method
 let fuit = ["apple", "banana", "orange", "mango", "kiwi"];
-console.log(`Original array: ${fuit}`);
+//console.log(`Original array: ${fuit}`);
 let removedFuit = fuit.splice(2, 2);
-console.log(`Original modified Array: ${fuit}`);
-console.log(`removed array: ${removedFuit}`);
+//console.log(`Original modified Array: ${fuit}`);
+//console.log(`removed array: ${removedFuit}`);
+
+// adding items with splice
+let colours = ["red", "green", "blue"];
+colours.splice(1, 0, "yellow", "purple");
+console.log(colours);
