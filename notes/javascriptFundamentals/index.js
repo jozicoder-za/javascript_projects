@@ -236,4 +236,15 @@ let [first, second] = fruit;
 // Destructuring with default values
 let nub = [1, 2];
 let [num1, num2, num3 = 4] = nub;
-console.log(num1, num2, num3);
+//console.log(num1, num2, num3);
+
+// rest operator
+const uniqueNum = [1, 2, 3, 4, 5, 6, 7, 8];
+const [n1, n2, ...restNum] = uniqueNum;
+//console.log(n1, n2, restNum);
+
+let strN = "hello";
+
+// indexOf()
+let frut = ["apple", "banana", "orange", "banana"];
+console.log(frut.indexOf("banana"));
