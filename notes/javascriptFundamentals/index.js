@@ -290,4 +290,9 @@ let thelo = ["apple", "banana", "orange", "mango"];
 
 // includes method specifying the starting index
 let nombolo = [10, 20, 30, 40, 50, 30, 40];
-console.log(nombolo.includes(30, 3));
+//console.log(nombolo.includes(30, 3));
+
+// Shallow array with concat
+let originalArray = [1, 2, 3];
+let copyArray = [].concat(originalArray);
+console.log(copyArray);
