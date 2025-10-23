@@ -292,7 +292,14 @@ let thelo = ["apple", "banana", "orange", "mango"];
 let nombolo = [10, 20, 30, 40, 50, 30, 40];
 //console.log(nombolo.includes(30, 3));
 
-// Shallow array with concat
+// Creating shallow array with concat
 let originalArray = [1, 2, 3];
 let copyArray = [].concat(originalArray);
-console.log(copyArray);
+//console.log(copyArray);
+//console.log(originalArray === copyArray);
+
+// Creating shallow array with slice
+let oriArr = [1, 2, 3];
+let copyOri = oriArr.slice();
+console.log(copyOri);
+console.log(oriArr === copyOri);
