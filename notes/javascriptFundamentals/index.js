@@ -286,4 +286,8 @@ noMb.splice(0);
 
 // includes() method
 let thelo = ["apple", "banana", "orange", "mango"];
-console.log(thelo.includes("banana"));
+//console.log(thelo.includes("banana"));
+
+// includes method specifying the starting index
+let nombolo = [10, 20, 30, 40, 50, 30, 40];
+console.log(nombolo.includes(30, 3));
