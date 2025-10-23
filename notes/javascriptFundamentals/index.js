@@ -301,5 +301,11 @@ let copyArray = [].concat(originalArray);
 // Creating shallow array with slice
 let oriArr = [1, 2, 3];
 let copyOri = oriArr.slice();
-console.log(copyOri);
-console.log(oriArr === copyOri);
+//console.log(copyOri);
+//console.log(oriArr === copyOri);
+
+// Creating shallow array with spread operator
+let orgArr = [1, 2, 3, 4];
+let copyOrg = [...orgArr];
+console.log(copyOrg);
+console.log(orgArr === copyOrg);
