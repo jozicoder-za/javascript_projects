@@ -309,3 +309,14 @@ let orgArr = [1, 2, 3, 4];
 let copyOrg = [...orgArr];
 console.log(copyOrg);
 console.log(orgArr === copyOrg);
+
+// Dynamically access objects properties
+
+const person = {
+  name: "Alice",
+  age: 23,
+  city: "Joburg",
+};
+
+let propertyName = "city";
+console.log(person[propertyName]);
