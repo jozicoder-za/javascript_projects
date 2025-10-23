@@ -282,4 +282,8 @@ if (indexToRemove !== -1) {
 // Clearing the array
 let noMb = [1, 2, 3, 4, 5];
 noMb.splice(0);
-console.log(noMb);
+//console.log(noMb);
+
+// includes() method
+let thelo = ["apple", "banana", "orange", "mango"];
+console.log(thelo.includes("banana"));
