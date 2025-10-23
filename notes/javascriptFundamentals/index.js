@@ -307,8 +307,8 @@ let copyOri = oriArr.slice();
 // Creating shallow array with spread operator
 let orgArr = [1, 2, 3, 4];
 let copyOrg = [...orgArr];
-console.log(copyOrg);
-console.log(orgArr === copyOrg);
+//console.log(copyOrg);
+//console.log(orgArr === copyOrg);
 
 // Dynamically access objects properties
 
@@ -316,7 +316,19 @@ const person = {
   name: "Alice",
   age: 23,
   city: "Joburg",
+  job: "Engineer",
 };
 
 let propertyName = "city";
-console.log(person[propertyName]);
+//console.log(person[propertyName]);
+
+// Remove Properties
+delete person.job;
+//console.log(person);
+
+// Destructuring
+person.job = "Web Developer";
+const { job, city, ...remainingProperties } = person;
+//console.log(job);
+//console.log(city);
+//console.log(remainingProperties);
