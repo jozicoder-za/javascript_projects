@@ -341,5 +341,19 @@ const { job, city, ...remainingProperties } = person;
 //console.log("age" in person);
 
 // check object property with undefined
-console.log(person.job === undefined);
-console.log(person.gender === undefined);
+//console.log(person.job === undefined);
+//console.log(person.gender === undefined);
+
+const personD = {
+  name: "Alice",
+  age: 30,
+  contact: {
+    email: "alice#example.com",
+    phone: {
+      home: "123-4567-890",
+      work: "098-765-4325",
+    },
+  },
+};
+
+console.log(personD.contact.phone.work);
