@@ -332,3 +332,14 @@ const { job, city, ...remainingProperties } = person;
 //console.log(job);
 //console.log(city);
 //console.log(remainingProperties);
+
+// Check if object has a property
+//console.log(person.hasOwnProperty("job"));
+//console.log(person.hasOwnProperty("salary"));
+
+// Check object property with in
+//console.log("age" in person);
+
+// check object property with undefined
+console.log(person.job === undefined);
+console.log(person.gender === undefined);
