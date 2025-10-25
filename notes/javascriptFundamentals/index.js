@@ -363,5 +363,23 @@ const personD = {
 const orgArray = { name: "John", age: 30 };
 const copiedOrg = orgArray;
 orgArray.name = "Dhlamini";
-console.log(orgArray);
-console.log(copiedOrg);
+//console.log(orgArray);
+//console.log(copiedOrg);
+
+// function vs object methods
+// function
+function greetings(name) {
+  return `Hello ${name}`;
+}
+//console.log(greetings("sifiso"));
+
+// object methods
+const pername = {
+  name: "Bob",
+  age: 30,
+  sayHello: function () {
+    return `Hello ${this.name}`;
+  },
+};
+
+//console.log(pername.sayHello());
