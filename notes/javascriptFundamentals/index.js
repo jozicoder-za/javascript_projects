@@ -386,4 +386,25 @@ const pername = {
 
 // Object() constructor
 const lokoObj = new Object();
-console.log(lokoObj);
+//console.log(lokoObj);
+
+const lokiObj = Object();
+//console.log(lokiObj);
+
+// Object constructor with undefined
+const newObj = new Object(undefined);
+//console.log(newObj);
+
+// checking if value is an object
+function toObject(value) {
+  if (value === null || value === undefined) {
+    return {};
+  }
+  if (typeof value === "object") {
+    return value;
+  }
+  return Object(value);
+}
+console.log(toObject(null));
+console.log(toObject(true));
+console.log(toObject([1, 2, 3]));
