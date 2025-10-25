@@ -449,3 +449,15 @@ const developerObj = {
 // JSON.stringify() other optional parameter - control spacing
 
 //console.log(JSON.stringify(developerObj, null, 2));
+
+// JSON string to JSON object
+const jsonString = '{"name": "John","age": 30, "isAdmin": true}';
+
+const userObj = JSON.parse(jsonString);
+console.log(userObj);
+
+// List array element in separate lines
+
+const devStudent = ["Naomi", "Tom", "Jessica"];
+const teamList = devStudent.join("\n");
+console.log(teamList);
