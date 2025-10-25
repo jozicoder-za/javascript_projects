@@ -383,3 +383,7 @@ const pername = {
 };
 
 //console.log(pername.sayHello());
+
+// Object() constructor
+const lokoObj = new Object();
+console.log(lokoObj);
