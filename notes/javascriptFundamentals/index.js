@@ -405,6 +405,32 @@ function toObject(value) {
   }
   return Object(value);
 }
-console.log(toObject(null));
-console.log(toObject(true));
-console.log(toObject([1, 2, 3]));
+//console.log(toObject(null));
+//console.log(toObject(true));
+//console.log(toObject([1, 2, 3]));
+
+// JSON
+// file .json
+/*
+  { 
+    "name": "Alice", 
+    "age": 30,
+    "isStudent": false,
+    "list of course": ["Mathematics", "Physics", "CS"]
+  }
+
+*/
+//import data from "./example.json" with {type: "jason"}
+//console.log(data.age);
+//console.log(data['list of course'])
+
+// JSON.stringify() - JS object to JSON string
+
+const user = {
+  name: "John",
+  age: 30,
+  isAdmin: true,
+};
+
+const jsonStr = JSON.stringify(user);
+console.log(jsonStr);
