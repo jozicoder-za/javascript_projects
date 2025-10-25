@@ -356,4 +356,12 @@ const personD = {
   },
 };
 
-console.log(personD.contact.phone.work);
+//console.log(personD.contact.phone.work);
+
+// Non-primitive data - dealing with reference
+// change the original, also changes the copy
+const orgArray = { name: "John", age: 30 };
+const copiedOrg = orgArray;
+orgArray.name = "Dhlamini";
+console.log(orgArray);
+console.log(copiedOrg);
