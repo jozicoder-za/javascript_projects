@@ -433,4 +433,15 @@ const user = {
 };
 
 const jsonStr = JSON.stringify(user);
-console.log(jsonStr);
+//console.log(jsonStr);
+
+// JSON.stringify() with replacer (second argument)
+
+const developerObj = {
+  firstName: "Jessica",
+  isAwesome: true,
+  isMusician: true,
+  country: "USA",
+};
+
+console.log(JSON.stringify(developerObj, ["firstName", "country"]));
