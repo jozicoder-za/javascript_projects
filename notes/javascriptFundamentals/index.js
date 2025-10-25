@@ -444,4 +444,8 @@ const developerObj = {
   country: "USA",
 };
 
-console.log(JSON.stringify(developerObj, ["firstName", "country"]));
+//console.log(JSON.stringify(developerObj, ["firstName", "country"]));
+
+// JSON.stringify() other optional parameter - control spacing
+
+//console.log(JSON.stringify(developerObj, null, 2));
