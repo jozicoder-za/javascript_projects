@@ -537,3 +537,33 @@ const fRUit = {
 for (const prop in fRUit) {
   //console.log(fRUit[prop]);
 }
+
+// for... in loop
+const pERson = {
+  name: "John",
+  age: 30,
+  address: {
+    street: "123 Main St",
+    city: "Cape Town",
+    state: "CA",
+  },
+};
+
+for (const prop in pERson) {
+  //console.log(pERson[prop]);
+}
+
+// looping through nested objects
+function isObject(obj) {
+  return typeof obj === "object" && !Array.isArray(obj) && obj !== null;
+}
+
+for (const prop in pERson) {
+  if (isObject(pERson[prop])) {
+    for (const nestedProp in pERson[prop]) {
+      console.log(pERson[prop][nestedProp]);
+    }
+  } else {
+    console.log(pERson[prop]);
+  }
+}
