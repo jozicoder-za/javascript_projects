@@ -454,10 +454,28 @@ const developerObj = {
 const jsonString = '{"name": "John","age": 30, "isAdmin": true}';
 
 const userObj = JSON.parse(jsonString);
-console.log(userObj);
+//console.log(userObj);
 
 // List array element in separate lines
 
 const devStudent = ["Naomi", "Tom", "Jessica"];
 const teamList = devStudent.join("\n");
-console.log(teamList);
+//console.log(teamList);
+
+// Create a new line before and after the list
+//console.log("\nList of my books\n");
+
+const nUm = [1, 2, 3, 4, 5];
+const totalN = nUm.reduce((acc, curr) => acc + curr);
+//console.log(totalN);
+
+// Optional Chaining ?.
+const userN = {
+  name: "John",
+  profile: {
+    email: "john@example.com",
+    city: "Joburg",
+  },
+};
+
+console.log(userN.profile?.phone?.number);
