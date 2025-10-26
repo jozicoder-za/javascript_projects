@@ -494,3 +494,14 @@ const { name, jobb } = perSon;
 
 let { name: personName, age: personAge } = perSon;
 //console.log(personName, personAge);
+
+// fallback values
+//let {name = 'annonymous', age=0} = perSon;
+
+// function return objects
+
+function createPerson(name, job) {
+  return { name, job };
+}
+
+//console.log(createPerson("charlie", "developer"));
