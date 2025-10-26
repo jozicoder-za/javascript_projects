@@ -516,3 +516,14 @@ const nameStr = "freeCodeCamp";
 for (const char of nameStr) {
   //console.log(char);
 }
+
+// Array of Objects
+const people = [
+  { name: "John", age: 30 },
+  { name: "Jane", age: 25 },
+  { name: "Jim", age: 40 },
+];
+
+for (let person of people) {
+  //console.log(`${person.name} is ${person.age} years old`);
+}
