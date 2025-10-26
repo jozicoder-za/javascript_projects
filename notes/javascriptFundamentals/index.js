@@ -478,4 +478,14 @@ const userN = {
   },
 };
 
-console.log(userN.profile?.phone?.number);
+//console.log(userN.profile?.phone?.number);
+
+// Object Destructuring
+const perSon = {
+  name: "Alice",
+  age: 30,
+  jobb: "web dev",
+};
+
+const { name, jobb } = perSon;
+console.log(name, jobb);
