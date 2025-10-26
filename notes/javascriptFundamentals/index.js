@@ -505,3 +505,14 @@ function createPerson(name, job) {
 }
 
 //console.log(createPerson("charlie", "developer"));
+
+// for... of loop
+const nUM = [1, 2, 3, 4, 5];
+for (const num of nUM) {
+  //console.log(num);
+}
+
+const nameStr = "freeCodeCamp";
+for (const char of nameStr) {
+  //console.log(char);
+}
