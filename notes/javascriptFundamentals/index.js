@@ -488,4 +488,9 @@ const perSon = {
 };
 
 const { name, jobb } = perSon;
-console.log(name, jobb);
+//console.log(name, jobb);
+
+// Default destructuring - default values
+
+let { name: personName, age: personAge } = perSon;
+//console.log(personName, personAge);
