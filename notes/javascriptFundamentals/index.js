@@ -527,3 +527,13 @@ const people = [
 for (let person of people) {
   //console.log(`${person.name} is ${person.age} years old`);
 }
+
+const fRUit = {
+  name: "apple",
+  color: "red",
+  price: 0.99,
+};
+
+for (const prop in fRUit) {
+  //console.log(fRUit[prop]);
+}
