@@ -590,6 +590,20 @@ for (let i = 0; i < 3; i++) {
     if (i === 1 && j === 1) {
       break;
     }
-    console.log(`i:${i}, j:${j}`);
+    //console.log(`i:${i}, j:${j}`);
   }
 }
+
+// toString() method
+const nUMm = 10;
+//console.log(nUMm.toString());
+
+const aRR = [1, 2, 3];
+//console.log(aRR.toString());
+
+const pErSon = {
+  name: "John",
+  age: 30,
+  isStudent: true,
+};
+//console.log(pErSon.toString());
