@@ -561,9 +561,17 @@ function isObject(obj) {
 for (const prop in pERson) {
   if (isObject(pERson[prop])) {
     for (const nestedProp in pERson[prop]) {
-      console.log(pERson[prop][nestedProp]);
+      //console.log(pERson[prop][nestedProp]);
     }
   } else {
-    console.log(pERson[prop]);
+    //console.log(pERson[prop]);
   }
+}
+
+// loop break statement
+for (let i = 0; i < 10; i++) {
+  if (i === 8) {
+    break;
+  }
+  console.log(i);
 }
