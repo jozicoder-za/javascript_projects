@@ -607,3 +607,8 @@ const pErSon = {
   isStudent: true,
 };
 //console.log(pErSon.toString());
+
+// Number()
+const myNuM = Number("100");
+console.log(typeof myNuM);
+console.log(myNuM);
