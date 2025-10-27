@@ -581,5 +581,15 @@ for (let i = 0; i < 10; i++) {
   if (i === 6) {
     continue;
   }
-  console.log(i);
+  //console.log(i);
+}
+
+// break to control flow of outer and inner loop
+for (let i = 0; i < 3; i++) {
+  for (j = 0; j < 3; j++) {
+    if (i === 1 && j === 1) {
+      break;
+    }
+    console.log(`i:${i}, j:${j}`);
+  }
 }
