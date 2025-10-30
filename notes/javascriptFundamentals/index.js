@@ -622,8 +622,13 @@ const myNuM = Number("100");
 //console.log(Number(null));
 
 // Number constructor with arrays
-console.log(Number([]));
-console.log(Number([7]));
-console.log(Number([7, 2, 8, 9]));
-console.log(Number(["str"]));
-console.log(Number(["str1", "str2"]));
+//console.log(Number([]));
+//console.log(Number([7]));
+//console.log(Number([7, 2, 8, 9]));
+//console.log(Number(["str"]));
+//console.log(Number(["str1", "str2"]));
+
+// Number constructor with objects
+console.log(Number({}));
+console.log(Number({ name: "jane" }));
+console.log(Number({ key: true }));
