@@ -610,5 +610,13 @@ const pErSon = {
 
 // Number()
 const myNuM = Number("100");
-console.log(typeof myNuM);
-console.log(myNuM);
+//console.log(typeof myNuM);
+//console.log(myNuM);
+
+// Number() output options
+console.log(Number(""));
+console.log(Number("nanans"));
+console.log(Number(true));
+console.log(Number(false));
+console.log(Number(undefined));
+console.log(Number(null));
