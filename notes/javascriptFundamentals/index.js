@@ -614,9 +614,16 @@ const myNuM = Number("100");
 //console.log(myNuM);
 
 // Number() output options
-console.log(Number(""));
-console.log(Number("nanans"));
-console.log(Number(true));
-console.log(Number(false));
-console.log(Number(undefined));
-console.log(Number(null));
+//console.log(Number(""));
+//console.log(Number("nanans"));
+//console.log(Number(true));
+//console.log(Number(false));
+//console.log(Number(undefined));
+//console.log(Number(null));
+
+// Number constructor with arrays
+console.log(Number([]));
+console.log(Number([7]));
+console.log(Number([7, 2, 8, 9]));
+console.log(Number(["str"]));
+console.log(Number(["str1", "str2"]));
