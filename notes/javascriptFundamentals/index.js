@@ -643,3 +643,8 @@ const myNuM = Number("100");
 function getUserData() {}
 function calculateTotal() {}
 function validateInput() {}
+
+// event handler function
+function handleClick() {}
+function onSubmit() {}
+function keyPressHandle() {}
