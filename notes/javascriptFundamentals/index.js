@@ -629,6 +629,12 @@ const myNuM = Number("100");
 //console.log(Number(["str1", "str2"]));
 
 // Number constructor with objects
-console.log(Number({}));
-console.log(Number({ name: "jane" }));
-console.log(Number({ key: true }));
+//console.log(Number({}));
+//console.log(Number({ name: "jane" }));
+//console.log(Number({ key: true }));
+
+// Naming Convention
+// boolean
+console.log("isLoading");
+console.log("hasPermission");
+console.log("canEdit");
