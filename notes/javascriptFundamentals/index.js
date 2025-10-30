@@ -635,6 +635,11 @@ const myNuM = Number("100");
 
 // Naming Convention
 // boolean
-console.log("isLoading");
-console.log("hasPermission");
-console.log("canEdit");
+//console.log("isLoading");
+//console.log("hasPermission");
+//console.log("canEdit");
+
+// functions
+function getUserData() {}
+function calculateTotal() {}
+function validateInput() {}
