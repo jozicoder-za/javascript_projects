@@ -694,3 +694,13 @@ function createCounter() {
 let counter = createCounter();
 //console.log(counter());
 //console.log(counter());
+
+// capture variables from outer function
+function multiply(c) {
+  return function (y) {
+    return x * y;
+  };
+}
+
+let double = multiply(2);
+console.log(double(5));
