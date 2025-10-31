@@ -648,3 +648,12 @@ function validateInput() {}
 function handleClick() {}
 function onSubmit() {}
 function keyPressHandle() {}
+
+// create array with empty slots
+const sparseArray = [1, , , 4];
+console.log(sparseArray.length);
+
+// create an empty array with fixed lots
+const emptyArray = new Array(5);
+console.log(emptyArray);
+console.log(emptyArray.length);
