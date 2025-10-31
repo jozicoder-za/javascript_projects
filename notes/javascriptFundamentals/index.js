@@ -667,5 +667,17 @@ const fixedLengthArray = Array.from({ length: 5 });
 // Creates an array of specific length and specified default values
 // Array.fill()
 const filledArray = new Array(3).fill(0);
-console.log(filledArray);
-console.log(filledArray.length);
+//console.log(filledArray);
+//console.log(filledArray.length);
+
+// closure
+function outerFunction(x) {
+  let y = 0;
+  function innerFunction() {
+    console.log(x + y);
+  }
+  return innerFunction;
+}
+
+let closure = outerFunction(5);
+closure();
