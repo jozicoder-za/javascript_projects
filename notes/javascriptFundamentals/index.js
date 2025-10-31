@@ -680,4 +680,17 @@ function outerFunction(x) {
 }
 
 let closure = outerFunction(5);
-closure();
+//closure();
+
+// closure creating private functions
+function createCounter() {
+  let count = 0;
+  return function () {
+    count++;
+    return count;
+  };
+}
+
+let counter = createCounter();
+//console.log(counter());
+//console.log(counter());
