@@ -651,9 +651,14 @@ function keyPressHandle() {}
 
 // create array with empty slots
 const sparseArray = [1, , , 4];
-console.log(sparseArray.length);
+//console.log(sparseArray.length);
 
 // create an empty array with fixed lots
 const emptyArray = new Array(5);
-console.log(emptyArray);
-console.log(emptyArray.length);
+//console.log(emptyArray);
+//console.log(emptyArray.length);
+
+// creates an array of the specified length with all elements initialized to undefined
+const fixedLengthArray = Array.from({ length: 5 });
+console.log(fixedLengthArray);
+console.log(fixedLengthArray.length);
