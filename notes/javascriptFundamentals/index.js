@@ -659,6 +659,13 @@ const emptyArray = new Array(5);
 //console.log(emptyArray.length);
 
 // creates an array of the specified length with all elements initialized to undefined
+// Array.from()
 const fixedLengthArray = Array.from({ length: 5 });
-console.log(fixedLengthArray);
-console.log(fixedLengthArray.length);
+//console.log(fixedLengthArray);
+//console.log(fixedLengthArray.length);
+
+// Creates an array of specific length and specified default values
+// Array.fill()
+const filledArray = new Array(3).fill(0);
+console.log(filledArray);
+console.log(filledArray.length);
