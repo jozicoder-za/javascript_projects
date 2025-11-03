@@ -715,3 +715,8 @@ function createIncrement() {
 }
 let increment = createCounter();
 increment();
+
+// Var variable
+var iNum = 10;
+var iNum = 14;
+console.log(iNum);
