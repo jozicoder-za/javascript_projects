@@ -719,4 +719,20 @@ increment();
 // Var variable
 var iNum = 10;
 var iNum = 14;
-console.log(iNum);
+//console.log(iNum);
+
+// Var variable accessible outside the block scope
+if (true) {
+  var gamaLakhe = "Bethuel";
+  //console.log(gamaLakhe);
+}
+//console.log(gamaLakhe);
+
+// function hoisting
+sayHello();
+
+function sayHello() {
+  // console.log("Hello World!");
+}
+//bulisa();
+const bulisa = () => console.log("Heyy");
