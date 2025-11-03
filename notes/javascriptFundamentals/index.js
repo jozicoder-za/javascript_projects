@@ -703,4 +703,15 @@ function multiply(c) {
 }
 
 let double = multiply(2);
-console.log(double(5));
+//console.log(double(5));
+
+// closure captures variables by reference not by value
+function createIncrement() {
+  let count = 0;
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
+let increment = createCounter();
+increment();
