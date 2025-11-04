@@ -799,3 +799,16 @@ function loggArgs(...args) {
 }
 
 //loggArgs(1, 2, 3, 4, 5);
+
+// rest parameter place as the last arguments
+function exampleFunction(a, b, ...restOfArgs) {
+  ///code
+}
+
+// using Rest parameter vs arguments object
+function hasCaat(...arg) {
+  return arg.includes("cat");
+}
+
+console.log(hasCaat("dog", "chicken", "cat"));
+console.log(hasCaat("dog", "chicken", "horse"));
