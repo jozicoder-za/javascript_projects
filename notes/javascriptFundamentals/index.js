@@ -756,3 +756,15 @@ export { PI };
 //console.log(add(5,3));
 //console.log(subtract(10,4));
 //console.log(PI);
+
+// import all files
+// import * as Math from "./math.js"
+
+// Argument Objects
+function logArgs() {
+  for (const arg of arguments) {
+    //console.log(arg);
+  }
+}
+
+logArgs(1, 2, 3, 4);
