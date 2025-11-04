@@ -789,3 +789,13 @@ function hasCat() {
 }
 
 //console.log(hasCat("dog", "cat", "mouse"));
+//console.log(hasCat("dog", "chicken", "horse"));
+
+// Rest Parameters vs Arguments Object
+function loggArgs(...args) {
+  for (const arg of args) {
+    console.log(arg);
+  }
+}
+
+//loggArgs(1, 2, 3, 4, 5);
