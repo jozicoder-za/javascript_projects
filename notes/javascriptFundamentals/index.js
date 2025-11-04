@@ -160,7 +160,7 @@ function greet() {
 //greet();
 
 // Function Parameters
-function greet(name) {
+function greets(name) {
   //console.log(`Hello ${name}`);
 }
 
@@ -368,10 +368,10 @@ orgArray.name = "Dhlamini";
 
 // function vs object methods
 // function
-function greetings(name) {
+function greEtings(name) {
   return `Hello ${name}`;
 }
-//console.log(greetings("sifiso"));
+//console.log(greEtings("sifiso"));
 
 // object methods
 const pername = {
@@ -586,7 +586,7 @@ for (let i = 0; i < 10; i++) {
 
 // break to control flow of outer and inner loop
 for (let i = 0; i < 3; i++) {
-  for (j = 0; j < 3; j++) {
+  for (let j = 0; j < 3; j++) {
     if (i === 1 && j === 1) {
       break;
     }
@@ -749,3 +749,10 @@ export function subtract(a, b) {
 // export a variable
 const PI = 3.14159;
 export { PI };
+
+// importing and using the modules
+//import { add, subtract, PI } from "./math.js";
+
+//console.log(add(5,3));
+//console.log(subtract(10,4));
+//console.log(PI);
