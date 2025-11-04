@@ -736,3 +736,8 @@ function sayHello() {
 }
 //bulisa();
 const bulisa = () => console.log("Heyy");
+
+// Module export
+export function add(a, b) {
+  return a + b;
+}
