@@ -768,3 +768,17 @@ function logArgs() {
 }
 
 logArgs(1, 2, 3, 4);
+
+function getArg() {
+  return arguments[1];
+}
+
+//console.log(getArg(2, 4, 6)); // 4
+
+// getting number of arguments used when calling a function
+function getArgs() {
+  return arguments.length;
+}
+
+console.log(getArgs(1, 2, 3));
+console.log(getArgs(2, 3));
