@@ -780,5 +780,12 @@ function getArgs() {
   return arguments.length;
 }
 
-console.log(getArgs(1, 2, 3));
-console.log(getArgs(2, 3));
+//console.log(getArgs(1, 2, 3));
+//console.log(getArgs(2, 3));
+
+// Arguments object converted into array
+function hasCat() {
+  return [...arguments].includes("cat");
+}
+
+//console.log(hasCat("dog", "cat", "mouse"));
