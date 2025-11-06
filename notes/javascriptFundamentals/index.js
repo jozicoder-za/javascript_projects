@@ -823,5 +823,20 @@ NoMbolo.forEach(function (number) {
 
 // call back using arrow function
 NoMbolo.forEach((number, index, array) => {
-  console.log(`Element ${number} is at index ${index} in array [${array}]`);
+  //console.log(`Element ${number} is at index ${index} in array [${array}]`);
 });
+
+// Higher Order Function
+function operateOnArray(arr, operation) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(operation(arr[i]));
+  }
+  return result;
+}
+function doubled(x) {
+  return x * 2;
+}
+
+let doubleNumber = operateOnArray(NoMbolo, doubled);
+//console.log(doubleNumber);
