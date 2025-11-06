@@ -810,5 +810,18 @@ function hasCaat(...arg) {
   return arg.includes("cat");
 }
 
-console.log(hasCaat("dog", "chicken", "cat"));
-console.log(hasCaat("dog", "chicken", "horse"));
+//console.log(hasCaat("dog", "chicken", "cat"));
+//console.log(hasCaat("dog", "chicken", "horse"));
+
+// Callback
+// forEach
+
+let NoMbolo = [1, 2, 3, 4, 5];
+NoMbolo.forEach(function (number) {
+  //console.log(number * 2);
+});
+
+// call back using arrow function
+NoMbolo.forEach((number, index, array) => {
+  console.log(`Element ${number} is at index ${index} in array [${array}]`);
+});
