@@ -840,3 +840,15 @@ function doubled(x) {
 
 let doubleNumber = operateOnArray(NoMbolo, doubled);
 //console.log(doubleNumber);
+
+// factories
+function multiplyBy(factor) {
+  return function (number) {
+    return number * factor;
+  };
+}
+
+let doublee = multiply(2);
+let triple = multiply(3);
+console.log(doublee(5));
+console.log(triple(4));
