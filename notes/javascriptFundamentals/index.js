@@ -868,3 +868,12 @@ const nUmbErs = nUmB.map((element) => {
 });
 
 console.log(nUmbErs);
+
+//Second Argument - index of current element
+const nUMbErs = nUmB.map((element, index) => {
+  console.log(`Element: ${element}`);
+  console.log(`Index: ${index}`);
+  return element * 4;
+});
+
+console.log(nUMbErs);
