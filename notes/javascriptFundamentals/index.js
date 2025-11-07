@@ -858,3 +858,13 @@ let triple = multiply(3);
 const nUmB = [4, 8, 12, 16, 20];
 const doubling = nUmB.map((num) => num * 2);
 //console.log(doubling);
+
+// Map callback function arguments (3 arguments)
+// first argument - current element
+
+const nUmbErs = nUmB.map((element) => {
+  console.log("Element", element);
+  return element * 3;
+});
+
+console.log(nUmbErs);
