@@ -886,3 +886,7 @@ const nUMBers = nUmB.map((element, index, array) => {
 });
 
 //console.log(nUMbErs);
+
+const numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const nuMero = numero.filter((num) => num % 2 === 0);
+console.log(nuMero);
