@@ -863,17 +863,26 @@ const doubling = nUmB.map((num) => num * 2);
 // first argument - current element
 
 const nUmbErs = nUmB.map((element) => {
-  console.log("Element", element);
+  //console.log("Element", element);
   return element * 3;
 });
 
-console.log(nUmbErs);
+//console.log(nUmbErs);
 
 //Second Argument - index of current element
 const nUMbErs = nUmB.map((element, index) => {
-  console.log(`Element: ${element}`);
-  console.log(`Index: ${index}`);
+  //console.log(`Element: ${element}`);
+  //console.log(`Index: ${index}`);
   return element * 4;
 });
 
-console.log(nUMbErs);
+//console.log(nUMbErs);
+
+const nUMBers = nUmB.map((element, index, array) => {
+  //console.log(`Element: ${element}`);
+  //console.log(`Index: ${index}`);
+  //console.log(`Array: ${array}`);
+  return element * 2;
+});
+
+//console.log(nUMbErs);
