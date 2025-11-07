@@ -850,5 +850,11 @@ function multiplyBy(factor) {
 
 let doublee = multiply(2);
 let triple = multiply(3);
-console.log(doublee(5));
-console.log(triple(4));
+//console.log(doublee(5));
+//console.log(triple(4));
+
+// Map
+
+const nUmB = [4, 8, 12, 16, 20];
+const doubling = nUmB.map((num) => num * 2);
+//console.log(doubling);
