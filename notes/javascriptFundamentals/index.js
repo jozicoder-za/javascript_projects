@@ -896,4 +896,12 @@ const nummb = [1, 2, 3, 4, 5];
 const nummSum = nummb.reduce((accumulator, currentValue) => {
   return accumulator + currentValue;
 }, 0);
-console.log(nummSum);
+//console.log(nummSum);
+
+// Method Chaining
+let strChain = "  Hello, World   "
+  .trim()
+  .toLowerCase()
+  .replace("world", "JavaScript");
+
+console.log(strChain);
