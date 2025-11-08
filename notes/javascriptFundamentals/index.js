@@ -889,4 +889,11 @@ const nUMBers = nUmB.map((element, index, array) => {
 
 const numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const nuMero = numero.filter((num) => num % 2 === 0);
-console.log(nuMero);
+//console.log(nuMero);
+
+// Reduce Method
+const nummb = [1, 2, 3, 4, 5];
+const nummSum = nummb.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+console.log(nummSum);
