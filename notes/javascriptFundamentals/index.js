@@ -928,4 +928,12 @@ thelO.sort();
 // Sort Numbers
 const NuMERO = [414, 200, 5, 10, 3];
 NuMERO.sort();
-console.log(NuMERO);
+//console.log(NuMERO);
+// don't follow numeric ascending order
+
+// sort method with compare function
+const nuMERO = [414, 200, 5, 10, 3];
+nuMERO.sort((a, b) => a - b);
+console.log(nuMERO);
+
+//sfsf
