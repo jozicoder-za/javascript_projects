@@ -918,4 +918,9 @@ const totalCreditWithBonus = transactions
   .filter((num) => num.type === "credit")
   .map((num) => num.amount * 1.1)
   .reduce((sum, amount) => sum + amount, 0);
-console.log(totalCreditWithBonus);
+//console.log(totalCreditWithBonus);
+
+// Sort method
+const thelO = ["Banana", "Orange", "Apple", "Mango"];
+thelO.sort();
+console.log(thelO);
