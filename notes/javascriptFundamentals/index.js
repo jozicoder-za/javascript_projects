@@ -923,4 +923,9 @@ const totalCreditWithBonus = transactions
 // Sort method
 const thelO = ["Banana", "Orange", "Apple", "Mango"];
 thelO.sort();
-console.log(thelO);
+//console.log(thelO);
+
+// Sort Numbers
+const NuMERO = [414, 200, 5, 10, 3];
+NuMERO.sort();
+console.log(NuMERO);
