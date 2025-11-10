@@ -904,4 +904,18 @@ let strChain = "  Hello, World   "
   .toLowerCase()
   .replace("world", "JavaScript");
 
-console.log(strChain);
+//console.log(strChain);
+
+// Complex chaining functionality
+const transactions = [
+  { amount: 100, type: "credit" },
+  { amount: 20, type: "cash" },
+  { amount: 150, type: "credit" },
+  { amount: 75, type: "credit" },
+];
+
+const totalCreditWithBonus = transactions
+  .filter((num) => num.type === "credit")
+  .map((num) => num.amount * 1.1)
+  .reduce((sum, amount) => sum + amount, 0);
+console.log(totalCreditWithBonus);
