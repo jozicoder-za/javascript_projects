@@ -934,6 +934,21 @@ NuMERO.sort();
 // sort method with compare function
 const nuMERO = [414, 200, 5, 10, 3];
 nuMERO.sort((a, b) => a - b);
-console.log(nuMERO);
+//console.log(nuMERO);
 
-//sfsf
+// every method
+const noin = [2, 4, 6, 8, 10];
+const evenNoin = noin.every((num) => num % 2 === 0);
+//console.log(evenNoin);
+
+/*
+  <ul class="ingredient">
+    <li>Flow</li>
+    <li>Cheese</li>
+    <li>Water</li>
+  </ul>
+*/
+
+// querySelectorAll
+const listList = document.querySelectorAll("ul.ingredients li");
+//console.log(listList);
