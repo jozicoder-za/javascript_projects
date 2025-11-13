@@ -956,3 +956,14 @@ const listList = document.querySelectorAll("ul.ingredients li");
 for (let i = 0; i < listList.length; i++) {
   //console.log(listList[i]);
 }
+
+//const container = document.getElementById("container");
+//console.log(container);
+//container.innerText = "<ul><li>Cheese</li><li>Tomatoes</li></ul>";
+
+// createElement()
+const img = document.createElement("img");
+
+// innerText()
+const container = document.getElementById("container");
+console.log(container.innerText);
