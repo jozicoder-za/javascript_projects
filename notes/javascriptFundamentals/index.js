@@ -952,3 +952,7 @@ const evenNoin = noin.every((num) => num % 2 === 0);
 // querySelectorAll
 const listList = document.querySelectorAll("ul.ingredients li");
 //console.log(listList);
+
+for (let i = 0; i < listList.length; i++) {
+  //console.log(listList[i]);
+}
