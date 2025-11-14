@@ -976,7 +976,11 @@ listItem.textContent = "Cookies";
 //dessertList.appendChild(listItem);
 
 // removeChild() method
-const sectionEl = document.getElementById("example-section");
+//const sectionEl = document.getElementById("example-section");
 // get last paragraph
-const lastPara = document.querySelector("#example-section p:last-of-type");
-sectionEl.removeChild(lastPara);
+//const lastPara = document.querySelector("#example-section p:last-of-type");
+//sectionEl.removeChild(lastPara);
+
+// Navigator interface - information about browser environment
+console.log(navigator.userAgent);
+console.log(navigator.language);
