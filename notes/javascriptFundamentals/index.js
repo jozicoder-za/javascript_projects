@@ -982,5 +982,9 @@ listItem.textContent = "Cookies";
 //sectionEl.removeChild(lastPara);
 
 // Navigator interface - information about browser environment
-console.log(navigator.userAgent);
-console.log(navigator.language);
+//console.log(navigator.userAgent);
+//console.log(navigator.language);
+
+// Window interface
+// console.log(window.innerWidth);
+// console.log(window.location)
