@@ -966,4 +966,11 @@ const img = document.createElement("img");
 
 // innerText()
 const container = document.getElementById("container");
-console.log(container.innerText);
+//console.log(container.innerText);
+//console.log(container.innerText);
+
+// appendChild()
+const dessertList = document.getElementById("desserts");
+const listItem = document.createElement("li");
+listItem.textContent = "Cookies";
+dessertList.appendChild(listItem);
