@@ -988,3 +988,6 @@ listItem.textContent = "Cookies";
 // Window interface
 // console.log(window.innerWidth);
 // console.log(window.location)
+
+// Document Interface
+//console.log(document);
