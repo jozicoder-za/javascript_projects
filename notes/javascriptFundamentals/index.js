@@ -973,4 +973,10 @@ const container = document.getElementById("container");
 const dessertList = document.getElementById("desserts");
 const listItem = document.createElement("li");
 listItem.textContent = "Cookies";
-dessertList.appendChild(listItem);
+//dessertList.appendChild(listItem);
+
+// removeChild() method
+const sectionEl = document.getElementById("example-section");
+// get last paragraph
+const lastPara = document.querySelector("#example-section p:last-of-type");
+sectionEl.removeChild(lastPara);
