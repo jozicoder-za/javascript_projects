@@ -1003,5 +1003,10 @@ listItem.textContent = "Cookies";
   text-transform: capitalize;
 }
 */
-const paraEl = document.getElementById("color");
-paraEl.setAttribute("class", "color");
+//const paraEl = document.getElementById("color");
+//paraEl.setAttribute("class", "color");
+
+// Updating the attribute
+const divEl = document.querySelector(".my-class");
+divEl.setAttribute("class", "example");
+console.log(divEl);
