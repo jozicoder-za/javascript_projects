@@ -991,3 +991,17 @@ listItem.textContent = "Cookies";
 
 // Document Interface
 //console.log(document);
+
+// setAttribute()
+/*
+  <p id="color">My Paragraph</p>
+*/
+/*
+  .color {
+  font-size: 30px;
+  color: red;
+  text-transform: capitalize;
+}
+*/
+const paraEl = document.getElementById("color");
+paraEl.setAttribute("class", "color");
