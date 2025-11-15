@@ -1007,6 +1007,15 @@ listItem.textContent = "Cookies";
 //paraEl.setAttribute("class", "color");
 
 // Updating the attribute
-const divEl = document.querySelector(".my-class");
-divEl.setAttribute("class", "example");
-console.log(divEl);
+/*
+  <div class="my-class"></div>
+*/
+//const divEl = document.querySelector(".my-class");
+//divEl.setAttribute("class", "example");
+//console.log(divEl);
+
+// Event Objects
+// addEventListener
+
+const btnEl = document.getElementById("btn");
+btnEl.addEventListener("click", () => console.log("clicked"));
