@@ -1054,7 +1054,36 @@ function toggleBgColor() {
 //paraEl.classList.add("highlight");
 
 // classList toggle()
-const menu = document.getElementById("menu");
-const toggleBtn = document.getElementById("toggle-btn");
+/*
+  <button id="toggle-btn">Toggle Menu</button>
+    <nav class="menu" id="menu">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Products</li>
+      </ul>
+    </nav>
+*/
 
-toggleBtn.addEventListener("click", () => menu.classList.toggle("show"));
+/*
+  .menu {
+  display: none;
+  background-color: lightgrey;
+  width: 50%;
+  padding: 10px;
+}
+
+.menu.show {
+  display: block;
+}
+*/
+//const menu = document.getElementById("menu");
+//const toggleBtn = document.getElementById("toggle-btn");
+
+//toggleBtn.addEventListener("click", () => menu.classList.toggle("show"));
+
+// DOMContentLoaded
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM is Loaded");
+});
