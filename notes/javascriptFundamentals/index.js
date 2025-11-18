@@ -1017,5 +1017,9 @@ listItem.textContent = "Cookies";
 // Event Objects
 // addEventListener
 
-const btnEl = document.getElementById("btn");
-btnEl.addEventListener("click", () => console.log("clicked"));
+//const btnEl = document.getElementById("btn");
+//btnEl.addEventListener("click", () => console.log("clicked"));
+
+// input addEventListener
+const input = document.getElementById("input");
+input.addEventListener("input", () => console.log(input.value));
