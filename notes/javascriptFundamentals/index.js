@@ -1049,6 +1049,12 @@ function toggleBgColor() {
 //paraEl.style.color = "red";
 
 // Element.classList
-const paraEl = document.getElementById("para");
+//const paraEl = document.getElementById("para");
 
-paraEl.classList.add("highlight");
+//paraEl.classList.add("highlight");
+
+// classList toggle()
+const menu = document.getElementById("menu");
+const toggleBtn = document.getElementById("toggle-btn");
+
+toggleBtn.addEventListener("click", () => menu.classList.toggle("show"));
