@@ -1045,5 +1045,10 @@ function toggleBgColor() {
 //});
 
 // Element.style - Element.classList
+//const paraEl = document.getElementById("para");
+//paraEl.style.color = "red";
+
+// Element.classList
 const paraEl = document.getElementById("para");
-paraEl.style.color = "red";
+
+paraEl.classList.add("highlight");
