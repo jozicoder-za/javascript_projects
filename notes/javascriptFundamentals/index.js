@@ -1026,20 +1026,24 @@ listItem.textContent = "Cookies";
 
 // removing an event listener
 
-const bodyEl = document.querySelector("body");
-const para = document.getElementById("para");
-const btn = document.getElementById("btn");
+//const bodyEl = document.querySelector("body");
+//const para = document.getElementById("para");
+//const btn = document.getElementById("btn");
 
-let isBgColorGray = true;
+//let isBgColorGray = true;
 
 function toggleBgColor() {
-  console.log("better");
-  bodyEl.style.backgroundColor = isBgColorGray;
-  isBgColorGray = !isBgColorGray;
+  //console.log("better");
+  //bodyEl.style.backgroundColor = isBgColorGray;
+  //isBgColorGray = !isBgColorGray;
 }
 
-btn.addEventListener("click", () => toggleBgColor);
+//btn.addEventListener("click", () => toggleBgColor);
 
-para.addEventListener("mouseenter", () => {
-  btn.removeEventListener("click", toggleBgColor);
-});
+//para.addEventListener("mouseenter", () => {
+//btn.removeEventListener("click", toggleBgColor);
+//});
+
+// Element.style - Element.classList
+const paraEl = document.getElementById("para");
+paraEl.style.color = "red";
