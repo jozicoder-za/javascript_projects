@@ -1,5 +1,3 @@
-.color {
-  font-size: 30px;
-  color: blue;
-  text-transform: capitalize;
+body {
+  background-color: gray;
 }

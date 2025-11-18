@@ -1021,5 +1021,25 @@ listItem.textContent = "Cookies";
 //btnEl.addEventListener("click", () => console.log("clicked"));
 
 // input addEventListener
-const input = document.getElementById("input");
-input.addEventListener("input", () => console.log(input.value));
+//const input = document.getElementById("input");
+//input.addEventListener("input", () => console.log(input.value));
+
+// removing an event listener
+
+const bodyEl = document.querySelector("body");
+const para = document.getElementById("para");
+const btn = document.getElementById("btn");
+
+let isBgColorGray = true;
+
+function toggleBgColor() {
+  console.log("better");
+  bodyEl.style.backgroundColor = isBgColorGray;
+  isBgColorGray = !isBgColorGray;
+}
+
+btn.addEventListener("click", () => toggleBgColor);
+
+para.addEventListener("mouseenter", () => {
+  btn.removeEventListener("click", toggleBgColor);
+});
