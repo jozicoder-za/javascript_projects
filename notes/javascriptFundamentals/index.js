@@ -1103,3 +1103,17 @@ function changeImg() {
     "https://cdn.freecodecamp.org/curriculum/responsive-web-design-principle/FCCStickers-CamperBot200.jpg";
   console.log("image was changed");
 }
+
+// update image
+//function changeImg() {
+//iMg.src =
+//"https://cdn.freecodecamp.org/curriculum/responsive=web-design-princiles/FCCStickers-CamperBot200mjpg";
+//console.log("image changed");
+//}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", changeImg);
+} else {
+  console.log("DOMContentLoaded already fired");
+  changeImg();
+}
