@@ -1111,9 +1111,15 @@ function changeImg() {
 //console.log("image changed");
 //}
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", changeImg);
-} else {
-  console.log("DOMContentLoaded already fired");
-  changeImg();
-}
+// if (document.readyState === "loading") {
+//  document.addEventListener("DOMContentLoaded", changeImg);
+// } else {
+//  console.log("DOMContentLoaded already fired");
+//  changeImg();
+// }
+
+// setTimeout
+
+setTimeout(() => {
+  console.log("load message after 3 seconds");
+}, 3000);
