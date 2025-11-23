@@ -1084,6 +1084,22 @@ function toggleBgColor() {
 
 // DOMContentLoaded
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM is Loaded");
-});
+//document.addEventListener("DOMContentLoaded", () => {
+//console.log("DOM is Loaded");
+//});
+
+/*
+ <h1>Image Change on DOM loaded</h1>
+    <img
+      id="example-img"
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt=""
+    />
+*/
+const iMg = document.getElementById("example-img");
+
+function changeImg() {
+  iMg.src =
+    "https://cdn.freecodecamp.org/curriculum/responsive-web-design-principle/FCCStickers-CamperBot200.jpg";
+  console.log("image was changed");
+}
