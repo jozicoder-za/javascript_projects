@@ -1140,8 +1140,31 @@ function changeImg() {
 //}, 5000);
 
 // clear a setTimeout
-let timeoutId = setTimeout(() => {
-  console.log("This will not run");
-}, 5000);
+//let timeoutId = setTimeout(() => {
+//  console.log("This will not run");
+//}, 5000);
 
-clearTimeout(timeoutId);
+//clearTimeout(timeoutId);
+
+// Cancel Timeout through the DOM
+const cancelBtn = document.getElementById("cancelButton");
+
+let timeoutID = setTimeout(() => {
+  console.log("It will not run if cancelled");
+}, 3000);
+
+cancelBtn.addEventListener("click", () => {
+  clearTimeout(timeoutID);
+  console.log("setTimeout cancelled");
+});
+
+const intervalBtn = document.getElementById("intervalButton");
+
+let intervalId = setInterval(() => {
+  console.log("Will stop when cancelled");
+}, 1000);
+
+intervalBtn.addEventListener("click", () => {
+  clearInterval(intervalId);
+  console.log("Interval stop");
+});
