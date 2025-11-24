@@ -1129,3 +1129,12 @@ function changeImg() {
 //setInterval(() => {
 //  console.log("print after 2 seconds");
 // }, 2000);
+
+// clearInterval
+const intervalId = setInterval(() => {
+  console.log("will stop after 5 seconds");
+}, 1000);
+
+setTimeout(() => {
+  clearInterval(intervalId);
+}, 5000);
