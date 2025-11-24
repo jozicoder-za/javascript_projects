@@ -1120,6 +1120,12 @@ function changeImg() {
 
 // setTimeout
 
-setTimeout(() => {
-  console.log("load message after 3 seconds");
-}, 3000);
+// setTimeout(() => {
+//  console.log("load message after 3 seconds");
+// }, 3000);
+
+// setInterval
+
+//setInterval(() => {
+//  console.log("print after 2 seconds");
+// }, 2000);
