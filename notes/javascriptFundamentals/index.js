@@ -1131,10 +1131,17 @@ function changeImg() {
 // }, 2000);
 
 // clearInterval
-const intervalId = setInterval(() => {
-  console.log("will stop after 5 seconds");
-}, 1000);
+//const intervalId = setInterval(() => {
+//console.log("will stop after 5 seconds");
+//}, 1000);
 
-setTimeout(() => {
-  clearInterval(intervalId);
+//setTimeout(() => {
+//  clearInterval(intervalId);
+//}, 5000);
+
+// clear a setTimeout
+let timeoutId = setTimeout(() => {
+  console.log("This will not run");
 }, 5000);
+
+clearTimeout(timeoutId);
