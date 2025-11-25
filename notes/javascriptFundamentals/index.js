@@ -1147,24 +1147,68 @@ function changeImg() {
 //clearTimeout(timeoutId);
 
 // Cancel Timeout through the DOM
-const cancelBtn = document.getElementById("cancelButton");
+//const cancelBtn = document.getElementById("cancelButton");
 
-let timeoutID = setTimeout(() => {
-  console.log("It will not run if cancelled");
-}, 3000);
+//let timeoutID = setTimeout(() => {
+//  console.log("It will not run if cancelled");
+//}, 3000);
 
-cancelBtn.addEventListener("click", () => {
-  clearTimeout(timeoutID);
-  console.log("setTimeout cancelled");
-});
+//cancelBtn.addEventListener("click", () => {
+//  clearTimeout(timeoutID);
+//  console.log("setTimeout cancelled");
+//});
 
-const intervalBtn = document.getElementById("intervalButton");
+//const intervalBtn = document.getElementById("intervalButton");
 
-let intervalId = setInterval(() => {
-  console.log("Will stop when cancelled");
-}, 1000);
+//let intervalId = setInterval(() => {
+//  console.log("Will stop when cancelled");
+//}, 1000);
 
-intervalBtn.addEventListener("click", () => {
-  clearInterval(intervalId);
-  console.log("Interval stop");
-});
+//intervalBtn.addEventListener("click", () => {
+//  clearInterval(intervalId);
+//  console.log("Interval stop");
+//});
+
+// requestAnimationFrame()
+
+/*
+  HTML
+  <div id="rect" class="rect">freeCodeCamp is Awesome</div>
+*/
+
+/*
+  CSS
+  body {
+  overflow-x: hidden;
+}
+
+.rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  border: 5px solid #1b1b32;
+  color: gray;
+  font-size: 2rem;
+  position: absolute;
+}
+*/
+
+//const rect = document.getElementById("rect");
+
+//function update() {
+//  rect.style.left = position + "px";
+//  position += 2;
+
+//  if (position > window.innerWidth) {
+//    position = -rect.offsetWidth;
+//  }
+//}
+
+//function animate() {
+//  update();
+//  requestAnimationFrame(animate);
+//}
+
+//requestAnimationFrame(animate);

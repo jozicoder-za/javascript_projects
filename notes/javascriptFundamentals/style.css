@@ -1,10 +1,15 @@
-.menu {
-  display: none;
-  background-color: lightgray;
-  width: 50%;
-  padding: 10px;
+body {
+  overflow-x: hidden;
 }
 
-.menu.show {
-  display: block;
+.rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  border: 5px solid #1b1b32;
+  color: gray;
+  font-size: 2rem;
+  position: absolute;
 }
