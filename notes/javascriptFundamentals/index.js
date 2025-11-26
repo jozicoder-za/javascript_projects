@@ -1236,13 +1236,52 @@ function changeImg() {
 }
 */
 
-const square = document.getElementById("square");
-const animation = square.animate(
-  [{ transform: "translateX(0px)" }, { transform: "translateX(100px)" }],
-  {
-    duration: 2000,
-    iteration: Infinity,
-    direction: "alternate",
-    easing: "ease-in-out",
-  }
-);
+//const square = document.getElementById("square");
+//const animation = square.animate(
+//  [{ transform: "translateX(0px)" }, { transform: "translateX(100px)" }],
+//  {
+//    duration: 2000,
+//    iteration: Infinity,
+//    direction: "alternate",
+//    easing: "ease-in-out",
+//  }
+//);
+
+// Example 2
+
+/* 
+  HTML
+  <div id="square" class="square"></div>
+    <button id="playBtn">Play</button>
+    <button id="pauseBtn">Pause</button>
+*/
+
+/*
+  CSS
+  body {
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.square {
+  background: #1b1b32;
+  width: 10rem;
+  height: 10rem;
+  aspect-ratio: 1/1;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: orangered;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+  */
