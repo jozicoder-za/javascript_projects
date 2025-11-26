@@ -1212,3 +1212,9 @@ function changeImg() {
 //}
 
 //requestAnimationFrame(animate);
+
+// animate()
+/*
+  HTML
+  <div id="square" class="square"></div>
+*/
