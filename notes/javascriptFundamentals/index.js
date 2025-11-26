@@ -1218,3 +1218,31 @@ function changeImg() {
   HTML
   <div id="square" class="square"></div>
 */
+
+/* 
+  CSS
+  body {
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  background: #1b1b32;
+  width: 10rem;
+  height: 10rem;
+  aspect-ratio: 1/1;
+}
+*/
+
+const square = document.getElementById("square");
+const animation = square.animate(
+  [{ transform: "translateX(0px)" }, { transform: "translateX(100px)" }],
+  {
+    duration: 2000,
+    iteration: Infinity,
+    direction: "alternate",
+    easing: "ease-in-out",
+  }
+);
