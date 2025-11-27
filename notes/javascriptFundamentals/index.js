@@ -1286,30 +1286,41 @@ button {
 }
   */
 
-const square = document.getElementById("square");
-const playBtn = document.getElementById("playBtn");
-const pauseBtn = document.getElementById("pauseBtn");
+//const square = document.getElementById("square");
+//const playBtn = document.getElementById("playBtn");
+//const pauseBtn = document.getElementById("pauseBtn");
 
-const animation = square.animate(
-  [{ transform: "translateX(0px)" }, { transform: "translateX(200px)" }],
-  {
-    duration: 5000,
-    //iterations: Infinity,
-    direction: "alternate",
-    easing: "ease-in-out",
-  }
-);
+//const animation = square.animate(
+//  [{ transform: "translateX(0px)" }, { transform: "translateX(200px)" }],
+//  {
+//    duration: 5000,
+//    //iterations: Infinity,
+//    direction: "alternate",
+//    easing: "ease-in-out",
+//  }
+//);
 
-animation.onfinish = () => {
-  console.log("Animation finished");
-};
+//animation.onfinish = () => {
+//  console.log("Animation finished");
+//};
 
-playBtn.addEventListener("click", () => {
-  animation.play();
-  console.log("Animation started");
-});
+//playBtn.addEventListener("click", () => {
+//  animation.play();
+//  console.log("Animation started");
+//});
 
-pauseBtn.addEventListener("click", () => {
-  animation.pause();
-  console.log("You pause the animation");
-});
+//pauseBtn.addEventListener("click", () => {
+//  animation.pause();
+//  console.log("You pause the animation");
+//});
+
+// Canvas API
+
+/*
+  HTML
+  <canvas id="my-canvas" width="400" height="400"></canvas>
+*/
+
+const canvas = document.getElementById("my-canvas");
+canvas.width = 400;
+canvas.height = 400;
