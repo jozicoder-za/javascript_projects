@@ -1324,3 +1324,6 @@ button {
 const canvas = document.getElementById("my-canvas");
 canvas.width = 400;
 canvas.height = 400;
+
+const ctx = canvas.getContext("2d");
+console.log(ctx);
