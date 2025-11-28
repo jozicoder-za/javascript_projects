@@ -1348,9 +1348,30 @@ button {
     <button id="open-modal">Open Modal Dialog</button>
 */
 
+//const dialog = document.getElementById("my-modal");
+//const openButton = document.getElementById("open-modal");
+
+//openButton.addEventListener("click", () => {
+//  dialog.showModal();
+//});
+
+// Closing Modal
+/*
+  HTML
+  <dialog id="my-modal">
+      <p>This is a modal dialog</p>
+      <button id="close-modal">Close Modal</button>
+    </dialog>
+    <button id="open-modal">Open Modal Dialog</button>
+*/
 const dialog = document.getElementById("my-modal");
 const openButton = document.getElementById("open-modal");
+const closeButton = document.getElementById("close-modal");
 
 openButton.addEventListener("click", () => {
   dialog.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+  dialog.close();
 });
