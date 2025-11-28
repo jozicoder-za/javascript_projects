@@ -1331,10 +1331,26 @@ button {
 // Modal
 
 /*
+  HTML
   <dialog id="my-modal">
       <p>This is a modal dialog</p>
     </dialog>
 */
 
+//const dialog = document.getElementById("my-modal");
+//dialog.showModal();
+
+// showModal by interactivity
+/*
+  <dialog id="my-modal">
+      <p>This is a modal dialog</p>
+    </dialog>
+    <button id="open-modal">Open Modal Dialog</button>
+*/
+
 const dialog = document.getElementById("my-modal");
-dialog.showModal();
+const openButton = document.getElementById("open-modal");
+
+openButton.addEventListener("click", () => {
+  dialog.showModal();
+});
