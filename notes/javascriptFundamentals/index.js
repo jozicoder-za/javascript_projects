@@ -1321,9 +1321,20 @@ button {
   <canvas id="my-canvas" width="400" height="400"></canvas>
 */
 
-const canvas = document.getElementById("my-canvas");
-canvas.width = 400;
-canvas.height = 400;
+//const canvas = document.getElementById("my-canvas");
+//canvas.width = 400;
+//canvas.height = 400;
 
-const ctx = canvas.getContext("2d");
-console.log(ctx);
+//const ctx = canvas.getContext("2d");
+//console.log(ctx);
+
+// Modal
+
+/*
+  <dialog id="my-modal">
+      <p>This is a modal dialog</p>
+    </dialog>
+*/
+
+const dialog = document.getElementById("my-modal");
+dialog.showModal();
