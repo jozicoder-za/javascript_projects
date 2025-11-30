@@ -1364,14 +1364,26 @@ button {
     </dialog>
     <button id="open-modal">Open Modal Dialog</button>
 */
-const dialog = document.getElementById("my-modal");
-const openButton = document.getElementById("open-modal");
-const closeButton = document.getElementById("close-modal");
+//const dialog = document.getElementById("my-modal");
+//const openButton = document.getElementById("open-modal");
+//const closeButton = document.getElementById("close-modal");
 
-openButton.addEventListener("click", () => {
-  dialog.showModal();
-});
+//openButton.addEventListener("click", () => {
+//  dialog.showModal();
+//});
 
-closeButton.addEventListener("click", () => {
-  dialog.close();
+//closeButton.addEventListener("click", () => {
+//  dialog.close();
+//});
+
+// Change Event
+
+/*
+  HTML
+  <input type="text" name="" id="inputEvent" />
+*/
+
+const inputEl = document.getElementById("inputEvent");
+inputEl.addEventListener("keypress", (event) => {
+  console.log(event);
 });
