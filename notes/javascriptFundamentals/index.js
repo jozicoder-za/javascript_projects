@@ -1376,14 +1376,28 @@ button {
 //  dialog.close();
 //});
 
-// Change Event
+// InputEvent Event
 
 /*
   HTML
   <input type="text" name="" id="inputEvent" />
 */
 
-const inputEl = document.getElementById("inputEvent");
-inputEl.addEventListener("keypress", (event) => {
-  console.log(event);
+//const inputEl = document.getElementById("inputEvent");
+//inputEl.addEventListener("keydown", (event) => {
+//  console.log(event);
+//});
+
+// Event Bubbling
+const p = document.querySelector("p");
+const span = document.querySelector("span");
+
+p.addEventListener("click", (event) => {
+  console.log("P Listener: ");
+  console.log(event.target);
+});
+
+span.addEventListener("click", (event) => {
+  console.log("Span Listener: ");
+  console.log(event.target);
 });
