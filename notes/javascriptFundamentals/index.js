@@ -1389,6 +1389,26 @@ button {
 //});
 
 // Event Bubbling
+
+/*
+  HTML
+  <p>click paragraph <span>click span!</span></p>
+*/
+//const p = document.querySelector("p");
+//const span = document.querySelector("span");
+
+//p.addEventListener("click", (event) => {
+//  console.log("P Listener: ");
+//  console.log(event.target);
+//});
+
+//span.addEventListener("click", (event) => {
+//  console.log("Span Listener: ");
+//  console.log(event.target);
+//});
+
+// Prevent Event Propagation (bubbling)
+
 const p = document.querySelector("p");
 const span = document.querySelector("span");
 
@@ -1400,4 +1420,5 @@ p.addEventListener("click", (event) => {
 span.addEventListener("click", (event) => {
   console.log("Span Listener: ");
   console.log(event.target);
+  event.stopPropagation();
 });
