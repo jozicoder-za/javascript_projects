@@ -1424,6 +1424,11 @@ const span = document.querySelector("span");
 //});
 
 // change only span color
-span.addEventListener("click", (event) => {
-  event.target.style.color = "red";
+//span.addEventListener("click", (event) => {
+//  event.target.style.color = "red";
+//});
+
+// Change paragraph font color
+p.addEventListener("click", (event) => {
+  event.target.style.color = "blue";
 });
