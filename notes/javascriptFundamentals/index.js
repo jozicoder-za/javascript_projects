@@ -1429,6 +1429,11 @@ const span = document.querySelector("span");
 //});
 
 // Change paragraph font color
-p.addEventListener("click", (event) => {
-  event.target.style.color = "blue";
-});
+//p.addEventListener("click", (event) => {
+//  event.target.style.color = "blue";
+//});
+
+// Errors
+// syntax error
+//const nameArr = ['beth', 'mike' 'stan']
+//console.log(nameArr)
