@@ -1439,4 +1439,13 @@ button {
 //console.log(nameArr)
 
 // Reference error
-console.log(price);
+//console.log(price);
+
+// Type Error
+const devObj = {
+  name: "Jessica",
+  country: "SA",
+  job: "Developer",
+};
+
+console.log(devObj.map());
