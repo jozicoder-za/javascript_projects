@@ -1456,11 +1456,22 @@ button {
 
 // throw statement
 
-function validateInput(input) {
-  if (typeof input !== "number") {
-    throw new TypeError(`Expected a number but receive a ${typeof input}`);
-  }
-  return input * 2;
-}
+//function validateInput(input) {
+//if (typeof input !== "number") {
+//throw new TypeError(`Expected a number but receive a ${typeof input}`);
+//}
+//return input * 2;
+//}
 
-console.log(validateInput(5));
+//console.log(validateInput(5));
+
+// throw a generic error
+
+//function divide(numerator, denominator) {
+//if (denominator === 0) {
+//throw new Error("Cannot divide by zero (0)");
+//}
+//return numerator / denominator;
+//}
+
+//console.log(4 / 0);
