@@ -1442,10 +1442,14 @@ button {
 //console.log(price);
 
 // Type Error
-const devObj = {
-  name: "Jessica",
-  country: "SA",
-  job: "Developer",
-};
+//const devObj = {
+//name: "Jessica",
+//country: "SA",
+//job: "Developer",
+//};
 
-console.log(devObj.map());
+//console.log(devObj.map());
+
+// Range Error
+const arr = [];
+arr.length = -1;
