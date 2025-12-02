@@ -1451,5 +1451,16 @@ button {
 //console.log(devObj.map());
 
 // Range Error
-const arr = [];
-arr.length = -1;
+//const arr = [];
+//arr.length = -1;
+
+// throw statement
+
+function validateInput(input) {
+  if (typeof input !== "number") {
+    throw new TypeError(`Expected a number but receive a ${typeof input}`);
+  }
+  return input * 2;
+}
+
+console.log(validateInput(5));
