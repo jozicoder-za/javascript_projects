@@ -1501,16 +1501,20 @@ button {
 //console.log(sum);
 
 // debugger complex example
-function calculateTotalPrice(price, discountPercentage) {
-  debugger;
-  let discountAmount = (price * discountPercentage) / 100;
-  let totalPrice = price - discountAmount;
+//function calculateTotalPrice(price, discountPercentage) {
+//debugger;
+//let discountAmount = (price * discountPercentage) / 100;
+//let totalPrice = price - discountAmount;
 
-  console.log(`Original Price: ${price}`);
-  console.log(`Discount Amount: ${discountAmount}`);
-  console.log(`Total Price After Discount: ${totalPrice}`);
-  return totalPrice;
-}
+//console.log(`Original Price: ${price}`);
+//console.log(`Discount Amount: ${discountAmount}`);
+//console.log(`Total Price After Discount: ${totalPrice}`);
+//return totalPrice;
+//}
 
-let finalPrice = calculateTotalPrice(100, 15);
-console.log(`Final Price: ${finalPrice}`);
+//let finalPrice = calculateTotalPrice(100, 15);
+//console.log(`Final Price: ${finalPrice}`);
+
+// Regular Expression
+const regex = /freeCodeCamp/;
+console.log(typeof regex);
