@@ -1494,8 +1494,23 @@ button {
 
 // Debugger Statement
 
-let firstNumber = 5;
-let secondNumber = 10;
-debugger;
-let sum = firstNumber + secondNumber;
-console.log(sum);
+//let firstNumber = 5;
+//let secondNumber = 10;
+//debugger;
+//let sum = firstNumber + secondNumber;
+//console.log(sum);
+
+// debugger complex example
+function calculateTotalPrice(price, discountPercentage) {
+  debugger;
+  let discountAmount = (price * discountPercentage) / 100;
+  let totalPrice = price - discountAmount;
+
+  console.log(`Original Price: ${price}`);
+  console.log(`Discount Amount: ${discountAmount}`);
+  console.log(`Total Price After Discount: ${totalPrice}`);
+  return totalPrice;
+}
+
+let finalPrice = calculateTotalPrice(100, 15);
+console.log(`Final Price: ${finalPrice}`);
