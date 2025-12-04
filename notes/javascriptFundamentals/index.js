@@ -1542,8 +1542,13 @@ button {
 //console.log("free".match(regex));
 
 // replacing content of string
-const regex = /freecodecamp/;
-const str = "freecodecamp is rly kewl";
-const replaced = str.replace(regex, "freeCodeCamp");
-console.log(replaced);
-console.log(regex);
+//const regex = /freecodecamp/;
+//const str = "freecodecamp is rly kewl";
+//const replaced = str.replace(regex, "freeCodeCamp");
+//console.log(replaced);
+//console.log(regex);
+
+// modifiers - i - ignore case sensitive
+const regex = /freeCodeCamp/i;
+console.log(regex.test("freecodecamp"));
+console.log(regex.test("FREECODECAMP"));
