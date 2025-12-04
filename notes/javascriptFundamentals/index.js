@@ -1531,12 +1531,19 @@ button {
 //console.log(regex.test("camp"));
 
 // match method
-const regex = /freeCodeCamp/;
+//const regex = /freeCodeCamp/;
 //const match = "freeCodeCamp".match(regex);
 //console.log(match);
 
-console.log("freeCodeCamp is great".match(regex));
-console.log("I love freeCodeCamp".match(regex));
-console.log("freecodecamp".match(regex));
-console.log("FREECODECAMP".match(regex));
-console.log("free".match(regex));
+//console.log("freeCodeCamp is great".match(regex));
+//console.log("I love freeCodeCamp".match(regex));
+//console.log("freecodecamp".match(regex));
+//console.log("FREECODECAMP".match(regex));
+//console.log("free".match(regex));
+
+// replacing content of string
+const regex = /freecodecamp/;
+const str = "freecodecamp is rly kewl";
+const replaced = str.replace(regex, "freeCodeCamp");
+console.log(replaced);
+console.log(regex);
