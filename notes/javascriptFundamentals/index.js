@@ -1532,5 +1532,11 @@ button {
 
 // match method
 const regex = /freeCodeCamp/;
-const match = "freeCodeCamp".match(regex);
-console.log(match);
+//const match = "freeCodeCamp".match(regex);
+//console.log(match);
+
+console.log("freeCodeCamp is great".match(regex));
+console.log("I love freeCodeCamp".match(regex));
+console.log("freecodecamp".match(regex));
+console.log("FREECODECAMP".match(regex));
+console.log("free".match(regex));
