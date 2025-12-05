@@ -1589,9 +1589,17 @@ button {
 
 // Anchors
 // Carrot (^) anchor - matches the start of the string
-const start = /^freecodecamp/i;
+//const start = /^freecodecamp/i;
 
-console.log(start.test("freecodecamp"));
-console.log(start.test("freecodecamp is great"));
-console.log(start.test("I love freecodecamp"));
-console.log(start.test("have met freecodecamp's founder"));
+//console.log(start.test("freecodecamp"));
+//console.log(start.test("freecodecamp is great"));
+//console.log(start.test("I love freecodecamp"));
+//console.log(start.test("have met freecodecamp's founder"));
+
+// Dollar sign($) anchor - matches the end of the string
+const end = /freecodecamp$/i;
+
+console.log(end.test("freecodecamp"));
+console.log(end.test("freecodecamp is great"));
+console.log(end.test("I love freecodecamp"));
+console.log(end.test("have met freecodecamp's founder"));
