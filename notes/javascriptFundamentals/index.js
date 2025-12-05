@@ -1566,23 +1566,32 @@ button {
 //console.log(regex.test("code"));
 //console.log(regex.test("camp"));
 
-const regex = /freeCodeCamp/gi;
+//const regex = /freeCodeCamp/gi;
 
 //Last index
-console.log(regex.lastIndex);
-console.log(regex.test("freeCodeCamp"));
-console.log(regex.lastIndex);
-console.log(regex.test("freeCodeCamp is great"));
-console.log(regex.lastIndex);
-console.log(regex.test("I love freeCodeCamp"));
-console.log(regex.lastIndex);
-console.log(regex.test("freecodecamp"));
-console.log(regex.lastIndex);
-console.log(regex.test("FREECODECAMP"));
-console.log(regex.lastIndex);
-console.log(regex.test("free"));
-console.log(regex.lastIndex);
-console.log(regex.test("code"));
-console.log(regex.lastIndex);
-console.log(regex.test("camp"));
-console.log(regex.lastIndex);
+//console.log(regex.lastIndex);
+//console.log(regex.test("freeCodeCamp"));
+//console.log(regex.lastIndex);
+//console.log(regex.test("freeCodeCamp is great"));
+//console.log(regex.lastIndex);
+//console.log(regex.test("I love freeCodeCamp"));
+//console.log(regex.lastIndex);
+//console.log(regex.test("freecodecamp"));
+//console.log(regex.lastIndex);
+//console.log(regex.test("FREECODECAMP"));
+//console.log(regex.lastIndex);
+//console.log(regex.test("free"));
+//console.log(regex.lastIndex);
+//console.log(regex.test("code"));
+//console.log(regex.lastIndex);
+//console.log(regex.test("camp"));
+//console.log(regex.lastIndex);
+
+// Anchors
+// Carrot (^) anchor - matches the start of the string
+const start = /^freecodecamp/i;
+
+console.log(start.test("freecodecamp"));
+console.log(start.test("freecodecamp is great"));
+console.log(start.test("I love freecodecamp"));
+console.log(start.test("have met freecodecamp's founder"));
