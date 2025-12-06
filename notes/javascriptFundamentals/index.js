@@ -1631,6 +1631,14 @@ button {
 
 // d flag - give more info in match object
 
-const regex = /freecodecamp/di;
-const string = `we love freecodecamp isn't freecodecamp great`;
-console.log(string.match(regex));
+//const regex = /freecodecamp/di;
+//const string = `we love freecodecamp isn't freecodecamp great`;
+//console.log(string.match(regex));
+
+// Match and replace first instance in a string
+const regex = /freecodecamp/;
+const str = "freecodecamp is the best we love freecodecamp";
+const matched = str.match(regex);
+const replaced = str.replace(regex, "freeCodeCamp");
+console.log(matched);
+console.log(replaced);
