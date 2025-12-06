@@ -1605,14 +1605,26 @@ button {
 //console.log(end.test("have met freecodecamp's founder"));
 
 // Matching Across Multiple lines
-const start = /^freecodecamp/i;
-const end = /freecodecamp$/i;
+//const start = /^freecodecamp/i;
+//const end = /freecodecamp$/i;
+
+//const string = `I really love
+//freecodecamp
+//it's my favorite
+//`;
+//console.log(string);
+
+//console.log(start.test(string));
+//console.log(end.test(string));
+
+// m flag, multiple line modifiers
+const start = /^freecodecamp/im;
+const end = /freecodecamp$/im;
 
 const string = `I really love
 freecodecamp
-it's my favorite
+it's the best
 `;
-console.log(string);
 
 console.log(start.test(string));
 console.log(end.test(string));
