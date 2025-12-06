@@ -1618,13 +1618,19 @@ button {
 //console.log(end.test(string));
 
 // m flag, multiple line modifiers
-const start = /^freecodecamp/im;
-const end = /freecodecamp$/im;
+//const start = /^freecodecamp/im;
+//const end = /freecodecamp$/im;
 
-const string = `I really love
-freecodecamp
-it's the best
-`;
+//const string = `I really love
+//freecodecamp
+//it's the best
+//`;
 
-console.log(start.test(string));
-console.log(end.test(string));
+//console.log(start.test(string));
+//console.log(end.test(string));
+
+// d flag - give more info in match object
+
+const regex = /freecodecamp/di;
+const string = `we love freecodecamp isn't freecodecamp great`;
+console.log(string.match(regex));
