@@ -1597,9 +1597,22 @@ button {
 //console.log(start.test("have met freecodecamp's founder"));
 
 // Dollar sign($) anchor - matches the end of the string
+//const end = /freecodecamp$/i;
+
+//console.log(end.test("freecodecamp"));
+//console.log(end.test("freecodecamp is great"));
+//console.log(end.test("I love freecodecamp"));
+//console.log(end.test("have met freecodecamp's founder"));
+
+// Matching Across Multiple lines
+const start = /^freecodecamp/i;
 const end = /freecodecamp$/i;
 
-console.log(end.test("freecodecamp"));
-console.log(end.test("freecodecamp is great"));
-console.log(end.test("I love freecodecamp"));
-console.log(end.test("have met freecodecamp's founder"));
+const string = `I really love
+freecodecamp
+it's my favorite
+`;
+console.log(string);
+
+console.log(start.test(string));
+console.log(end.test(string));
