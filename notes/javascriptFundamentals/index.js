@@ -1645,10 +1645,21 @@ button {
 
 // Match and replace all instance in a string
 // g - global modifier
+// affects the information object
 
-const regex = /freecodecamp/g;
+//const regex = /freecodecamp/g;
+//const str = "freecodecamp is the best we love freecodecamp";
+//const matched = str.match(regex);
+//const replaced = str.replace(regex, "leetcode");
+//console.log(matched);
+//console.log(replaced);
+
+// matchAll and replaceAll
+// g modifier looses infor on the information object
+
+const pattern = "freecodecamp";
 const str = "freecodecamp is the best we love freecodecamp";
-const matched = str.match(regex);
-const replaced = str.replace(regex, "leetcode");
+const matched = str.matchAll(pattern);
+const replaced = str.replaceAll(pattern, "leetcode");
 console.log(matched);
 console.log(replaced);
