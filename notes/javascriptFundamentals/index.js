@@ -1636,9 +1636,19 @@ button {
 //console.log(string.match(regex));
 
 // Match and replace first instance in a string
-const regex = /freecodecamp/;
+//const regex = /freecodecamp/;
+//const str = "freecodecamp is the best we love freecodecamp";
+//const matched = str.match(regex);
+//const replaced = str.replace(regex, "freeCodeCamp");
+//console.log(matched);
+//console.log(replaced);
+
+// Match and replace all instance in a string
+// g - global modifier
+
+const regex = /freecodecamp/g;
 const str = "freecodecamp is the best we love freecodecamp";
 const matched = str.match(regex);
-const replaced = str.replace(regex, "freeCodeCamp");
+const replaced = str.replace(regex, "leetcode");
 console.log(matched);
 console.log(replaced);
