@@ -1708,4 +1708,11 @@ button {
 //const regex = /[abcdf]/
 
 // range - consecutive characters
-const regex = /[a-d]/;
+//const regex = /[a-d]/;
+
+// lower and uppercase
+//const regex = /[a-zA-Z]/
+
+// mixing digits and characters
+
+const regex = /[a-zA-Z0-9]/;
