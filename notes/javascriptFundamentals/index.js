@@ -1657,9 +1657,19 @@ button {
 // matchAll and replaceAll
 // g modifier looses infor on the information object
 
-const pattern = "freecodecamp";
+//const pattern = "freecodecamp";
+//const str = "freecodecamp is the best we love freecodecamp";
+//const matched = str.matchAll(pattern);
+//const replaced = str.replaceAll(pattern, "leetcode");
+//console.log(matched);
+//console.log(replaced);
+
+// matched.next()
+const regex = /freecodecamp/g;
 const str = "freecodecamp is the best we love freecodecamp";
-const matched = str.matchAll(pattern);
-const replaced = str.replaceAll(pattern, "leetcode");
+const matched = str.matchAll(regex);
+const replaced = str.replaceAll(regex, "leetcode");
 console.log(matched);
 console.log(replaced);
+console.log(matched.next());
+//console.log(replaced.next());
