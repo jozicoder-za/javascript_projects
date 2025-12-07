@@ -1675,7 +1675,19 @@ button {
 //console.log(replaced.next());
 
 // match all instances by converting into an array
-const regex = /freecodecamp/g;
-const str = "freecodecamp is the best we love freecodecamp";
-const matched = str.matchAll(regex);
-console.log(Array.from(matched));
+//const regex = /freecodecamp/g;
+//const str = "freecodecamp is the best we love freecodecamp";
+//const matched = str.matchAll(regex);
+//console.log(Array.from(matched));
+
+// Character classes
+// wildcard class (.)
+//const regex = /a./;
+// matches letter a followed by one single character
+
+//const regex = /0|1|2|3|4|5|6|7|8|9/;
+//console.log(regex);
+
+// shorthand of the above
+const regex = /\d/;
+// match single numerical character anywhere in the string
