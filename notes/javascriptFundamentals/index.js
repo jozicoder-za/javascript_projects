@@ -1689,5 +1689,23 @@ button {
 //console.log(regex);
 
 // shorthand of the above
-const regex = /\d/;
+//const regex = /\d/;
 // match single numerical character anywhere in the string
+
+// \w - represent any word character
+//const regex = /\w/
+
+//word character - a - z, 0 - 9, (_)
+
+// \s whitespace class
+// matches any whitespace
+
+//const regex = /\D/;
+// does not match numerical character
+
+//console.log(regex);
+
+//const regex = /[abcdf]/
+
+// range - consecutive characters
+const regex = /[a-d]/;
