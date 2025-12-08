@@ -1719,4 +1719,12 @@ button {
 
 // matching literal hyphen
 //const regex = /[-a-zA-Z0-9]/;
-const regex = /[\W]/;
+//const regex = /[\W]/;
+
+// Positive lookahead
+// matches a pattern that is followed by another pattern
+const regex = /free(?=code)/i;
+console.log(regex.test("freeCodeCamp"));
+console.log(regex.test("free code camp"));
+console.log(regex.test("I need someone for free to write code for me"));
+// to pass test free must immediately followed by code
