@@ -1744,7 +1744,15 @@ button {
 //console.log(regex.test("I need someone for free to write code for me"));
 
 // Negative lookahead - match based on preceding pattern
-const regex = /(?<!free)code/i;
-console.log(regex.test("freeCodeCamp"));
-console.log(regex.test("free code camp"));
-console.log(regex.test("I need someone for free to write code for me"));
+//const regex = /(?<!free)code/i;
+//console.log(regex.test("freeCodeCamp"));
+//console.log(regex.test("free code camp"));
+//console.log(regex.test("I need someone for free to write code for me"));
+
+// Regex Quantifiers
+// Matching the previous character exactly four times
+const regex = /^\d{4}$/;
+console.log(regex.test("123"));
+console.log(regex.test("1234"));
+console.log(regex.test("12345"));
+console.log(regex.test("123456"));
