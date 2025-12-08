@@ -1751,7 +1751,14 @@ button {
 
 // Regex Quantifiers
 // Matching the previous character exactly four times
-const regex = /^\d{4}$/;
+//const regex = /^\d{4}$/;
+//console.log(regex.test("123"));
+//console.log(regex.test("1234"));
+//console.log(regex.test("12345"));
+//console.log(regex.test("123456"));
+
+// Matching 4 or more digits
+const regex = /^\d{4,}$/;
 console.log(regex.test("123"));
 console.log(regex.test("1234"));
 console.log(regex.test("12345"));
