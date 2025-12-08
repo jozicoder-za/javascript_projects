@@ -1723,8 +1723,16 @@ button {
 
 // Positive lookahead
 // matches a pattern that is followed by another pattern
-const regex = /free(?=code)/i;
+//const regex = /free(?=code)/i;
+//console.log(regex.test("freeCodeCamp"));
+//console.log(regex.test("free code camp"));
+//console.log(regex.test("I need someone for free to write code for me"));
+// to pass test free must immediately followed by code
+
+// Negative lookahead
+const regex = /free(?!code)/i;
 console.log(regex.test("freeCodeCamp"));
 console.log(regex.test("free code camp"));
 console.log(regex.test("I need someone for free to write code for me"));
-// to pass test free must immediately followed by code
+
+// to pass test free not immediately followed by code
