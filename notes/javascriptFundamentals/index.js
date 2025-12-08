@@ -1715,4 +1715,8 @@ button {
 
 // mixing digits and characters
 
-const regex = /[a-zA-Z0-9]/;
+//const regex = /[a-zA-Z0-9]/;
+
+// matching literal hyphen
+//const regex = /[-a-zA-Z0-9]/;
+const regex = /[\W]/;
