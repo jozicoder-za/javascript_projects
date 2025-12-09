@@ -1779,7 +1779,15 @@ button {
 //const regex = /^[a-zA-Z]{0,1}\d{4, 6}$/;
 
 // shorthand quantifier with a single optional character (?)
-const regex = /^[a-zA-Z]?\d{4,6}$/;
+//const regex = /^[a-zA-Z]?\d{4,6}$/;
+//console.log(regex.test("123"));
+//console.log(regex.test("a1234"));
+//console.log(regex.test("12345"));
+
+// Allow any number of letters before a number
+const regex = /^[a-zA-Z]{0,}\d{4,6}$/;
 console.log(regex.test("123"));
-console.log(regex.test("a1234"));
+console.log(regex.test("1234"));
 console.log(regex.test("12345"));
+console.log(regex.test("123456"));
+console.log(regex.test("1234567"));
