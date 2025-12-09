@@ -1793,9 +1793,13 @@ button {
 //console.log(regex.test("1234567"));
 
 // short hand for the above regular expression
-const regex = /^[a-zA-Z]*\d{4,6}$/;
-console.log(regex.test("123"));
-console.log(regex.test("1234"));
-console.log(regex.test("12345"));
-console.log(regex.test("123456"));
-console.log(regex.test("1234567"));
+//const regex = /^[a-zA-Z]*\d{4,6}$/;
+//console.log(regex.test("123"));
+//console.log(regex.test("1234"));
+//console.log(regex.test("12345"));
+//console.log(regex.test("123456"));
+//console.log(regex.test("1234567"));
+
+// Capturing Group
+const regex = /free(code)camp/i;
+console.log("freecodecamp".replace(regex, "paidcodeworld"));
