@@ -1758,8 +1758,16 @@ button {
 //console.log(regex.test("123456"));
 
 // Matching 4 or more digits
-const regex = /^\d{4,}$/;
+//const regex = /^\d{4,}$/;
+//console.log(regex.test("123"));
+//console.log(regex.test("1234"));
+//console.log(regex.test("12345"));
+//console.log(regex.test("123456"));
+
+// Identifiers should have maximum 0f 6 and minumim 4
+const regex = /^\d{4,6}$/;
 console.log(regex.test("123"));
 console.log(regex.test("1234"));
 console.log(regex.test("12345"));
 console.log(regex.test("123456"));
+console.log(regex.test("1234567"));
