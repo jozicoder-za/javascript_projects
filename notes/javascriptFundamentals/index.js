@@ -1764,10 +1764,22 @@ button {
 //console.log(regex.test("12345"));
 //console.log(regex.test("123456"));
 
-// Identifiers should have maximum 0f 6 and minumim 4
-const regex = /^\d{4,6}$/;
+// Identifiers should have maximum 0f 6 and minimum 4
+//const regex = /^\d{4,6}$/;
+//console.log(regex.test("123"));
+//console.log(regex.test("1234"));
+//console.log(regex.test("12345"));
+//console.log(regex.test("123456"));
+//console.log(regex.test("1234567"));
+
+// Identifiers starting with a letter
+//const regex = /^[a-zA-Z]\d{4,6}$/
+
+// Presence of letters
+//const regex = /^[a-zA-Z]{0,1}\d{4, 6}$/;
+
+// shorthand quantifier with a single optional character (?)
+const regex = /^[a-zA-Z]?\d{4,6}$/;
 console.log(regex.test("123"));
-console.log(regex.test("1234"));
+console.log(regex.test("a1234"));
 console.log(regex.test("12345"));
-console.log(regex.test("123456"));
-console.log(regex.test("1234567"));
