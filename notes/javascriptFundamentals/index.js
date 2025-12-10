@@ -1816,7 +1816,14 @@ button {
     </form>
 */
 
+//const input = document.querySelector("input");
+//input.addEventListener("input", (e) => {
+//console.log(e.target.checkValidity());
+//});
+
 const input = document.querySelector("input");
 input.addEventListener("input", (e) => {
-  console.log(e.target.checkValidity());
+  if (!e.target.checkValidity()) {
+    e.target.reportValidity();
+  }
 });
