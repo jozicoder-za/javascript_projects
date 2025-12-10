@@ -1821,9 +1821,20 @@ button {
 //console.log(e.target.checkValidity());
 //});
 
+//const input = document.querySelector("input");
+//input.addEventListener("input", (e) => {
+//if (!e.target.checkValidity()) {
+//e.target.reportValidity();
+//}
+//});
+
+// getCustomValidy
+
 const input = document.querySelector("input");
 input.addEventListener("input", (e) => {
   if (!e.target.checkValidity()) {
-    e.target.reportValidity();
+    e.target.getCustomValidity(
+      "You must use a company email address that ends in @sampleCompany.com"
+    );
   }
 });
