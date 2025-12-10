@@ -1801,5 +1801,22 @@ button {
 //console.log(regex.test("1234567"));
 
 // Capturing Group
-const regex = /free(code)camp/i;
-console.log("freecodecamp".replace(regex, "paidcodeworld"));
+//const regex = /free(code)camp/i;
+//console.log("freecodecamp".replace(regex, "paidcodeworld"));
+
+// Form Validation
+/*
+  HTML
+  <form action="">
+      <input
+        type="email"
+        placeholder="username@company.com"
+        pattern=".+@sampleCompany\.com"
+      />
+    </form>
+*/
+
+const input = document.querySelector("input");
+input.addEventListener("input", (e) => {
+  console.log(e.target.checkValidity());
+});
