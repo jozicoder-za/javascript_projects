@@ -1830,11 +1830,34 @@ button {
 
 // getCustomValidy
 
+//const input = document.querySelector("input");
+//input.addEventListener("input", (e) => {
+// if (!e.target.checkValidity()) {
+// e.target.getCustomValidity(
+// "You must use a company email address that ends in @sampleCompany.com"
+//);
+// }
+//});
+
+// validity()
+
+//const input = document.querySelector("input");
+
+//input.addEventListener("input", (e) => {
+//console.log(e.target.validity);
+//});
+
+// preventDefault() method
+/*
+  <label
+      >Enter some character:
+      <input type="text" />
+    </label>
+    <p id="output"></p>
+*/
+
 const input = document.querySelector("input");
-input.addEventListener("input", (e) => {
-  if (!e.target.checkValidity()) {
-    e.target.getCustomValidity(
-      "You must use a company email address that ends in @sampleCompany.com"
-    );
-  }
+const output = document.getElementById("output");
+input.addEventListener("keypress", (e) => {
+  output.innerText = `You pressed ${e.key} key`;
 });
