@@ -1869,3 +1869,11 @@ input.addEventListener("keydown", (e) => {
   e.preventDefault();
   output.innerText = `You pressed ${e.key} key`;
 });
+
+// preventDefault() for form submission
+// form submit methods
+// Action Attribute
+// <form action="https://freecodecamp.org" />
+
+// Relative path
+// <form action="/data" />
