@@ -1856,8 +1856,16 @@ button {
     <p id="output"></p>
 */
 
+//const input = document.querySelector("input");
+//const output = document.getElementById("output");
+//input.addEventListener("keypress", (e) => {
+//output.innerText = `You pressed ${e.key} key`;
+//});
+
 const input = document.querySelector("input");
 const output = document.getElementById("output");
-input.addEventListener("keypress", (e) => {
+console.log(output);
+input.addEventListener("keydown", (e) => {
+  e.preventDefault();
   output.innerText = `You pressed ${e.key} key`;
 });
