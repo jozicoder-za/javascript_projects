@@ -1881,5 +1881,9 @@ button {
 // Working with Dates
 
 // Date object
-const now = new Date();
-console.log(now);
+//const now = new Date();
+//console.log(now);
+
+// Specific Date
+const specificDate = new Date("July 4, 2022 14:07:09");
+console.log(specificDate);
