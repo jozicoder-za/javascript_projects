@@ -1894,6 +1894,11 @@ button {
 //console.log(date);
 
 // getMonth method
-const now = new Date();
-const month = now.getMonth();
+//const now = new Date();
+//const month = now.getMonth();
 //console.log(month);
+
+// getFullYear method
+const now = new Date();
+const year = now.getFullYear();
+console.log(year);
