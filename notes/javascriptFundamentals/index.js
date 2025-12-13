@@ -1862,13 +1862,13 @@ button {
 //output.innerText = `You pressed ${e.key} key`;
 //});
 
-const input = document.querySelector("input");
-const output = document.getElementById("output");
-console.log(output);
-input.addEventListener("keydown", (e) => {
-  e.preventDefault();
-  output.innerText = `You pressed ${e.key} key`;
-});
+//const input = document.querySelector("input");
+//const output = document.getElementById("output");
+//console.log(output);
+//input.addEventListener("keydown", (e) => {
+//e.preventDefault();
+//output.innerText = `You pressed ${e.key} key`;
+//});
 
 // preventDefault() for form submission
 // form submit methods
@@ -1877,3 +1877,9 @@ input.addEventListener("keydown", (e) => {
 
 // Relative path
 // <form action="/data" />
+
+// Working with Dates
+
+// Date object
+const now = new Date();
+console.log(now);
