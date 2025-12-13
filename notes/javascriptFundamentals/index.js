@@ -1889,6 +1889,11 @@ button {
 //console.log(specificDate);
 
 // getDate method
+//const now = new Date();
+//const date = now.getDate();
+//console.log(date);
+
+// getMonth method
 const now = new Date();
-const date = now.getDate();
-console.log(date);
+const month = now.getMonth();
+//console.log(month);
