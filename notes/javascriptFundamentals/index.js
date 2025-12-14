@@ -1899,6 +1899,11 @@ button {
 //console.log(month);
 
 // getFullYear method
+//const now = new Date();
+//const year = now.getFullYear();
+//console.log(year);
+
+// Date Formats
+// toISOString()
 const now = new Date();
-const year = now.getFullYear();
-console.log(year);
+console.log(now.toISOString());
