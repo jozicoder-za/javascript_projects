@@ -1912,3 +1912,14 @@ button {
 // Formating date based on user's local
 //const now = new Date();
 //console.log(now.toLocaleDateString());
+
+// locales parameters
+const date = new Date();
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(date.toLocaleDateString("en-GB", options));
