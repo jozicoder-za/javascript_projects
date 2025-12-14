@@ -1905,5 +1905,10 @@ button {
 
 // Date Formats
 // toISOString()
-const now = new Date();
-console.log(now.toISOString());
+//const now = new Date();
+//console.log(now.toISOString());
+
+// toLocaleDateString()
+// Formating date based on user's local
+//const now = new Date();
+//console.log(now.toLocaleDateString());
