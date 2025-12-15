@@ -1927,5 +1927,13 @@ button {
 // Maps and Set
 
 // Set - unique value object
-const treeSet = new Set(["Baabab", "beth", "jacklabel", "beth"]);
+//const treeSet = new Set(["Baabab", "beth", "jacklabel", "beth"]);
+//console.log(treeSet);
+
+// Initiate the set and add the values
+const treeSet = new Set();
+treeSet.add("Baobab");
+treeSet.add("beth");
+treeSet.add("jacklabel");
+treeSet.add("beth");
 console.log(treeSet);
