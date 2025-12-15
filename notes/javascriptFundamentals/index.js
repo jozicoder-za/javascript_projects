@@ -1914,12 +1914,18 @@ button {
 //console.log(now.toLocaleDateString());
 
 // locales parameters
-const date = new Date();
-const options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-};
+//const date = new Date();
+//const options = {
+//weekday: "long",
+//year: "numeric",
+//month: "long",
+//day: "numeric",
+//};
 
-console.log(date.toLocaleDateString("en-GB", options));
+// console.log(date.toLocaleDateString("en-GB", options));
+
+// Maps and Set
+
+// Set - unique value object
+const treeSet = new Set(["Baabab", "beth", "jacklabel", "beth"]);
+console.log(treeSet);
