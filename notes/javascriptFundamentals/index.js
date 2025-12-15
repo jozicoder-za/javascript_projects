@@ -1931,9 +1931,27 @@ button {
 //console.log(treeSet);
 
 // Initiate the set and add the values
-const treeSet = new Set();
-treeSet.add("Baobab");
-treeSet.add("beth");
-treeSet.add("jacklabel");
-treeSet.add("beth");
-console.log(treeSet);
+//const treeSet = new Set();
+//treeSet.add("Baobab");
+//treeSet.add("beth");
+//treeSet.add("jacklabel");
+//treeSet.add("beth");
+//console.log(treeSet);
+
+// Set Methods
+// delete
+
+//treeSet.delete("jacklabel");
+//console.log(treeSet);
+
+// has() method
+const treeSet = new Set(["beth", "stan", "mike", "mike", "stan"]);
+//console.log(treeSet.has("mike"));
+//console.log(treeSet.has("bethy"));
+
+// entries() method
+//console.log(treeSet.entries());
+
+// keys() and values()
+console.log("keys:", treeSet.keys());
+console.log("Values:", treeSet.values);
