@@ -1957,4 +1957,9 @@ const treeSet = new Set(["beth", "stan", "mike", "mike", "stan"]);
 //console.log("Values:", treeSet.values);
 
 // forEach
-treeSet.forEach((tree) => console.log(tree));
+//treeSet.forEach((tree) => console.log(tree));
+
+// clear() - clears the array
+console.log(treeSet);
+treeSet.clear();
+console.log(treeSet);
