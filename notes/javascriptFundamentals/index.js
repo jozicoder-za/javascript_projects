@@ -1945,7 +1945,7 @@ button {
 //console.log(treeSet);
 
 // has() method
-const treeSet = new Set(["beth", "stan", "mike", "mike", "stan"]);
+//const treeSet = new Set(["beth", "stan", "mike", "mike", "stan"]);
 //console.log(treeSet.has("mike"));
 //console.log(treeSet.has("bethy"));
 
@@ -1965,4 +1965,9 @@ const treeSet = new Set(["beth", "stan", "mike", "mike", "stan"]);
 //console.log(treeSet);
 
 // size method
-console.log(treeSet.size);
+//console.log(treeSet.size);
+
+const treeWeakSet = new WeakSet();
+treeWeakSet.add({ name: "Baobab" });
+treeWeakSet.add({ name: "Bread Fruit" });
+console.log(treeWeakSet);
