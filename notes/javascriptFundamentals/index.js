@@ -1953,5 +1953,8 @@ const treeSet = new Set(["beth", "stan", "mike", "mike", "stan"]);
 //console.log(treeSet.entries());
 
 // keys() and values()
-console.log("keys:", treeSet.keys());
-console.log("Values:", treeSet.values);
+//console.log("keys:", treeSet.keys());
+//console.log("Values:", treeSet.values);
+
+// forEach
+treeSet.forEach((tree) => console.log(tree));
