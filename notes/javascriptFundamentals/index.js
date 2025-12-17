@@ -2000,6 +2000,11 @@ let items = [];
 //}
 
 // Update
-function updateItem(index, newItem) {
-  items[index] = newItem;
+//function updateItem(index, newItem) {
+//items[index] = newItem;
+//}
+
+// Delete
+function deleteItems(index) {
+  items.splice(index, 1);
 }
