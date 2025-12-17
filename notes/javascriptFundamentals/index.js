@@ -1993,9 +1993,13 @@ let items = [];
 //function createItem(item) {
 //items.push(item);
 //}
-items.push("sifiso");
+
 // Read
-function readItems() {
-  return items;
+//function readItems() {
+//return items;
+//}
+
+// Update
+function updateItem(index, newItem) {
+  items[index] = newItem;
 }
-console.log(readItems());
