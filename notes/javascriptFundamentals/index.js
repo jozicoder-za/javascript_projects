@@ -1967,7 +1967,19 @@ button {
 // size method
 //console.log(treeSet.size);
 
-const treeWeakSet = new WeakSet();
-treeWeakSet.add({ name: "Baobab" });
-treeWeakSet.add({ name: "Bread Fruit" });
-console.log(treeWeakSet);
+//const treeWeakSet = new WeakSet();
+//treeWeakSet.add({ name: "Baobab" });
+//treeWeakSet.add({ name: "Bread Fruit" });
+//console.log(treeWeakSet);
+
+// Map
+//const myFirstMap = new Map([
+//  [{ type: "deciduous" }, "Maple tree"],
+//  [["forest", "grove"], "Pine tree"],
+//  [42, "Oak tree"],
+//  [true, "Birch tree"],
+//]);
+//console.log(myFirstMap);
+
+const weakMap = new WeakMap();
+console.log(weakMap);
