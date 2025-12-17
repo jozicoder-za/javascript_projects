@@ -1981,5 +1981,15 @@ button {
 //]);
 //console.log(myFirstMap);
 
-const weakMap = new WeakMap();
-console.log(weakMap);
+//const weakMap = new WeakMap();
+//console.log(weakMap);
+
+// Local Storage - CRUD Operation
+// CRUD - Create, Read, Update, Delete
+
+let items = [];
+
+// Create
+function createItem(item) {
+  items.push(item);
+}
