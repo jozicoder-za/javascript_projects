@@ -1990,6 +1990,12 @@ button {
 let items = [];
 
 // Create
-function createItem(item) {
-  items.push(item);
+//function createItem(item) {
+//items.push(item);
+//}
+items.push("sifiso");
+// Read
+function readItems() {
+  return items;
 }
+console.log(readItems());
