@@ -2011,8 +2011,19 @@ button {
 
 // local storage
 // setItem
-localStorage.setItem("username", "Jane Doe");
+//localStorage.setItem("username", "Jane Doe");
 
 // getItem()
-let username = localStorage.getItem("username");
-console.log(username);
+//let username = localStorage.getItem("username");
+
+// removeItem()
+//localStorage.removeItem("username");
+
+// clear()
+//localStorage.clear();
+
+// sessionStorage
+sessionStorage.setItem("cart", "3 Items");
+let cart = sessionStorage.getItem("cart");
+sessionStorage.removeItem("cart");
+sessionStorage.clear();
