@@ -2023,7 +2023,14 @@ button {
 //localStorage.clear();
 
 // sessionStorage
-sessionStorage.setItem("cart", "3 Items");
-let cart = sessionStorage.getItem("cart");
-sessionStorage.removeItem("cart");
-sessionStorage.clear();
+//sessionStorage.setItem("cart", "3 Items");
+//let cart = sessionStorage.getItem("cart");
+//sessionStorage.removeItem("cart");
+//sessionStorage.clear();
+
+// Cookies
+document.cookie =
+  "username=JohnDoe; expires=Fri, 31 Dec 2021 23:59:59 GMT; path=/";
+
+// Delete Cookies, set previous date
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
