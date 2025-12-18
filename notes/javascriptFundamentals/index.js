@@ -1987,7 +1987,7 @@ button {
 // Local Storage - CRUD Operation
 // CRUD - Create, Read, Update, Delete
 
-let items = [];
+//let items = [];
 
 // Create
 //function createItem(item) {
@@ -2005,6 +2005,14 @@ let items = [];
 //}
 
 // Delete
-function deleteItems(index) {
-  items.splice(index, 1);
-}
+//function deleteItems(index) {
+//items.splice(index, 1);
+//}
+
+// local storage
+// setItem
+localStorage.setItem("username", "Jane Doe");
+
+// getItem()
+let username = localStorage.getItem("username");
+console.log(username);
