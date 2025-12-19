@@ -2042,11 +2042,17 @@ button {
 // IndexedDB
 let request = indexedDB.open("Sample DB", 1);
 
-request.onerror = function (event) {
-  console.log("Error opening Database");
-};
+//request.onerror = function (event) {
+//console.log("Error opening Database");
+//};
 
-request.onsuccess = function (event) {
+//request.onsuccess = function (event) {
+//let db = event.target.result;
+//console.log("Database opened successfully");
+//};
+
+request.onupgradeneeded = function (event) {
   let db = event.target.result;
-  console.log("Database opened successfully");
+  let objectStore = db.createObjectStore("customers", { keyPath: "id" });
+  let request = objectStore.add({ id: 1, name: "John Doe" });
 };
