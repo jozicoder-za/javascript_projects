@@ -2040,7 +2040,7 @@ button {
 //console.log(fingerprintExample);
 
 // IndexedDB
-let request = indexedDB.open("Sample DB", 1);
+//let request = indexedDB.open("Sample DB", 1);
 
 //request.onerror = function (event) {
 //console.log("Error opening Database");
@@ -2051,8 +2051,24 @@ let request = indexedDB.open("Sample DB", 1);
 //console.log("Database opened successfully");
 //};
 
-request.onupgradeneeded = function (event) {
-  let db = event.target.result;
-  let objectStore = db.createObjectStore("customers", { keyPath: "id" });
-  let request = objectStore.add({ id: 1, name: "John Doe" });
+//request.onupgradeneeded = function (event) {
+//let db = event.target.result;
+//let objectStore = db.createObjectStore("customers", { keyPath: "id" });
+//let request = objectStore.add({ id: 1, name: "John Doe" });
+//};
+
+let transaction = db.transaction(["customer"], "readwrite");
+let objectStore = transaction("customer");
+let request = objectStore.add({
+  id: 1,
+  name: "John Doe",
+  email: "john@ex.com",
+});
+
+request.oneerror = function (event) {
+  console.log("Error adding data");
+};
+
+request.onsuccess = function (event) {
+  console.log("Data added successfully");
 };
