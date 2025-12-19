@@ -2029,8 +2029,12 @@ button {
 //sessionStorage.clear();
 
 // Cookies
-document.cookie =
-  "username=JohnDoe; expires=Fri, 31 Dec 2021 23:59:59 GMT; path=/";
+//document.cookie =
+//"username=JohnDoe; expires=Fri, 31 Dec 2021 23:59:59 GMT; path=/";
 
 // Delete Cookies, set previous date
-document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+//document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+
+// Browser Fingerprinting
+let fingerprintExample = navigator.userAgent + screen.width + screen.height;
+console.log(fingerprintExample);
