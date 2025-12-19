@@ -2089,17 +2089,24 @@ button {
 //method2() {}
 //}
 
-class Dog {
-  constructor(name) {
-    this.name = name;
-  }
-  //method
-  bark() {
-    console.log(`${this.name} says Woof`);
-  }
-}
+//class Dog {
+//constructor(name) {
+//this.name = name;
+//}
+//method
+//bark() {
+//console.log(`${this.name} says Woof`);
+//}
+//}
 
 // Instance of Dog
-const bobby = new Dog("Gino");
-const dog = new Dog("Danger");
-dog.bark();
+//const bobby = new Dog("Gino");
+//const dog = new Dog("Danger");
+//dog.bark();
+
+// This keyword
+class Dessert {
+  constructor(hasPeanuts) {
+    this.hasPeanuts = hasPeanuts;
+  }
+}
