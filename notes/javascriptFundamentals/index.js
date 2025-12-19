@@ -2036,5 +2036,17 @@ button {
 //document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
 
 // Browser Fingerprinting
-let fingerprintExample = navigator.userAgent + screen.width + screen.height;
-console.log(fingerprintExample);
+//let fingerprintExample = navigator.userAgent + screen.width + screen.height;
+//console.log(fingerprintExample);
+
+// IndexedDB
+let request = indexedDB.open("Sample DB", 1);
+
+request.onerror = function (event) {
+  console.log("Error opening Database");
+};
+
+request.onsuccess = function (event) {
+  let db = event.target.result;
+  console.log("Database opened successfully");
+};
