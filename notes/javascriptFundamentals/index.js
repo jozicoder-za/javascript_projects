@@ -2057,18 +2057,34 @@ button {
 //let request = objectStore.add({ id: 1, name: "John Doe" });
 //};
 
-let transaction = db.transaction(["customer"], "readwrite");
-let objectStore = transaction("customer");
-let request = objectStore.add({
-  id: 1,
-  name: "John Doe",
-  email: "john@ex.com",
-});
+//let transaction = db.transaction(["customer"], "readwrite");
+//let objectStore = transaction("customer");
+//let request = objectStore.add({
+//id: 1,
+//name: "John Doe",
+//email: "john@ex.com",
+//});
 
-request.oneerror = function (event) {
-  console.log("Error adding data");
-};
+//request.oneerror = function (event) {
+//console.log("Error adding data");
+//};
 
-request.onsuccess = function (event) {
-  console.log("Data added successfully");
-};
+//request.onsuccess = function (event) {
+//console.log("Data added successfully");
+//};
+
+// Example
+//let transaction = db.transaction(["customer"]);
+//let objectStore = transaction.objectStore("customer");
+//let request = objectStore.get(1);
+
+//request.oneerror = function (event) {
+//console.log("Error retrieving data");
+//};
+
+// Classes
+class MyClassName {
+  constructor() {}
+  method1() {}
+  method2() {}
+}
