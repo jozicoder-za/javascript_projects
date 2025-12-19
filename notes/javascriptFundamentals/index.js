@@ -2105,8 +2105,22 @@ button {
 //dog.bark();
 
 // This keyword
+//class Dessert {
+//constructor(hasPeanuts) {
+//this.hasPeanuts = hasPeanuts;
+//}
+//}
+
 class Dessert {
-  constructor(hasPeanuts) {
-    this.hasPeanuts = hasPeanuts;
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+  showPrice() {
+    console.log(`The price of ${this.name} is ${this.price}`);
   }
 }
+
+// Instances
+const brownie = new Dessert("Brownie", 5.99);
+brownie.showPrice();
