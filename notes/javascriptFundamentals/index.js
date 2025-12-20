@@ -2125,22 +2125,30 @@ button {
 //const brownie = new Dessert("Brownie", 5.99);
 //brownie.showPrice();
 
-// class inheritance
-class Vehicle {
-  constructor(brand, year) {
-    this.brand = brand;
-    this.year = year;
-  }
-}
+//class inheritance
+//class Vehicle {
+//constructor(brand, year) {
+//this.brand = brand;
+//this.year = year;
+//}
+//}
 
-class Car extends Vehicle {
-  honk() {
-    console.log("Honk!!!");
-  }
-}
+//class Car extends Vehicle {
+//honk() {
+//console.log("Honk!!!");
+//}
+//}
 
 // Instance of Car
-let myCar = new Car("FCC Car", 2019);
-console.log(myCar.brand);
-console.log(myCar.year);
-myCar.honk();
+//let myCar = new Car("FCC Car", 2019);
+//console.log(myCar.brand);
+//console.log(myCar.year);
+//myCar.honk();
+
+// Child  class
+class Car extends Vehicle {
+  constructor(brand, year, numDoors) {
+    super(brand, year);
+    this.numDoors = numDoors;
+  }
+}
