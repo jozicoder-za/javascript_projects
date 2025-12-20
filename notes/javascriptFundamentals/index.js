@@ -2146,9 +2146,14 @@ button {
 //myCar.honk();
 
 // Child  class
-class Car extends Vehicle {
-  constructor(brand, year, numDoors) {
-    super(brand, year);
-    this.numDoors = numDoors;
-  }
-}
+//class Car extends Vehicle {
+//constructor(brand, year, numDoors) {
+//super(brand, year);
+//this.numDoors = numDoors;
+//}
+//}
+
+let myCar = new Car("fcc Motor", 2019, 4);
+console.log(myCar.brand);
+console.log(myCar.year);
+console.log(myCar.numDoors);
