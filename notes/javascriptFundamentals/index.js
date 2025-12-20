@@ -2153,7 +2153,25 @@ button {
 //}
 //}
 
-let myCar = new Car("fcc Motor", 2019, 4);
-console.log(myCar.brand);
-console.log(myCar.year);
-console.log(myCar.numDoors);
+//let myCar = new Car("fcc Motor", 2019, 4);
+//console.log(myCar.brand);
+//console.log(myCar.year);
+//console.log(myCar.numDoors);
+
+// Static Properties and methods
+class Movie {
+  constructor(title, rating) {
+    this.title = title;
+    this.rating = rating;
+  }
+
+  static compareMovies(movieA, movieB) {
+    if (movieA.rating > movieB.rating) {
+      console.log(`${movieA.title} has a higher rating.`);
+    } else if (movieA.rating < movieB.rating) {
+      console.log(`${movieA.title} has a higher rating`);
+    } else {
+      console.log(`These movies have the same rating`);
+    }
+  }
+}
