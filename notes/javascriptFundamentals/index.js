@@ -2111,16 +2111,36 @@ button {
 //}
 //}
 
-class Dessert {
-  constructor(name, price) {
-    this.name = name;
-    this.price = price;
-  }
-  showPrice() {
-    console.log(`The price of ${this.name} is ${this.price}`);
+//class Dessert {
+//constructor(name, price) {
+//this.name = name;
+//this.price = price;
+//}
+//showPrice() {
+//console.log(`The price of ${this.name} is ${this.price}`);
+//}
+//}
+
+// Instances
+//const brownie = new Dessert("Brownie", 5.99);
+//brownie.showPrice();
+
+// class inheritance
+class Vehicle {
+  constructor(brand, year) {
+    this.brand = brand;
+    this.year = year;
   }
 }
 
-// Instances
-const brownie = new Dessert("Brownie", 5.99);
-brownie.showPrice();
+class Car extends Vehicle {
+  honk() {
+    console.log("Honk!!!");
+  }
+}
+
+// Instance of Car
+let myCar = new Car("FCC Car", 2019);
+console.log(myCar.brand);
+console.log(myCar.year);
+myCar.honk();
