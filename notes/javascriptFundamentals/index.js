@@ -2175,3 +2175,8 @@ class Movie {
     }
   }
 }
+
+let movieA = new Movie("Movie A", 80);
+let movieB = new Movie("Movie B", 45);
+console.log(movieA);
+console.log(movieB);
