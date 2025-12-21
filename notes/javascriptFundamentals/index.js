@@ -2159,26 +2159,37 @@ button {
 //console.log(myCar.numDoors);
 
 // Static Properties and methods
-class Movie {
-  constructor(title, rating) {
-    this.title = title;
-    this.rating = rating;
-  }
+//class Movie {
+//constructor(title, rating) {
+//this.title = title;
+//this.rating = rating;
+//}
 
-  static compareMovies(movieA, movieB) {
-    if (movieA.rating > movieB.rating) {
-      console.log(`${movieA.title} has a higher rating.`);
-    } else if (movieA.rating < movieB.rating) {
-      console.log(`${movieA.title} has a higher rating`);
-    } else {
-      console.log(`These movies have the same rating`);
-    }
+//static compareMovies(movieA, movieB) {
+//if (movieA.rating > movieB.rating) {
+//console.log(`${movieA.title} has a higher rating.`);
+//} else if (movieA.rating < movieB.rating) {
+//console.log(`${movieA.title} has a higher rating`);
+//} else {
+//console.log(`These movies have the same rating`);
+//}
+//}
+//}
+
+//let movieA = new Movie("Movie A", 80);
+//let movieB = new Movie("Movie B", 45);
+//console.log(movieA);
+//console.log(movieB);
+
+//Movie.compareMovies(movieA, movieB);
+
+// Factory Method
+class Pizza {
+  constructor(type, price) {
+    this.type = type;
+    this.price = price;
+  }
+  static createMargherita() {
+    return new this("Margherita", 6.99);
   }
 }
-
-let movieA = new Movie("Movie A", 80);
-let movieB = new Movie("Movie B", 45);
-console.log(movieA);
-console.log(movieB);
-
-Movie.compareMovies(movieA, movieB);
