@@ -2193,3 +2193,7 @@ class Pizza {
     return new this("Margherita", 6.99);
   }
 }
+
+let myPizza = Pizza.createMargherita();
+console.log(myPizza);
+console.log(myPizza.type);
