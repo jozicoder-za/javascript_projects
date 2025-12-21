@@ -2207,3 +2207,9 @@ class Pizza {
     Pizza.numberOfPizzaSold++;
   }
 }
+
+let pizza1 = new Pizza("Margherita");
+let pizza2 = new Pizza("Neopolitan");
+
+console.log(pizza1);
+console.log(pizza2);
