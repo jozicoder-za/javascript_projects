@@ -2184,16 +2184,26 @@ button {
 //Movie.compareMovies(movieA, movieB);
 
 // Factory Method
+//class Pizza {
+//constructor(type, price) {
+//this.type = type;
+//this.price = price;
+//}
+//static createMargherita() {
+//return new this("Margherita", 6.99);
+//}
+//}
+
+//let myPizza = Pizza.createMargherita();
+//console.log(myPizza);
+//console.log(myPizza.type);
+
+// Static method and static keyword
 class Pizza {
-  constructor(type, price) {
+  static numberOfPizzaSold = 0;
+
+  constructor(type) {
     this.type = type;
-    this.price = price;
-  }
-  static createMargherita() {
-    return new this("Margherita", 6.99);
+    Pizza.numberOfPizzaSold++;
   }
 }
-
-let myPizza = Pizza.createMargherita();
-console.log(myPizza);
-console.log(myPizza.type);
