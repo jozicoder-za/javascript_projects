@@ -2199,17 +2199,29 @@ button {
 //console.log(myPizza.type);
 
 // Static method and static keyword
-class Pizza {
-  static numberOfPizzaSold = 0;
+//class Pizza {
+//static numberOfPizzaSold = 0;
 
-  constructor(type) {
-    this.type = type;
-    Pizza.numberOfPizzaSold++;
+//constructor(type) {
+//this.type = type;
+//Pizza.numberOfPizzaSold++;
+//}
+//}
+
+//let pizza1 = new Pizza("Margherita");
+//let pizza2 = new Pizza("Neopolitan");
+
+//console.log(pizza1);
+//console.log(pizza2);
+//console.log(Pizza.numberOfPizzaSold);
+
+// Recursion
+const recursionCountDown = (number) => {
+  if (number < 1) {
+    return;
   }
-}
+  console.log(number);
+  recursionCountDown(number - 1);
+};
 
-let pizza1 = new Pizza("Margherita");
-let pizza2 = new Pizza("Neopolitan");
-
-console.log(pizza1);
-console.log(pizza2);
+recursionCountDown(5);
