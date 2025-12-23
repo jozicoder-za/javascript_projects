@@ -2245,8 +2245,21 @@ button {
 
 // Impure function
 // modifying global variables
-let total = 0;
-function addTotal(value) {
-  total += value;
-  return total;
+//let total = 0;
+//function addTotal(value) {
+//total += value;
+//return total;
+//}
+
+// console.log interacts with outsite operation
+//function greet(name) {
+//console.log(`Hello, ${name}`);
+//}
+
+//greet("Alice");
+
+// rewrite with functional programming
+function greet(name) {
+  return `Hello, ${name}`;
 }
+console.log(greet("Alice"));
