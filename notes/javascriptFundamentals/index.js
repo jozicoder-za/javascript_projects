@@ -2259,7 +2259,14 @@ button {
 //greet("Alice");
 
 // rewrite with functional programming
-function greet(name) {
-  return `Hello, ${name}`;
+//function greet(name) {
+//return `Hello, ${name}`;
+//}
+//console.log(greet("Alice"));
+
+// Currying
+function add(a, b) {
+  return a + b;
 }
-console.log(greet("Alice"));
+
+console.log(add(3, 4));
