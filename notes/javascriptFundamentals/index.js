@@ -2239,6 +2239,14 @@ button {
 
 // functiona programming
 // pure function
-function add(a, b) {
-  return a + b;
+//function add(a, b) {
+//return a + b;
+//}
+
+// Impure function
+// modifying global variables
+let total = 0;
+function addTotal(value) {
+  total += value;
+  return total;
 }
