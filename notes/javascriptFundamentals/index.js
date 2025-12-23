@@ -2227,12 +2227,18 @@ button {
 //recursionCountDown(5);
 
 // Swap the order for the recursion call
-const recursiveCountUp = (number) => {
-  if (number < 1) {
-    return;
-  }
-  recursiveCountUp(number - 1);
-  console.log(number);
-};
+//const recursiveCountUp = (number) => {
+//if (number < 1) {
+//return;
+//}
+//recursiveCountUp(number - 1);
+//console.log(number);
+//};
 
-recursiveCountUp(5);
+//recursiveCountUp(5);
+
+// functiona programming
+// pure function
+function add(a, b) {
+  return a + b;
+}
