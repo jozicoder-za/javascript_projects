@@ -2216,12 +2216,23 @@ button {
 //console.log(Pizza.numberOfPizzaSold);
 
 // Recursion
-const recursionCountDown = (number) => {
+//const recursionCountDown = (number) => {
+//if (number < 1) {
+//return;
+//}
+//console.log(number);
+//recursionCountDown(number - 1);
+//};
+
+//recursionCountDown(5);
+
+// Swap the order for the recursion call
+const recursiveCountUp = (number) => {
   if (number < 1) {
     return;
   }
+  recursiveCountUp(number - 1);
   console.log(number);
-  recursionCountDown(number - 1);
 };
 
-recursionCountDown(5);
+recursiveCountUp(5);
