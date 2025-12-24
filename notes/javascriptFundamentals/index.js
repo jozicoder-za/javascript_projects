@@ -2293,3 +2293,10 @@ button {
 //email: "john@example.com",
 //}),
 //});
+
+const aPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Operation successfull");
+  }, 1000);
+});
+console.log(aPromise);
