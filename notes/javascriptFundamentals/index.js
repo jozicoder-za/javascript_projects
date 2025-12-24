@@ -2299,4 +2299,12 @@ const aPromise = new Promise((resolve, reject) => {
     resolve("Operation successfull");
   }, 1000);
 });
-console.log(aPromise);
+//console.log(aPromise);
+
+aPromise
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
