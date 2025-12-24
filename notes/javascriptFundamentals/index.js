@@ -2271,13 +2271,25 @@ button {
 
 //console.log(add(3, 4));
 
-function curriedAdd(a) {
-  return function (b) {
-    return a + b;
-  };
-}
+//function curriedAdd(a) {
+//return function (b) {
+//return a + b;
+//};
+//}
 
-console.log(curriedAdd(3)(4));
-const addFive = curriedAdd(5);
-console.log(addFive(10));
-console.log(addFive(20));
+//console.log(curriedAdd(3)(4));
+//const addFive = curriedAdd(5);
+//console.log(addFive(10));
+//console.log(addFive(20));
+
+// Asynchronous Javascript
+//fetch("https://api.example.com/data/user", {
+//method: "POST",
+//headers: {
+//"Content-Type": "application/json",
+//},
+//body: JSON.stringify({
+//name: "John Doe",
+//email: "john@example.com",
+//}),
+//});
