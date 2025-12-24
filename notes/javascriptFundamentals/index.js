@@ -2320,11 +2320,23 @@ button {
 //.catch((error) => console.log("Error: ", error));
 
 // async/await
-async function delayedGreeting(name) {
-  console.log("A messenger entered the chat...");
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-  console.log(`Hello, ${name}!`);
+//async function delayedGreeting(name) {
+//console.log("A messenger entered the chat...");
+//await new Promise((resolve) => setTimeout(resolve, 2000));
+//console.log(`Hello, ${name}!`);
+//}
+
+//delayedGreeting("Alice");
+//console.log("First Printed Message!");
+
+async function fetchUserData() {
+  try {
+    let response = await fetch("https://api.example.com/users");
+    let userData = await response.json();
+    console.log(userData);
+  } catch (error) {
+    console.log("Error fetching user data:", error);
+  }
 }
 
-delayedGreeting("Alice");
-console.log("First Printed Message!");
+fetchUserData();
