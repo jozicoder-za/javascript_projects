@@ -2294,17 +2294,27 @@ button {
 //}),
 //});
 
-const aPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Operation successfull");
-  }, 1000);
-});
+//const aPromise = new Promise((resolve, reject) => {
+//setTimeout(() => {
+//resolve("Operation successfull");
+//}, 1000);
+//});
 //console.log(aPromise);
 
-aPromise
-  .then((result) => {
-    console.log(result);
+//aPromise
+//.then((result) => {
+//console.log(result);
+//})
+//.catch((error) => {
+//console.log(error);
+//});
+
+fetch("https://api.example.com/data")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    return fetch("https://api.example.com/data2");
   })
-  .catch((error) => {
-    console.log(error);
-  });
+  .then((response) => response.json())
+  .then((data2) => console.log(data2))
+  .catch((error) => console.log("Error: ", error));
