@@ -2309,12 +2309,22 @@ button {
 //console.log(error);
 //});
 
-fetch("https://api.example.com/data")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    return fetch("https://api.example.com/data2");
-  })
-  .then((response) => response.json())
-  .then((data2) => console.log(data2))
-  .catch((error) => console.log("Error: ", error));
+//fetch("https://api.example.com/data")
+//.then((response) => response.json())
+//.then((data) => {
+//console.log(data);
+//return fetch("https://api.example.com/data2");
+//})
+//.then((response) => response.json())
+//.then((data2) => console.log(data2))
+//.catch((error) => console.log("Error: ", error));
+
+// async/await
+async function delayedGreeting(name) {
+  console.log("A messenger entered the chat...");
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  console.log(`Hello, ${name}!`);
+}
+
+delayedGreeting("Alice");
+console.log("First Printed Message!");
