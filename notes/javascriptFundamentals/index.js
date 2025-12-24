@@ -2265,8 +2265,19 @@ button {
 //console.log(greet("Alice"));
 
 // Currying
-function add(a, b) {
-  return a + b;
+//function add(a, b) {
+//return a + b;
+//}
+
+//console.log(add(3, 4));
+
+function curriedAdd(a) {
+  return function (b) {
+    return a + b;
+  };
 }
 
-console.log(add(3, 4));
+console.log(curriedAdd(3)(4));
+const addFive = curriedAdd(5);
+console.log(addFive(10));
+console.log(addFive(20));
