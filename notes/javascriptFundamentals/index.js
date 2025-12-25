@@ -2329,14 +2329,14 @@ button {
 //delayedGreeting("Alice");
 //console.log("First Printed Message!");
 
-async function fetchUserData() {
-  try {
-    let response = await fetch("https://api.example.com/users");
-    let userData = await response.json();
-    console.log(userData);
-  } catch (error) {
-    console.log("Error fetching user data:", error);
-  }
-}
+//async function fetchUserData() {
+//try {
+//let response = await fetch("https://api.example.com/users");
+//let userData = await response.json();
+//console.log(userData);
+//} catch (error) {
+//console.log("Error fetching user data:", error);
+//}
+//}
 
-fetchUserData();
+//fetchUserData();
