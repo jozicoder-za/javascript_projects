@@ -3,3 +3,7 @@
 console.log(typeof "Hello");
 console.log(typeof 42);
 console.log(typeof true);
+
+// Q2 - What is the output
+let x;
+console.log(x);
