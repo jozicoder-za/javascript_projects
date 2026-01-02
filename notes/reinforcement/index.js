@@ -9,9 +9,17 @@ let x;
 console.log(x);
 
 // Q3 - Data Type and Type Coercion
-console.log(1 + "2" + "2");
-console.log(1 + +"2" + "2");
-console.log(1 + -"1" + "2");
-console.log(+"1" + "1" + "2");
-console.log("A" - "B" + "2");
-console.log("A" - "B" + 2);
+//console.log(1 + "2" + "2");
+//console.log(1 + +"2" + "2");
+//console.log(1 + -"1" + "2");
+//console.log(+"1" + "1" + "2");
+//console.log("A" - "B" + "2");
+//console.log("A" - "B" + 2);
+
+// Q4 - Equality Operators
+console.log(1 == "1");
+console.log(1 === "1");
+console.log(null == undefined);
+console.log(null === undefined);
+console.log(NaN == NaN);
+console.log(Object.is(NaN, NaN));
