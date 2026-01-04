@@ -39,10 +39,14 @@
 //console.log(typeof null);
 
 // modifying based on scope
-let x = 10;
+//let x = 10;
 
-if (true) {
-  let x = 20;
-}
+//if (true) {
+//let x = 20;
+//}
 
-console.log(x);
+//console.log(x);
+
+// logging hosting
+console.log(a);
+var a = 5;
