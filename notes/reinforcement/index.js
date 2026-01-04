@@ -48,5 +48,16 @@
 //console.log(x);
 
 // logging hosting
-console.log(a);
-var a = 5;
+//console.log(a);
+//var a = 5;
+
+// Regular vs Arrow function
+function regular() {
+  console.log(this);
+}
+
+const regularF = () => {
+  console.log(this);
+};
+regular();
+regularF();
