@@ -63,5 +63,7 @@
 //regularF();
 
 // Arrow function inheritance
-const add = (a, b) => a + b;
-console.log(add(2, 3));
+//const add = (a, b) => a + b;
+//console.log(add(2, 3));
+
+console.log([1, 2, 3].map((num) => num * 2));
