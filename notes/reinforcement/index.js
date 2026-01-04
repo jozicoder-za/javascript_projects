@@ -52,12 +52,16 @@
 //var a = 5;
 
 // Regular vs Arrow function
-function regular() {
-  console.log(this);
-}
+//function regular() {
+//console.log(this);
+//}
 
-const regularF = () => {
-  console.log(this);
-};
-regular();
-regularF();
+//const regularF = () => {
+//console.log(this);
+//};
+//regular();
+//regularF();
+
+// Arrow function inheritance
+const add = (a, b) => a + b;
+console.log(add(2, 3));
