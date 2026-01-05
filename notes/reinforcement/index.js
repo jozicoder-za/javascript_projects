@@ -69,7 +69,10 @@
 //console.log([1, 2, 3].map((num) => num * 2));
 
 // Referencing an object
-const obj = { a: 1 };
-const ref = obj;
-ref.a = 2;
-console.log(obj.a);
+//const obj = { a: 1 };
+//const ref = obj;
+//ref.a = 2;
+//console.log(obj.a);
+
+// Shallow copy and object
+const copy = Object.assign({}, myObj);
