@@ -82,6 +82,7 @@
 //const { name: firstName, age } = user;
 //console.log(firstName, age);
 
-const name = "marry";
-console.log(name.toUpperCase());
-console.log(name);
+// Iteration with the setTimeout function
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 0);
+}
