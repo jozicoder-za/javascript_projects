@@ -75,4 +75,13 @@
 //console.log(obj.a);
 
 // Shallow copy and object
-const copy = Object.assign({}, myObj);
+//const copy = Object.assign({}, myObj);
+
+// Object Destructuring
+//const user = { name: "Alex", age: 30 };
+//const { name: firstName, age } = user;
+//console.log(firstName, age);
+
+const name = "marry";
+console.log(name.toUpperCase());
+console.log(name);
