@@ -83,6 +83,23 @@
 //console.log(firstName, age);
 
 // Iteration with the setTimeout function
-for (let i = 0; i < 3; i++) {
-  setTimeout(() => console.log(i), 0);
+//for (let i = 0; i < 3; i++) {
+//setTimeout(() => console.log(i), 0);
+//}
+
+// While loop amplified
+
+// Switch statement with a twist
+const x = 2;
+
+switch (x) {
+  case 1:
+    console.log("one");
+  case 2:
+    console.log("two");
+  case 3:
+    console.log("three");
+    break;
+  default:
+    console.log("default");
 }
