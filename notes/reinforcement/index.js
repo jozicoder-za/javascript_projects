@@ -105,5 +105,12 @@
 //}
 
 // Short Circuiting
-const result = false && console.log("Hello");
-console.log(result);
+//const result = false && console.log("Hello");
+//console.log(result);
+
+// empty return statement
+function test() {
+  return;
+}
+
+console.log(test());
