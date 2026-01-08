@@ -109,8 +109,20 @@
 //console.log(result);
 
 // empty return statement
-function test() {
-  return;
-}
+//function test() {
+//return;
+//}
 
-console.log(test());
+//console.log(test());
+
+// Call a function with undefined parameter
+//function greet(name = "Guest") {
+//console.log(name);
+//}
+
+//greet(null);
+
+// spread functionality withing a function
+const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4];
+console.log(arr2);
