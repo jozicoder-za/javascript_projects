@@ -128,8 +128,20 @@
 //console.log(arr2);
 
 // setting function default values
-function foo(a, b = 2) {
-  console.log(a + b);
+//function foo(a, b = 2) {
+//console.log(a + b);
+//}
+
+//foo(3);
+// closure pattern
+function outer() {
+  let count = 0;
+  return function () {
+    count++;
+    return count;
+  };
 }
 
-foo(3);
+const counter = outer();
+console.log(counter());
+console.log(counter());
