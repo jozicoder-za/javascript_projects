@@ -147,11 +147,19 @@
 //console.log(counter());
 
 // global object
+//const obj = {
+//value: 42,
+//getValue() {
+//return this.value;
+//},
+//};
+
+//console.log(obj.getValue());
+
+// arrow function and this keyword
 const obj = {
-  value: 42,
-  getValue() {
-    return this.value;
-  },
+  value: 10,
+  getValue: () => this.value,
 };
 
 console.log(obj.getValue());
