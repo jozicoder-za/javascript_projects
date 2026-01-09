@@ -165,6 +165,13 @@
 //console.log(obj.getValue());
 
 // Promises
-Promise.resolve(5)
-  .then((value) => value * 2)
-  .then(console.log);
+//Promise.resolve(5)
+//.then((value) => value * 2)
+//.then(console.log);
+
+// Async await application
+async function foo() {
+  return 42;
+}
+
+foo().then(console.log);
