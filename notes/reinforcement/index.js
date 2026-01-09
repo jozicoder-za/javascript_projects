@@ -157,9 +157,14 @@
 //console.log(obj.getValue());
 
 // arrow function and this keyword
-const obj = {
-  value: 10,
-  getValue: () => this.value,
-};
+//const obj = {
+//value: 10,
+//getValue: () => this.value,
+//};
 
-console.log(obj.getValue());
+//console.log(obj.getValue());
+
+// Promises
+Promise.resolve(5)
+  .then((value) => value * 2)
+  .then(console.log);
