@@ -134,14 +134,24 @@
 
 //foo(3);
 // closure pattern
-function outer() {
-  let count = 0;
-  return function () {
-    count++;
-    return count;
-  };
-}
+//function outer() {
+//let count = 0;
+//return function () {
+//count++;
+//return count;
+//};
+//}
 
-const counter = outer();
-console.log(counter());
-console.log(counter());
+//const counter = outer();
+//console.log(counter());
+//console.log(counter());
+
+// global object
+const obj = {
+  value: 42,
+  getValue() {
+    return this.value;
+  },
+};
+
+console.log(obj.getValue());
