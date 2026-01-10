@@ -186,10 +186,17 @@
 //console.log(user.theme ?? "light-theme");
 
 // asynchronous timeline
-console.log("start");
+//console.log("start");
 
-setTimeout(() => console.log("timeout"), 0);
+//setTimeout(() => console.log("timeout"), 0);
 
-Promise.resolve().then(() => console.log("promise"));
+//Promise.resolve().then(() => console.log("promise"));
 
-console.log("end");
+//console.log("end");
+
+// creating a custom made error message
+try {
+  throw new Error("oops");
+} catch (e) {
+  console.log(e.message);
+}
