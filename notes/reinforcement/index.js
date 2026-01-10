@@ -176,11 +176,20 @@
 
 //foo().then(console.log);
 
-// coelescine nullish
-const user = {
-  theme: null,
-  userSetup: 5,
-  gamer: false,
-};
+// coalesce nullish
+//const user = {
+//theme: null,
+//userSetup: 5,
+//gamer: false,
+//};
 
-console.log(user.theme ?? "light-theme");
+//console.log(user.theme ?? "light-theme");
+
+// asynchronous timeline
+console.log("start");
+
+setTimeout(() => console.log("timeout"), 0);
+
+Promise.resolve().then(() => console.log("promise"));
+
+console.log("end");
