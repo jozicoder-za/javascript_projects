@@ -170,8 +170,17 @@
 //.then(console.log);
 
 // Async await application
-async function foo() {
-  return 42;
-}
+//async function foo() {
+//return 42;
+//}
 
-foo().then(console.log);
+//foo().then(console.log);
+
+// coelescine nullish
+const user = {
+  theme: null,
+  userSetup: 5,
+  gamer: false,
+};
+
+console.log(user.theme ?? "light-theme");
