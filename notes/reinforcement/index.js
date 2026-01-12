@@ -211,7 +211,12 @@
 //console.log(i);
 //}
 
-for (let i = 1; i < 6; i++) {
-  if (i === 4) break;
-  console.log(i);
+//for (let i = 1; i < 6; i++) {
+//if (i === 4) break;
+//console.log(i);
+//}
+
+const shoppingList = { tomatoes: 4, apples: 10 };
+for (const item in shoppingList) {
+  console.log(item);
 }
