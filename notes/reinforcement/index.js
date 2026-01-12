@@ -195,8 +195,18 @@
 //console.log("end");
 
 // creating a custom made error message
-try {
-  throw new Error("oops");
-} catch (e) {
-  console.log(e.message);
+//try {
+//throw new Error("oops");
+//} catch (e) {
+//console.log(e.message);
+//}
+
+for (let i = 0; i < 25; i += 2) {
+  if (i % 5 === 0) {
+    continue;
+  }
+  if (i % 13 === 0) {
+    break;
+  }
+  console.log(i);
 }
