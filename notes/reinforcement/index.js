@@ -201,12 +201,17 @@
 //console.log(e.message);
 //}
 
-for (let i = 0; i < 25; i += 2) {
-  if (i % 5 === 0) {
-    continue;
-  }
-  if (i % 13 === 0) {
-    break;
-  }
+//for (let i = 0; i < 25; i += 2) {
+//if (i % 5 === 0) {
+//continue;
+//}
+//if (i % 13 === 0) {
+//break;
+//}
+//console.log(i);
+//}
+
+for (let i = 1; i < 6; i++) {
+  if (i === 4) break;
   console.log(i);
 }
