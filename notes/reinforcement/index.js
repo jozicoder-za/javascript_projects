@@ -232,18 +232,32 @@
 //}
 
 // Higher order function
-function operateOnArray(arr, operation) {
-  const result = [];
-  for (let i = 0; i < arr.length; i++) {
-    result.push(operation(arr[i]));
-  }
-  return result;
-}
+//function operateOnArray(arr, operation) {
+//const result = [];
+//for (let i = 0; i < arr.length; i++) {
+//result.push(operation(arr[i]));
+//}
+//return result;
+//}
 
-function double(x) {
-  return x * 2;
-}
+//function double(x) {
+//return x * 2;
+//}
 
-const numbers = [1, 2, 3, 4, 5];
-const doubleNumbers = operateOnArray(numbers, double);
-console.log(doubleNumbers);
+//const numbers = [1, 2, 3, 4, 5];
+//const doubleNumbers = operateOnArray(numbers, double);
+//console.log(doubleNumbers);
+
+// Higher order function method
+const numbers = [1, 1, 1, 1, 1];
+let sum = 0;
+const forEachRes = numbers.forEach((num) => {
+  return (sum += num);
+});
+
+const mapRes = numbers.map((num) => {
+  return (sum += num);
+});
+
+console.log(forEachRes);
+console.log(mapRes);
