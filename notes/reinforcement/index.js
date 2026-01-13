@@ -249,15 +249,18 @@
 //console.log(doubleNumbers);
 
 // Higher order function method
-const numbers = [1, 1, 1, 1, 1];
-let sum = 0;
-const forEachRes = numbers.forEach((num) => {
-  return (sum += num);
-});
+//const numbers = [1, 1, 1, 1, 1];
+//let sum = 0;
+//const forEachRes = numbers.forEach((num) => {
+//return (sum += num);
+//});
 
-const mapRes = numbers.map((num) => {
-  return (sum += num);
-});
+//const mapRes = numbers.map((num) => {
+//return (sum += num);
+//});
 
-console.log(forEachRes);
-console.log(mapRes);
+//console.log(forEachRes);
+//console.log(mapRes);
+
+// Unconventional sorting
+console.log([, undefined, "a", "b", { 20: 5 }].sort());
