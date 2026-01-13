@@ -263,4 +263,12 @@
 //console.log(mapRes);
 
 // Unconventional sorting
-console.log([, undefined, "a", "b", { 20: 5 }].sort());
+//console.log([, undefined, "a", "b", { 20: 5 }].sort());
+
+const originalArray = [{ id: 1 }, { id: 2 }, { id: 3 }];
+const filteredArray = originalArray.filter((item) => item.id > 1);
+console.log(filteredArray);
+filteredArray[0].id = 4;
+console.log(filteredArray);
+console.log("original array");
+console.log(originalArray);
