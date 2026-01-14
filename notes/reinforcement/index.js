@@ -277,10 +277,14 @@
 //const shortWords = words.filter((word) => word.length <= 5);
 //console.log(shortWords);
 
-setTimeout(() => {
-  console.log("setTimeout wins");
-}, 0);
+//setTimeout(() => {
+//console.log("setTimeout wins");
+//}, 0);
 
-queueMicrotask(() => {
-  console.log("QueueMicrotask wins");
-});
+//queueMicrotask(() => {
+//console.log("QueueMicrotask wins");
+//});
+
+const x = new String("tricky");
+const y = x;
+console.log(x === y);
