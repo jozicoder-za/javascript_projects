@@ -295,5 +295,13 @@
 
 //console.log(goodbye());
 
-function myFunc() {}
-console.log(typeof myFunc);
+// Q 9.
+//function myFunc() {}
+//console.log(typeof myFunc);
+
+// Q 10
+let goodbye = async () => {
+  return "Goodbye";
+};
+
+goodbye().then(console.log);
