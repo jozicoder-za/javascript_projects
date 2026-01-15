@@ -285,6 +285,15 @@
 //console.log("QueueMicrotask wins");
 //});
 
-const x = new String("tricky");
-const y = x;
-console.log(x === y);
+//const x = new String("tricky");
+//const y = x;
+//console.log(x === y);
+
+//async function goodbye() {
+//return "goodbye";
+//}
+
+//console.log(goodbye());
+
+function myFunc() {}
+console.log(typeof myFunc);
