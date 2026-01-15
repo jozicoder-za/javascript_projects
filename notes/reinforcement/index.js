@@ -300,8 +300,18 @@
 //console.log(typeof myFunc);
 
 // Q 10
-let goodbye = async () => {
-  return "Goodbye";
-};
+//let goodbye = async () => {
+//return "Holla Dhlamini";
+//};
 
-goodbye().then(console.log);
+//goodbye().then(console.log);
+
+// Q 13
+
+let x = 10;
+function myFunc(y) {
+  y = 12;
+}
+
+console.log(myFunc(x));
+console.log(x);
