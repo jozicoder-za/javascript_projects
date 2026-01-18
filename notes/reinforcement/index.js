@@ -308,10 +308,23 @@
 
 // Q 13
 
-let x = 10;
-function myFunc(y) {
-  y = 12;
-}
+//let x = 10;
+//function myFunc(y) {
+//y = 12;
+//}
 
-console.log(myFunc(x));
-console.log(x);
+//console.log(myFunc(x));
+//console.log(x);
+
+//const user = {
+//isApp: true,
+//num: 8,
+//isReady: null,
+//};
+
+//console.log(user.isReady ?? "Blue");
+
+// Continue Q19
+
+// Continue Q 20
+console.log(BigInt(1000000000000000000) === 10000000000000000000);
