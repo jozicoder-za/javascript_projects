@@ -327,4 +327,11 @@
 // Continue Q19
 
 // Continue Q 20
-console.log(BigInt(1000000000000000000) === 10000000000000000000);
+//console.log(BigInt(1000000000000000000) === 10000000000000000000);
+
+// Q 23 - Function without return statement
+function add(a, b) {
+  a + b;
+}
+
+console.log(add(5, 6));
