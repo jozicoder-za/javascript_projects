@@ -360,12 +360,24 @@
 //console.log(spreadMap);
 
 // Q 38 - Function returning a value
-function getName() {
-  var name = "Jon";
-  function printName() {
-    console.log(name);
-  }
-  printName();
-}
+//function getName() {
+//var name = "Jon";
+//function printName() {
+//console.log(name);
+//}
+//printName();
+//}
 
-getName();
+//getName();
+
+// Q 41 - Recursive Function
+const test = (incrementer) => {
+  if (incrementer < 0) {
+    return;
+  }
+  console.log("first:" + incrementer);
+  test(incrementer - 1);
+  console.log("second" + incrementer);
+};
+
+test(2);
