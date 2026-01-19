@@ -345,16 +345,27 @@
 //console.log(map.get({}));
 
 // Q 32 - Unique values from arrays
-let map1 = new Map([
-  ["a", 1],
-  ["b", 1],
-  ["c", 1],
-]);
+//let map1 = new Map([
+//["a", 1],
+//["b", 1],
+//["c", 1],
+//]);
 
-let map2 = new Map([
-  ["a", 2],
-  ["b", 2],
-]);
+//let map2 = new Map([
+// ["a", 2],
+//["b", 2],
+//]);
 
-let spreadMap = new Map([...map1, ...map2]);
-console.log(spreadMap);
+//let spreadMap = new Map([...map1, ...map2]);
+//console.log(spreadMap);
+
+// Q 38 - Function returning a value
+function getName() {
+  var name = "Jon";
+  function printName() {
+    console.log(name);
+  }
+  printName();
+}
+
+getName();
