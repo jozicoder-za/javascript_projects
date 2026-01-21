@@ -371,13 +371,27 @@
 //getName();
 
 // Q 41 - Recursive Function
-const test = (incrementer) => {
-  if (incrementer < 0) {
-    return;
-  }
-  console.log("first:" + incrementer);
-  test(incrementer - 1);
-  console.log("second" + incrementer);
-};
+//const test = (incrementer) => {
+//if (incrementer < 0) {
+//return;
+//}
+//console.log("first:" + incrementer);
+//test(incrementer - 1);
+//console.log("second" + incrementer);
+//};
 
-test(2);
+//test(2);
+
+// Continue Q 43
+function resolveQuickly(x) {
+  return new Promise((resolve) => {
+    console.log(x);
+  });
+}
+
+async function asyncTest() {
+  var x = resolveQuickly(10);
+  console.log(5);
+}
+
+asyncTest();
