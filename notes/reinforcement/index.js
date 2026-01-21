@@ -383,15 +383,26 @@
 //test(2);
 
 // Continue Q 43
-function resolveQuickly(x) {
-  return new Promise((resolve) => {
-    console.log(x);
-  });
-}
+//function resolveQuickly(x) {
+//return new Promise((resolve) => {
+//console.log(x);
+//});
+//}
 
-async function asyncTest() {
-  var x = resolveQuickly(10);
-  console.log(5);
-}
+//async function asyncTest() {
+//var x = resolveQuickly(10);
+//console.log(5);
+//}
 
-asyncTest();
+//asyncTest();
+
+const arr = [5, 10, 12, 4, 2];
+
+const minVal = arr.reduce((acc, elem) => {
+  if (acc > elem) {
+    return elem;
+  }
+  return acc;
+});
+
+console.log(minVal);
