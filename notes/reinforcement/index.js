@@ -396,13 +396,26 @@
 
 //asyncTest();
 
-const arr = [5, 10, 12, 4, 2];
+//const arr = [5, 10, 12, 4, 2];
 
-const minVal = arr.reduce((acc, elem) => {
-  if (acc > elem) {
-    return elem;
-  }
-  return acc;
-});
+//const minVal = arr.reduce((acc, elem) => {
+//if (acc > elem) {
+//return elem;
+//}
+//return acc;
+//});
 
-console.log(minVal);
+//console.log(minVal);
+
+//console.log(Object.freeze());
+
+let scope = "global";
+let getScope = () => {
+  var scope = "local";
+  const inner = () => {
+    return scope;
+  };
+  return inner;
+};
+
+console.log(getScope()());
