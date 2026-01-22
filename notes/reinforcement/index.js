@@ -422,13 +422,20 @@
 
 // Q 64 - Closure that increment each time called
 
-let increment = (function () {
-  let incrementer = 0;
-  return function () {
-    incrementer += 1;
-    return incrementer;
-  };
-})();
+//let increment = (function () {
+//let incrementer = 0;
+//return function () {
+//incrementer += 1;
+//return incrementer;
+//};
+//})();
 
-console.log(increment());
-console.log(increment());
+//console.log(increment());
+//console.log(increment());
+
+function myFunction(x, y) {
+  const arr = Array.prototype.slice.call(arguments);
+  return arr.length;
+}
+
+console.log(myFunction(5));
