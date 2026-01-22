@@ -433,9 +433,13 @@
 //console.log(increment());
 //console.log(increment());
 
-function myFunction(x, y) {
-  const arr = Array.prototype.slice.call(arguments);
-  return arr.length;
-}
+//function myFunction(x, y) {
+//const arr = Array.prototype.slice.call(arguments);
+//return arr.length;
+//}
 
-console.log(myFunction(5));
+//console.log(myFunction(5));
+
+let xyz = "";
+xyz ||= "abc";
+console.log(xyz);
