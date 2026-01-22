@@ -409,13 +409,26 @@
 
 //console.log(Object.freeze());
 
-let scope = "global";
-let getScope = () => {
-  var scope = "local";
-  const inner = () => {
-    return scope;
-  };
-  return inner;
-};
+//let scope = "global";
+//let getScope = () => {
+//var scope = "local";
+//const inner = () => {
+//return scope;
+//};
+//return inner;
+//};
 
-console.log(getScope()());
+//console.log(getScope()());
+
+// Q 64 - Closure that increment each time called
+
+let increment = (function () {
+  let incrementer = 0;
+  return function () {
+    incrementer += 1;
+    return incrementer;
+  };
+})();
+
+console.log(increment());
+console.log(increment());
