@@ -440,6 +440,10 @@
 
 //console.log(myFunction(5));
 
-let xyz = "";
-xyz ||= "abc";
-console.log(xyz);
+//let xyz = "";
+//xyz ||= "abc";
+//console.log(xyz);
+
+// Return final comma separated value
+let x = (1, 2, 3);
+console.log(x);
