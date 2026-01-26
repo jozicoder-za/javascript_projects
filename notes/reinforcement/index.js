@@ -448,7 +448,18 @@
 //let x = (1, 2, 3);
 //console.log(x);
 
-setTimeout(function recur() {
-  console.log("called me");
-  setTimeout(recur, 1000);
-}, 1000);
+//setTimeout(function recur() {
+//console.log("called me");
+//setTimeout(recur, 1000);
+//}, 1000);
+
+//console.log(x);
+//x = 5;
+//if (x) {
+//var x = 10;
+//console.log(x);
+//}
+
+let a = 8;
+a >>>= 3;
+console.log(a);
