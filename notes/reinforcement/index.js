@@ -464,14 +464,23 @@
 //a >>>= 3;
 //console.log(a);
 
-let person = {
-  age: 25,
-  name: "Justin",
+//let person = {
+//age: 25,
+//name: "Justin",
+//};
+
+//const beRef = (myObj) => {
+//myObj.age = 30;
+//};
+
+//beRef(person);
+//console.log(person.age);
+
+const dog = {
+  color: "brown",
+  breed: {
+    pure: true,
+  },
 };
 
-const beRef = (myObj) => {
-  myObj.age = 30;
-};
-
-beRef(person);
-console.log(person.age);
+console.log(dog.hair.short);
