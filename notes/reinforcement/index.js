@@ -460,6 +460,18 @@
 //console.log(x);
 //}
 
-let a = 8;
-a >>>= 3;
-console.log(a);
+//let a = 8;
+//a >>>= 3;
+//console.log(a);
+
+let person = {
+  age: 25,
+  name: "Justin",
+};
+
+const beRef = (myObj) => {
+  myObj.age = 30;
+};
+
+beRef(person);
+console.log(person.age);
