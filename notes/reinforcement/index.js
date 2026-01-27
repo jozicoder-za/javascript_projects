@@ -500,3 +500,13 @@ const students = [
   { name: "Charlie", score: 65 },
   { name: "Diana", score: 88 },
 ];
+
+function analyzeScores(students) {
+  let result = [];
+  for (const item of students) {
+    result.push(item);
+  }
+  return result;
+}
+
+console.log(analyzeScores(students));
