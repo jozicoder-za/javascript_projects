@@ -476,11 +476,20 @@
 //beRef(person);
 //console.log(person.age);
 
-const dog = {
-  color: "brown",
-  breed: {
-    pure: true,
-  },
-};
+//const dog = {
+//color: "brown",
+//breed: {
+//pure: true,
+//},
+//};
 
-console.log(dog.hair.short);
+//console.log(dog.hair.short);
+
+// Coding Challenge - Student Score Analyzer
+// Description
+/* You are given an array of student object. 
+   Create a function that will analyze the following
+   1. averageScore
+   2. highest Scorer
+   3. passedStudent
+*/
