@@ -493,3 +493,10 @@
    2. highest Scorer
    3. passedStudent
 */
+
+const students = [
+  { name: "Alice", score: 78 },
+  { name: "Bob", score: 92 },
+  { name: "Charlie", score: 65 },
+  { name: "Diana", score: 88 },
+];
