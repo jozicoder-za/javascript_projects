@@ -538,3 +538,12 @@
   - smallOrders
   - totalItemsSold
 */
+
+/*
+{
+ totalRevenue: 425,
+ largestOrderCustomer: "Mike",
+ smallOrders: ["Anna"],
+ totalItemsSold: 7,
+}
+*/
