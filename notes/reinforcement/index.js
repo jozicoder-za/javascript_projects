@@ -494,38 +494,47 @@
    3. passedStudent
 */
 
-const students = [
-  { name: "Alice", score: 78 },
-  { name: "Bob", score: 92 },
-  { name: "Charlie", score: 65 },
-  { name: "Diana", score: 88 },
-];
+//const students = [
+//{ name: "Alice", score: 78 },
+//{ name: "Bob", score: 92 },
+//{ name: "Charlie", score: 65 },
+//{ name: "Diana", score: 88 },
+//];
 
-function analyzeScores(students) {
-  let totalScore = 0;
-  let highestScore = 0;
-  let highestScorer = "";
-  let passedStudents = [];
+//function analyzeScores(students) {
+//let totalScore = 0;
+//let highestScore = 0;
+//let highestScorer = "";
+//let passedStudents = [];
 
-  for (const student of students) {
-    totalScore += student.score;
+//for (const student of students) {
+//totalScore += student.score;
 
-    if (student.score > highestScore) {
-      highestScore = student.score;
-      highestScore = student.name;
-    }
+//if (student.score > highestScore) {
+//highestScore = student.score;
+//highestScore = student.name;
+//}
 
-    if (student.score >= 70) {
-      passedStudents.push(student.name);
-    }
-  }
-  const averageScore = totalScore / students.length;
+//if (student.score >= 70) {
+//passedStudents.push(student.name);
+//}
+//}
+//const averageScore = totalScore / students.length;
 
-  return {
-    averageScore: averageScore,
-    highestScore: highestScore,
-    passedStudents: passedStudents,
-  };
-}
+//return {
+//averageScore: averageScore,
+//highestScore: highestScore,
+//passedStudents: passedStudents,
+//};
+//}
 
-console.log(analyzeScores(students));
+//console.log(analyzeScores(students));
+
+// Challenge 2 Order Summary Generator
+// Write function that summarizes a customer order
+/* Function should return a object containing
+  - totalRevenue
+  - largestOrderCustomer
+  - smallOrders
+  - totalItemsSold
+*/
