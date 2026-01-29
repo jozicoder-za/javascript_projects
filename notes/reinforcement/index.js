@@ -502,11 +502,30 @@ const students = [
 ];
 
 function analyzeScores(students) {
-  let result = [];
-  for (const item of students) {
-    result.push(item);
+  let totalScore = 0;
+  let highestScore = 0;
+  let highestScorer = "";
+  let passedStudents = [];
+
+  for (const student of students) {
+    totalScore += student.score;
+
+    if (student.score > highestScore) {
+      highestScore = student.score;
+      highestScore = student.name;
+    }
+
+    if (student.score >= 70) {
+      passedStudents.push(student.name);
+    }
   }
-  return result;
+  const averageScore = totalScore / students.length;
+
+  return {
+    averageScore: averageScore,
+    highestScore: highestScore,
+    passedStudents: passedStudents,
+  };
 }
 
 console.log(analyzeScores(students));
