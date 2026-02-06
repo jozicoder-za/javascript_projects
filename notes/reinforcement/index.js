@@ -571,5 +571,20 @@ function generateOrderSummary(orders) {
       highestTotal = order.total;
       largestOrderCustomer = order.customer;
     }
+
+    if (order.total < 50) {
+      smallOrders.push(order.customer);
+    }
+
+    totalItemsSold += order.items.length;
   }
+
+  return {
+    totalRevenue: totalRevenue,
+    largestOrderCustomer: largestOrderCustomer,
+    smallOrders: smallOrders,
+    totalItemsSold: totalItemsSold,
+  };
 }
+
+console.log(generateOrderSummary(orders));
