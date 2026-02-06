@@ -547,3 +547,12 @@
  totalItemsSold: 7,
 }
 */
+
+// Solution
+
+const orders = [
+  { customer: "John", items: ["Shoes", "Hat"], total: 120 },
+  { customer: "Sarah", items: ["Bag"], total: 80 },
+  { customer: "Mike", items: ["Watch", "Shoes", "Socks"], total: 200 },
+  { customer: "Anna", items: ["Socks"], total: 25 },
+];
