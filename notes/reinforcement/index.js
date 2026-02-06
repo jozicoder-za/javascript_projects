@@ -556,3 +556,20 @@ const orders = [
   { customer: "Mike", items: ["Watch", "Shoes", "Socks"], total: 200 },
   { customer: "Anna", items: ["Socks"], total: 25 },
 ];
+
+function generateOrderSummary(orders) {
+  let totalRevenue = 0;
+  let highestTotal = 0;
+  let largestOrderCustomer = "";
+  let smallOrders = [];
+  let totalItemsSold = 0;
+
+  for (const order of orders) {
+    totalRevenue += order.total;
+
+    if (order.total > highestTotal) {
+      highestTotal = order.total;
+      largestOrderCustomer = order.customer;
+    }
+  }
+}
