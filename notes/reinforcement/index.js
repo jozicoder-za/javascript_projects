@@ -617,4 +617,11 @@ const account = {
 }
 */
 
+/*
+  Rules
+  - Amount must be greater than 0;
+  - Increase account balance
+  - Add a transaction record
+*/
+
 // next Fitness Tracker Logic
