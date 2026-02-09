@@ -602,26 +602,44 @@ console.log(generateOrderSummary(orders));
 */
 
 // Mini Banking System (Logic Only)
+
+/*
+Expected Output
+{
+  owner: "Sifiso", 
+  balance: 2900,
+  totalDeposits: 700,
+  totalWithdrawals: 300,
+  numberOfTransactions: 3
+  }
+  */
+
+/*
+ Rules
+ - Amount must be greater than 0;
+ - Increase account balance
+ - Add a transaction record
+ */
+
 const account = {
   owner: "Bethuel",
   balance: 2500,
   transaction: [],
 };
 
-/*
- transaction return as an object
-{
-  type: "deposit" | "withdraw",
-  amount: number,
-  date: string
-}
-*/
+function deposit(account, amount) {
+  if (amount <= 0) {
+    console.log("Deposit amount must be greater than 0.");
+    return;
+  }
 
-/*
-  Rules
-  - Amount must be greater than 0;
-  - Increase account balance
-  - Add a transaction record
-*/
+  account.balance += amount;
+
+  account.transaction.push({
+    type: "deposit",
+    amount: amount,
+    date: new Date().toLocaleString(),
+  });
+}
 
 // next Fitness Tracker Logic
