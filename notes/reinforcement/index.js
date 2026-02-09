@@ -549,7 +549,7 @@
 */
 
 // Solution
-
+/*
 const orders = [
   { customer: "John", items: ["Shoes", "Hat"], total: 120 },
   { customer: "Sarah", items: ["Bag"], total: 80 },
@@ -588,3 +588,33 @@ function generateOrderSummary(orders) {
 }
 
 console.log(generateOrderSummary(orders));
+
+*/
+
+/*
+
+  Continue with Mini-Real World Challenges
+  1. Mini Banking System
+  2. Fitness Tracker logic
+  3. Inventory System
+  4. Running log Analyzer
+
+*/
+
+// Mini Banking System (Logic Only)
+const account = {
+  owner: "Bethuel",
+  balance: 2500,
+  transaction: [],
+};
+
+/*
+ transaction return as an object
+{
+  type: "deposit" | "withdraw",
+  amount: number,
+  date: string
+}
+*/
+
+// next Fitness Tracker Logic
