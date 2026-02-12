@@ -627,6 +627,7 @@ const account = {
   transaction: [],
 };
 
+// Deposit Function
 function deposit(account, amount) {
   if (amount <= 0) {
     console.log("Deposit amount must be greater than 0.");
@@ -637,6 +638,27 @@ function deposit(account, amount) {
 
   account.transaction.push({
     type: "deposit",
+    amount: amount,
+    date: new Date().toLocaleString(),
+  });
+}
+
+// Withdraw function
+function withdraw(account, amount) {
+  if (amount <= 0) {
+    console.log("Withdrawal amount must be greater than 0.");
+    return;
+  }
+
+  if (amount > account.balance) {
+    console.log("insufficient funds.");
+    return;
+  }
+
+  account.balance -= amount;
+
+  account.transaction.push({
+    type: "withdraw",
     amount: amount,
     date: new Date().toLocaleString(),
   });
