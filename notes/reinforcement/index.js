@@ -621,6 +621,7 @@ Expected Output
  - Add a transaction record
  */
 
+/*
 const account = {
   owner: "Bethuel",
   balance: 2500,
@@ -687,5 +688,32 @@ function getAccountSummary(account) {
 }
 deposit(account, 500);
 console.log(getAccountSummary(account));
+*/
 
-// next Fitness Tracker Logic
+//  2. Fitness Tracker logic
+// 3. Inventory System
+// 4. Running log Analyzer
+
+// 2. Fitness Tracker Logic
+/* Create a workout app the tracks 
+   type (e.g, 'running', 'cycling', 'gym')
+   duration (in minutes)
+   caloriesBurned
+   date
+*/
+
+/* 
+it should return 
+
+{
+  totalDuration: 160,
+  totalCalories: 1480,
+  longestWorkout: 'Gym',
+  workoutBreakdown: {
+    Running: 55,
+    Cycling: 45,
+    Gym: 60
+  }
+}
+
+*/
