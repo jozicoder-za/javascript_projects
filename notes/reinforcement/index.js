@@ -664,4 +664,28 @@ function withdraw(account, amount) {
   });
 }
 
+// Account Summary Function
+function getAccountSummary(account) {
+  let totalDeposits = 0;
+  let totalWithdrawals = 0;
+
+  for (const transaction of account.transaction) {
+    if (transaction.type === "deposit") {
+      totalDeposits += transaction.amount;
+    } else if (transaction.type === "withdraw") {
+      totalWithdrawals += transaction.amount;
+    }
+  }
+
+  return {
+    owner: account.owner,
+    balance: account.balance,
+    totalDeposits: totalDeposits,
+    totalWithdrawals: totalWithdrawals,
+    numberOfTransactions: account.transactions.length,
+  };
+}
+deposit(account, 500);
+console.log(getAccountSummary(account));
+
 // next Fitness Tracker Logic
