@@ -732,4 +732,18 @@ function analyzeWorkouts(workouts) {
   let longestDuration = 0;
   let longestWorkout = "";
   let workoutBreakdown = {};
+
+  for (const workout of workouts) {
+    // total duration
+    totalDuration += workout.duration;
+
+    // total calories
+    totalCalories += workout.caloriesBurned;
+
+    // longest workout
+    if (workout.duration > longestDuration) {
+      longestDuration = workout.duration;
+      longestWorkout - workout.type;
+    }
+  }
 }
