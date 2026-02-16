@@ -717,3 +717,11 @@ it should return
 }
 
 */
+
+// Start out data
+const workouts = [
+  { type: "Running", duration: 30, caloriesBurned: 300, date: "2026-02-01" },
+  { type: "Cycling", duration: 45, caloriesBurned: 400, date: "2026-02-02" },
+  { type: "Running", duration: 25, caloriesBurned: 280, date: "2026-02-03" },
+  { type: "Gym", duration: 60, caloriesBurned: 500, date: "2026-02-04" },
+];
