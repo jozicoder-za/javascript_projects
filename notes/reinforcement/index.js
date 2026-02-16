@@ -743,7 +743,21 @@ function analyzeWorkouts(workouts) {
     // longest workout
     if (workout.duration > longestDuration) {
       longestDuration = workout.duration;
-      longestWorkout - workout.type;
+      longestWorkout = workout.type;
     }
+
+    if (!workoutBreakdown[workout.type]) {
+      workoutBreakdown[workout.type] = 0;
+    }
+    workoutBreakdown[workout.type] += workout.duration;
   }
+
+  return {
+    totalDuration: totalDuration,
+    totalCalories: totalCalories,
+    longestWorkout: longestWorkout,
+    workoutBreakdown: workoutBreakdown,
+  };
 }
+
+console.log(analyzeWorkouts(workouts));
