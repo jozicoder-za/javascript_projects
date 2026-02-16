@@ -725,3 +725,11 @@ const workouts = [
   { type: "Running", duration: 25, caloriesBurned: 280, date: "2026-02-03" },
   { type: "Gym", duration: 60, caloriesBurned: 500, date: "2026-02-04" },
 ];
+
+function analyzeWorkouts(workouts) {
+  let totalDuration = 0;
+  let totalCalories = 0;
+  let longestDuration = 0;
+  let longestWorkout = "";
+  let workoutBreakdown = {};
+}
