@@ -806,5 +806,10 @@ function analyzeInventory(inventory) {
   for (const product of inventory) {
     // Total inventory value
     totalInventoryValue += product.price * product.stock;
+
+    // find low stock items
+    if (product.stock < 10) {
+      lowStockItems.push(product.name);
+    }
   }
 }
