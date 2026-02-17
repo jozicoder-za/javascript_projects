@@ -796,3 +796,15 @@ const inventory = [
   { name: "Coffee Mug", price: 150, stock: 30, category: "Home" },
   { name: "Notebook", price: 80, stock: 50, category: "Stationery" },
 ];
+
+function analyzeInventory(inventory) {
+  let totalProducts = inventory.length;
+  let totalInventoryValue = 0;
+  let lowStockItems = [];
+  let categoryBreakdown = {};
+
+  for (const product of inventory) {
+    // Total inventory value
+    totalInventoryValue += product.price * product.stock;
+  }
+}
