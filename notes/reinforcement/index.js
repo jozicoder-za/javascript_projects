@@ -787,3 +787,12 @@ console.log(analyzeWorkouts(workouts));
     }
   }
 */
+
+// Solution
+// Data
+const inventory = [
+  { name: "Laptop", price: 15000, stock: 5, category: "Electronics" },
+  { name: "Headphones", price: 1200, stock: 15, category: "Electronics" },
+  { name: "Coffee Mug", price: 150, stock: 30, category: "Home" },
+  { name: "Notebook", price: 80, stock: 50, category: "Stationery" },
+];
