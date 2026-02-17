@@ -718,6 +718,7 @@ it should return
 
 */
 
+/*
 // Start out data
 const workouts = [
   { type: "Running", duration: 30, caloriesBurned: 300, date: "2026-02-01" },
@@ -761,3 +762,28 @@ function analyzeWorkouts(workouts) {
 }
 
 console.log(analyzeWorkouts(workouts));
+*/
+
+/*
+3. Inventory System
+4. Running log Analyzer
+*/
+
+// 3. Inventory System
+/*
+  Building the core inventory logic for a small online store
+  - Each Product has: name, price, stock, category
+  - create a function that will return an object containing totalProducts, totalInventoryValue, lowStockItems, categoryBreakdown
+
+  Expected Output
+  {
+    totalProducts: 4,
+    totalInventoryValue: 102000,
+    lowStockItems: ['Laptop],
+    categoryBreakdown: {
+      Electronics: 20,
+      Home: 30,
+      Stationery
+    }
+  }
+*/
