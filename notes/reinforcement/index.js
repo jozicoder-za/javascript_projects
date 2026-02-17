@@ -819,4 +819,13 @@ function analyzeInventory(inventory) {
 
     categoryBreakdown[product.category] += product.stock;
   }
+
+  return {
+    totalProducts: totalProducts,
+    totalInventoryValue: totalInventoryValue,
+    lowStockItems: lowStockItems,
+    categoryBreakdown: categoryBreakdown,
+  };
 }
+
+console.log(analyzeInventory(inventory));
