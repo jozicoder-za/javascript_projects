@@ -811,5 +811,12 @@ function analyzeInventory(inventory) {
     if (product.stock < 10) {
       lowStockItems.push(product.name);
     }
+
+    // Category stock breakdown
+    if (!categoryBreakdown[product.category]) {
+      categoryBreakdown[product.category] = 0;
+    }
+
+    categoryBreakdown[product.category] += product.stock;
   }
 }
