@@ -859,3 +859,12 @@ const runs = [
   { distance: 7, duration: 40, date: "2026-02-05", terrain: "Road" },
   { distance: 3, duration: 20, date: "2026-02-06", terrain: "Trail" },
 ];
+
+// analyzerRun function
+
+function analyzeruns(rums) {
+  let totalDistance = 0;
+  let totalDuration = 0;
+  let longestRun = 0;
+  let terrainBreakdown = {};
+}
