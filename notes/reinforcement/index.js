@@ -790,6 +790,7 @@ console.log(analyzeWorkouts(workouts));
 
 // Solution
 // Data
+/*
 const inventory = [
   { name: "Laptop", price: 15000, stock: 5, category: "Electronics" },
   { name: "Headphones", price: 1200, stock: 15, category: "Electronics" },
@@ -829,3 +830,24 @@ function analyzeInventory(inventory) {
 }
 
 console.log(analyzeInventory(inventory));
+
+*/
+
+// 4. Running Log Analyzer
+
+/*
+ Building a logic for a running performance tracker
+ Each run has: distance, duration, date, terrain
+
+ Expected Output
+ {
+  totalDistance: 25,
+  totalDuration: 155,
+  averagePace: 6.20,
+  longestRun: 10,
+  terrainBreakdown: {
+    Road: 12, 
+    Trail: 13
+  }
+ }
+*/
