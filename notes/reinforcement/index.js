@@ -851,3 +851,11 @@ console.log(analyzeInventory(inventory));
   }
  }
 */
+
+// Data
+const runs = [
+  { distance: 5, duration: 30, date: "2026-02-01", terrain: "Road" },
+  { distance: 10, duration: 65, date: "2026-02-03", terrain: "Trail" },
+  { distance: 7, duration: 40, date: "2026-02-05", terrain: "Road" },
+  { distance: 3, duration: 20, date: "2026-02-06", terrain: "Trail" },
+];
