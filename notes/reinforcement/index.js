@@ -867,4 +867,12 @@ function analyzeruns(rums) {
   let totalDuration = 0;
   let longestRun = 0;
   let terrainBreakdown = {};
+
+  for (const run of runs) {
+    // total distance
+    totalDistance += run.distance;
+
+    // Total Duration
+    totalDuration += run.duration;
+  }
 }
