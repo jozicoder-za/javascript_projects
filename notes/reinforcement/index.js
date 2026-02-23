@@ -879,5 +879,25 @@ function analyzeruns(rums) {
     if (run.distance > longestRun) {
       longestRun = run.distance;
     }
+
+    // Terrain breakdown
+    if (!terrainBreakdown[run.terrain]) {
+      terrainBreakdown[run.terrain] = 0;
+    }
+    terrainBreakdown[run.terrain] += run.distance;
   }
+
+  let averagePace = totalDuration / totalDistance;
+
+  averagePace = Number(averagePace.toFixed(2));
+
+  return {
+    totalDistance: totalDistance,
+    totalDuration: totalDuration,
+    averagePace: averagePace,
+    longestRun: longestRun,
+    terrainBreakdown: terrainBreakdown,
+  };
 }
+
+console.log(analyzeruns(runs));
