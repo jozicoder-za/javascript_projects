@@ -874,5 +874,10 @@ function analyzeruns(rums) {
 
     // Total Duration
     totalDuration += run.duration;
+
+    // Longest Run
+    if (run.distance > longestRun) {
+      longestRun = run.distance;
+    }
   }
 }
