@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>Mini Banking System</h2>
-    <div class="balance">Balance: R<span id="balance">2500</span></div>
-    <input type="number" name="amount" id="amount" placeholder="Enter amount" />
-    <button class="deposit-btn" onclick="deposit()">Deposit</button>
-    <button class="withdraw-btn" onclick="withdraw()">Withdraw</button>
+    <div class="container">
+      <h2>Mini Banking System</h2>
+      <div class="balance">Balance: R<span id="balance">2500</span></div>
+      <input
+        type="number"
+        name="amount"
+        id="amount"
+        placeholder="Enter amount"
+      />
+      <button class="deposit-btn" onclick="deposit()">Deposit</button>
+      <button class="withdraw-btn" onclick="withdraw()">Withdraw</button>
+      <div class="transactions">
+        <h4>Transactions</h4>
+        <div id="transactionList"></div>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
