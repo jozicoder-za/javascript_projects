@@ -5,3 +5,15 @@ body {
   justify-content: center;
   padding: 40px;
 }
+
+.container {
+  background: white;
+  padding: 25px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
