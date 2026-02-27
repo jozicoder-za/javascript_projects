@@ -30,3 +30,17 @@ input {
   padding: 8px;
   margin-bottom: 10px;
 }
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.withdraw-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 7px;
+}
