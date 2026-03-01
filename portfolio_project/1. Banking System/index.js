@@ -15,3 +15,5 @@ function updateUI() {
     transactionList.appendChild(div);
   });
 }
+
+function deposit() {}
