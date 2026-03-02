@@ -25,4 +25,10 @@ function deposit() {
   }
 
   account.balance += amount;
+
+  account.transactions.push({
+    type: "deposit",
+    amount: amount,
+  });
+  updateUI();
 }
