@@ -32,3 +32,12 @@ function deposit() {
   });
   updateUI();
 }
+
+function withdraw() {
+  const amount = Number(document.getElementById("amount").value);
+
+  if (amount <= 0) {
+    alert("Enter a valid withdrawal amount.");
+    return;
+  }
+}
