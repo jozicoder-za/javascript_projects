@@ -47,4 +47,12 @@ function withdraw() {
   }
 
   account.balance -= amount;
+
+  account.transactions.push({
+    type: "withdraw",
+    amount: amount,
+  });
+  updateUI();
 }
+
+updateUI();
