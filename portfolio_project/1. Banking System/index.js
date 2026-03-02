@@ -16,4 +16,13 @@ function updateUI() {
   });
 }
 
-function deposit() {}
+function deposit() {
+  const amount = Number(document.getElementById("amount").value);
+
+  if (amount <= 0) {
+    alert("Enter a valid deposit amount.");
+    return;
+  }
+
+  account.balance += amount;
+}
