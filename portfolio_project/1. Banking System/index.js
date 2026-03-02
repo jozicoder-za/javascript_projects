@@ -40,4 +40,11 @@ function withdraw() {
     alert("Enter a valid withdrawal amount.");
     return;
   }
+
+  if (amount > account.balance) {
+    alert("Insufficient funds.");
+    return;
+  }
+
+  account.balance -= amount;
 }
