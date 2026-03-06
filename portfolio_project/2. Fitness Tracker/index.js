@@ -25,4 +25,17 @@ function updateUI() {
   let totalCalories = 0;
   let longestDuration = 0;
   let longestWorkoutType = "None";
+
+  const workoutList = document.getElementById("workoutList");
+  workoutList.innerHTML = "";
+
+  for (const workout of workouts) {
+    longestDuration += workout.duration;
+    totalCalories += workout.caloriesBurned;
+
+    if (workout.duration > longestDuration) {
+      longestDuration = workout.duration;
+      longestWorkoutType = workout.type;
+    }
+  }
 }
