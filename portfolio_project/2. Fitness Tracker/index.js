@@ -16,4 +16,11 @@ function addWorkout() {
     duration: duration,
     caloriesBurned: calories,
   });
+
+  updateUI();
+}
+
+function updateUI() {
+  let totalDuration = 0;
+  let totalCalories = 0;
 }
