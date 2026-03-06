@@ -23,4 +23,6 @@ function addWorkout() {
 function updateUI() {
   let totalDuration = 0;
   let totalCalories = 0;
+  let longestDuration = 0;
+  let longestWorkoutType = "None";
 }
