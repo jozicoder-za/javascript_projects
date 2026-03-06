@@ -1,4 +1,4 @@
-const workout = [];
+const workouts = [];
 
 // Work out function
 function addWorkout() {
@@ -10,4 +10,10 @@ function addWorkout() {
     alert("Please enter valid numbers");
     return;
   }
+
+  workouts.push({
+    type: type,
+    duration: duration,
+    caloriesBurned: calories,
+  });
 }
