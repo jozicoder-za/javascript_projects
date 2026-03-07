@@ -38,4 +38,7 @@ function updateUI() {
       longestWorkoutType = workout.type;
     }
   }
+  document.getElementById("totalDuration").textContent = totalDuration;
+  document.getElementById("totalCalories").textContent = totalCalories;
+  document.getElementById("longestWorkout").textContent = longestWorkoutType;
 }
