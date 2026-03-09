@@ -1,0 +1,7 @@
+body {
+  font-family: Arial;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
