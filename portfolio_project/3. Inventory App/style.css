@@ -41,3 +41,9 @@ button {
   padding-top: 10px;
   font-size: 14px;
 }
+
+.product-list {
+  margin-top: 15px;
+  max-height: 160px;
+  overflow-y: auto;
+}
