@@ -47,3 +47,8 @@ button {
   max-height: 160px;
   overflow-y: auto;
 }
+
+.product-item {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
