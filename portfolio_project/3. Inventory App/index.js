@@ -5,4 +5,9 @@ function addProduct() {
   const price = document.getElementById("price").value;
   const stock = document.getElementById("stock").value;
   const category = document.getElementById("category").value;
+
+  if (!name || price <= 0 || stock < 0) {
+    alert("Please enter valid product information.");
+    return;
+  }
 }
