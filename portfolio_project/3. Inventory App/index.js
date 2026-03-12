@@ -10,4 +10,8 @@ function addProduct() {
     alert("Please enter valid product information.");
     return;
   }
+
+  inventory.push([name, price, stock, category]);
+
+  updateUI();
 }
