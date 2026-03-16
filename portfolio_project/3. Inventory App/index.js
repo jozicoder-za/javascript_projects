@@ -20,4 +20,15 @@ function updateUI() {
   let totalInventoryValue = 0;
   const productList = document.getElementById("productList");
   productList.innerHTML = "";
+
+  for (const product of inventory) {
+    totalInventoryValue += product.price * product.stock;
+    const div = document.createElement("div");
+
+    div.classList.add("product-item");
+
+    if (product.stock < 10) {
+      div.classList.add("low-stock");
+    }
+  }
 }
