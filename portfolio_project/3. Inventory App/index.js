@@ -15,3 +15,9 @@ function addProduct() {
 
   updateUI();
 }
+
+function updateUI() {
+  let totalInventoryValue = 0;
+  const productList = document.getElementById("productList");
+  productList.innerHTML = "";
+}
