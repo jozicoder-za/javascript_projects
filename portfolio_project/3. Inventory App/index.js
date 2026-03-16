@@ -30,5 +30,8 @@ function updateUI() {
     if (product.stock < 10) {
       div.classList.add("low-stock");
     }
+
+    div.textContent = `${product.name} | R${product.price} | Stock: ${product.stock} | ${product.category}`;
+    productList.appendChild(div);
   }
 }
