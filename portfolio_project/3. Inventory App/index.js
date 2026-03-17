@@ -2,8 +2,8 @@ const inventory = [];
 
 function addProduct() {
   const name = document.getElementById("name").value;
-  const price = document.getElementById("price").value;
-  const stock = document.getElementById("stock").value;
+  const price = Number(document.getElementById("price").value);
+  const stock = Number(document.getElementById("stock").value);
   const category = document.getElementById("category").value;
 
   if (!name || price <= 0 || stock < 0) {
@@ -11,7 +11,7 @@ function addProduct() {
     return;
   }
 
-  inventory.push([name, price, stock, category]);
+  inventory.push({ name, price, stock, category });
 
   updateUI();
 }
