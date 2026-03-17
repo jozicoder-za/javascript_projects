@@ -34,4 +34,6 @@ function updateUI() {
     div.textContent = `${product.name} | R${product.price} | Stock: ${product.stock} | ${product.category}`;
     productList.appendChild(div);
   }
+  document.getElementById("totalProducts").textContent = inventory.length;
+  document.getElementById("inventoryValue").textContent = totalInventoryValue;
 }
