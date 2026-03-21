@@ -46,3 +46,9 @@ button {
   font-size: 13px;
   margin-bottom: 5px;
 }
+
+.run-list {
+  margin-top: 15px;
+  max-height: 160px;
+  overflow-y: auto;
+}
