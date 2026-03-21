@@ -41,3 +41,8 @@ button {
   padding-top: 10px;
   font-size: 14px;
 }
+
+.run-item {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
