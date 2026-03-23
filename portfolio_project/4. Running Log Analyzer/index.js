@@ -8,4 +8,10 @@ function addRun() {
   if (distance <= 0 || duration <= 0) {
     alert("Please enter  valid values");
   }
+
+  runs.push({ distance, duration, terrain });
+
+  updateUI();
 }
+
+function updateUI() {}
