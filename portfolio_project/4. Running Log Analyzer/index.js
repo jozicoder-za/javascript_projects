@@ -14,4 +14,12 @@ function addRun() {
   updateUI();
 }
 
-function updateUI() {}
+function updateUI() {
+  let totalDistance = 0;
+  let totalDuration = 0;
+  let longestRun = 0;
+  let terrainBreakdown = {};
+
+  const runList = document.getElementById("runList");
+  runList.innerHTML = "";
+}
