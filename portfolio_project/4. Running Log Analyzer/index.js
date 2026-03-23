@@ -22,4 +22,13 @@ function updateUI() {
 
   const runList = document.getElementById("runList");
   runList.innerHTML = "";
+
+  for (const run of runs) {
+    totalDistance += run.distance;
+    totalDuration += run.duration;
+
+    if (run.distance > longestRun) {
+      longestRun = run.distance;
+    }
+  }
 }
