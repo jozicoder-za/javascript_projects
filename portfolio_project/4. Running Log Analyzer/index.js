@@ -30,5 +30,9 @@ function updateUI() {
     if (run.distance > longestRun) {
       longestRun = run.distance;
     }
+
+    if (!terrainBreakdown[run.terrain]) {
+      terrainBreakdown[run.terrain] = 0;
+    }
   }
 }
