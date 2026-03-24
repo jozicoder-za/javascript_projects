@@ -34,5 +34,13 @@ function updateUI() {
     if (!terrainBreakdown[run.terrain]) {
       terrainBreakdown[run.terrain] = 0;
     }
+
+    terrainBreakdown[run.terrain] += run.distance;
+
+    const div = document.createElement("div");
+    div.classList.add("run-item");
+    div.textContent = `${run.distance} km | ${run.duration} min | ${run.terrain}`;
+
+    runList.appendChild(div);
   }
 }
