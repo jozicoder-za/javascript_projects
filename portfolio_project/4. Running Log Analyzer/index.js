@@ -54,4 +54,11 @@ function updateUI() {
   document.getElementById("totalDuration").textContent = totalDuration;
   document.getElementById("averagePace").textContent = averagePace;
   document.getElementById("longestRun").textContent = longestRun;
+
+  let breakdownText = "";
+
+  for (const terrain in terrainBreakdown) {
+    breakdownText += `${terrain}: ${terrainBreakdown[terrain]} km |`;
+  }
+  document.getElementById("terrainBreakdown").textContent = breakdownText;
 }
