@@ -43,4 +43,15 @@ function updateUI() {
 
     runList.appendChild(div);
   }
+
+  let averagePace = 0;
+
+  if (totalDistance > 0) {
+    averagePace = (totalDuration / totalDistance).toFixed(2);
+  }
+
+  document.getElementById("totalDistance").textContent = totalDistance;
+  document.getElementById("totalDuration").textContent = totalDuration;
+  document.getElementById("averagePace").textContent = averagePace;
+  document.getElementById("longestRun").textContent = longestRun;
 }
