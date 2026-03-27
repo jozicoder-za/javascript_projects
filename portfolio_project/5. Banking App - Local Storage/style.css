@@ -19,7 +19,7 @@ h2 {
 }
 
 input {
-  width: 100%;
+  width: 95%;
   padding: 8px;
   margin-bottom: 10px;
 }
@@ -31,9 +31,14 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 8px;
+  color: white;
+  font-weight: 700;
 }
 
 .deposit {
   background: green;
-  color: white;
+}
+
+.withdraw {
+  background: red;
 }
