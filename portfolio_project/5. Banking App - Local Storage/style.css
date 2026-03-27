@@ -23,3 +23,11 @@ input {
   padding: 8px;
   margin-bottom: 10px;
 }
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+}
