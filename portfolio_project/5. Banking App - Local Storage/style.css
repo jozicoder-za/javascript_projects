@@ -42,3 +42,9 @@ button {
 .withdraw {
   background: red;
 }
+
+.transactions {
+  margin-top: 15px;
+  max-height: 150px;
+  overflow-y: auto;
+}
