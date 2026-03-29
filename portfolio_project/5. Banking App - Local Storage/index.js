@@ -18,3 +18,21 @@ function updateUI() {
     list.appendChild(div);
   });
 }
+
+function deposit() {
+  const amount = Number(document.getElementById("amount").value);
+
+  if (amount <= 0) {
+    alert("Invalid amount");
+    return;
+  }
+
+  account.balance += amount;
+
+  account.transactions.push({
+    type: "Deposit",
+    amount,
+  });
+  saveData();
+  updateUI();
+}
