@@ -6,3 +6,9 @@ let account = JSON.parse(localStorage.getItem("account")) || {
 function saveData() {
   localStorage.setItem("account", JSON.stringify(account));
 }
+
+function updateUI() {
+  document.getElementById("balance").textContent = account.balance;
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+}
