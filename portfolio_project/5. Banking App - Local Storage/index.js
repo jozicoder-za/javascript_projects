@@ -36,3 +36,12 @@ function deposit() {
   saveData();
   updateUI();
 }
+
+function withdraw() {
+  const amount = Number(document.getElementById("amount").value);
+
+  if (amount <= 0) {
+    alert("Invalid amount");
+    return;
+  }
+}
