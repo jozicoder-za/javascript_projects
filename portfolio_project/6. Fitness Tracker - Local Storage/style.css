@@ -46,3 +46,8 @@ button {
   max-height: 150px;
   overflow-y: auto;
 }
+
+.item {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
