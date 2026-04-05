@@ -13,4 +13,9 @@ function addWorkout() {
     alert("Invalid input");
     return;
   }
+
+  workouts.push({ type, duration, calories });
+
+  saveData();
+  updateUI();
 }
