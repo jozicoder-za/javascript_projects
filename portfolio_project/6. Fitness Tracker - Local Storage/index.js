@@ -19,3 +19,10 @@ function addWorkout() {
   saveData();
   updateUI();
 }
+
+function updateUI() {
+  let totalDuration = 0;
+  let totalCalories = 0;
+  let longest = 0;
+  let longestType = "None";
+}
