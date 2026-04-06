@@ -37,5 +37,10 @@ function updateUI() {
       longest = w.duration;
       longestType = w.type;
     }
+
+    const div = document.createElement("div");
+    div.classList.add("item");
+    div.textContent = `${w.type} - ${w.duration} min ${w.calories} cal`;
+    list.appendChild(div);
   });
 }
