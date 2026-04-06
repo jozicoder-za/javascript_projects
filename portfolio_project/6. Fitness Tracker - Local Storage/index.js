@@ -25,4 +25,12 @@ function updateUI() {
   let totalCalories = 0;
   let longest = 0;
   let longestType = "None";
+
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+
+  workouts.forEach((w) => {
+    totalDuration += w.duration;
+    totalCalories += w.calories;
+  });
 }
