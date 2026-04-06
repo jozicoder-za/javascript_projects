@@ -32,5 +32,10 @@ function updateUI() {
   workouts.forEach((w) => {
     totalDuration += w.duration;
     totalCalories += w.calories;
+
+    if (w.duration > longest) {
+      longest = w.duration;
+      longestType = w.type;
+    }
   });
 }
