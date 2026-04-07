@@ -43,4 +43,10 @@ function updateUI() {
     div.textContent = `${w.type} - ${w.duration} min ${w.calories} cal`;
     list.appendChild(div);
   });
+  document.getElementById("totalDuration").textContent = totalDuration;
+  document.getElementById("totalCalories").textContent = totalCalories;
+  document.getElementById("longestWorkout").textContent = longestType;
 }
+
+// Initial Load
+updateUI();
