@@ -24,3 +24,13 @@ select {
   padding: 8px;
   margin-bottom: 10px;
 }
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
