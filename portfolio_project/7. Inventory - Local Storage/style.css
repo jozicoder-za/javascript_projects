@@ -40,3 +40,9 @@ button {
   border-top: 1px solid #ddd;
   padding-top: 10px;
 }
+
+.product-list {
+  margin-top: 15px;
+  max-height: 160px;
+  overflow-y: auto;
+}
