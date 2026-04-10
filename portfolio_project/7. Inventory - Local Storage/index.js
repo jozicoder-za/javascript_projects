@@ -9,4 +9,9 @@ function addProduct() {
   const price = Number(document.getElementById("price").value);
   const stock = Number(document.getElementById("stock").value);
   const category = document.getElementById("category").value;
+
+  if (!name || price <= 0 || stock < 0) {
+    alert("Invalid input");
+    return;
+  }
 }
