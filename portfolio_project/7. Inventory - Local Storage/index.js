@@ -14,4 +14,9 @@ function addProduct() {
     alert("Invalid input");
     return;
   }
+
+  inventory.push({ name, price, stock, category });
+
+  saveData();
+  updateUI();
 }
