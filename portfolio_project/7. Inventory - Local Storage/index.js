@@ -26,4 +26,10 @@ function updateUI() {
 
   const list = document.getElementById("list");
   list.innerHTML = "";
+
+  inventory.forEach((product) => {
+    totalValue += product.price * product.stock;
+    const div = document.createElement("div");
+    div.classList.add("product-item");
+  });
 }
