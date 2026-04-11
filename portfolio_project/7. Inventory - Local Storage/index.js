@@ -31,11 +31,18 @@ function updateUI() {
     totalValue += product.price * product.stock;
     const div = document.createElement("div");
     div.classList.add("product-item");
+
+    if (product.stock < 10) {
+      div.classList.add("low-stock");
+    }
+
+    div.textContent = `${product.name} | R${product.price} | Stock: ${product.stock} | ${product.category}`;
+
+    list.appendChild(div);
   });
-
-  if (product.stock < 10) {
-    div.classList.add("low-stock");
-  }
-
-  div.textContent = `${product.name} | R${product.price} | Stock: ${product.stock} | ${product.category}`;
+  document.getElementById("totalProducts").textContent = inventory.length;
+  document.getElementById("inventoryValue").textContent = totalValue;
 }
+
+// Initial load
+updateUI();
