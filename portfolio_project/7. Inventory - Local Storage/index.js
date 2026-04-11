@@ -20,3 +20,10 @@ function addProduct() {
   saveData();
   updateUI();
 }
+
+function updateUI() {
+  let totalValue = 0;
+
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+}
