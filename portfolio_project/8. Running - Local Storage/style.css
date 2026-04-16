@@ -35,3 +35,20 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
+
+.stats {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.run-list {
+  margin-top: 15px;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.run-item {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
