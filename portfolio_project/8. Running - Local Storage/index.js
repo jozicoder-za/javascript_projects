@@ -61,4 +61,17 @@ function updateUI() {
   }
 
   let terrainText = "";
+
+  for (const terrain in terrainBreakdown) {
+    terrainText += `${terrain}: ${terrainBreakdown[terrain]} km`;
+  }
+
+  document.getElementById("totalDistance").textContent = totalDistance;
+  document.getElementById("totalDuration").textContent = totalDuration;
+  document.getElementById("averagePace").textContent = averagePace;
+  document.getElementById("longestRun").textContent = longestRun;
+  document.getElementById("terrainBreakdown").textContent = terrainText;
 }
+
+// Initial load
+updateUI();
