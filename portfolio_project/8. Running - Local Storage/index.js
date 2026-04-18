@@ -29,4 +29,20 @@ function updateUI() {
   let totalDuration = 0;
   let longestRun = 0;
   let terrainBreakdown = {};
+
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+
+  runs.forEach((run) => {
+    totalDistance += run.distance;
+    totalDuration += run.duration;
+
+    if (run.distance > longestRun) {
+      longestRun = run.distance;
+    }
+
+    if (!terrainBreakdown[run.terrain]) {
+      terrainBreakdown[run.terrain] = 0;
+    }
+  });
 }
