@@ -94,5 +94,3 @@ function selectAnswer(e) {
   nextButton.style.display = "block";
 }
 startQuiz();
-
-// continue 24:44

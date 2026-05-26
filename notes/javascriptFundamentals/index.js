@@ -1954,7 +1954,7 @@ button {
 
 // keys() and values()
 //console.log("keys:", treeSet.keys());
-//console.log("Values:", treeSet.values);
+//console.log("Values:", treeSet.values());
 
 // forEach
 //treeSet.forEach((tree) => console.log(tree));
