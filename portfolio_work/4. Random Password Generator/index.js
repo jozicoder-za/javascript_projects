@@ -23,11 +23,10 @@ function createPassword() {
 const btnEl = document.getElementById("btn");
 btnEl.addEventListener("click", createPassword);
 
-/*
-  16:46
+function copyPassword() {
+  passwordBox.select();
+  document.execCommand("copy");
+}
 
-  on the video they use the onclick but I will use 
-  the addEventlist on the btnEl
-  give the button an id
-
-*/
+const copyEl = document.getElementById("copy-element");
+copyEl.addEventListener("click", copyPassword);
