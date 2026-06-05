@@ -30,3 +30,10 @@ function copyPassword() {
 
 const copyEl = document.getElementById("copy-element");
 copyEl.addEventListener("click", copyPassword);
+
+/*
+  Will have to research the option to change the color
+  of the generated password and insert the text that will
+  fade out with the text copied!!
+
+*/
