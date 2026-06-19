@@ -19,4 +19,10 @@
   margin-top: 10%;
 }
 
-/* continue 3:46 */
+.calculator h1 {
+  font-size: 60px;
+}
+
+.calculator h1 span {
+  color: #ffff76;
+}
