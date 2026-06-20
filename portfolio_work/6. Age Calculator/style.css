@@ -57,3 +57,13 @@
   color: #333;
   cursor: pointer;
 }
+
+.input-box input:webkit-calender-picker-indicator {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  position: absolute;
+  background-position: calc(10);
+}
