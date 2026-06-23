@@ -1,6 +1,7 @@
 let userInput = document.getElementById("date");
 userInput.max = new Date().toISOString().split("T")[0];
 const btnEl = document.querySelector(".btn");
+const result = document.getElementById("result");
 
 btnEl.addEventListener("click", () => {
   let birthDate = new Date(userInput.value);
@@ -34,7 +35,7 @@ btnEl.addEventListener("click", () => {
     m3 = 11;
     y3--;
   }
-  console.log(y3, m3, d3);
+  result.innerHTML = `You are ${y3} years ${m3} months and ${d3} days old`;
 });
 
 function getDaysInMonth(year, month) {
