@@ -20,3 +20,4 @@ function generateQR() {
 }
 
 btnEl.addEventListener("click", generateQR);
+console.log(qrText);
