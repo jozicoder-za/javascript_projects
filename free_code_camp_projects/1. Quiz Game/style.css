@@ -33,3 +33,13 @@ body {
 .screen.active {
   display: block;
 }
+
+#start-screen h1 {
+  color: #e86a33;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.quiz-header {
+  margin-bottom: 2rem;
+}
