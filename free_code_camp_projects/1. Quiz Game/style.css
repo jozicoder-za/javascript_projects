@@ -87,3 +87,9 @@ body {
   border-color: #a3f0c4;
   color: #28a745;
 }
+
+.answer-btn.incorrect {
+  background: #fff0f0;
+  border-color: #ffbdbd;
+  color: #dc3545;
+}
