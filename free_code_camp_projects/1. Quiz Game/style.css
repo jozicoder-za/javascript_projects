@@ -34,6 +34,7 @@ body {
   display: block;
 }
 
+/* Start Screen */
 #start-screen h1 {
   color: #e86a33;
   margin-bottom: 20px;
@@ -73,4 +74,9 @@ body {
   padding: 1rem;
   cursor: pointer;
   text-align: left;
+}
+
+.answer-btn:hover {
+  background: #eadbc8;
+  border-color: #dac0ae;
 }
