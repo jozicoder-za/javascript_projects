@@ -93,3 +93,10 @@ body {
   border-color: #ffbdbd;
   color: #dc3545;
 }
+.progress-bar {
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
