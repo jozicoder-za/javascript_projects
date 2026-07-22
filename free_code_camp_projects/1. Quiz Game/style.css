@@ -107,3 +107,16 @@ body {
   width: 0%;
   transition: width 0.3s ease;
 }
+
+#result-screen h1 {
+  color: #e86a33;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.result-info {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 1rem;
+}
