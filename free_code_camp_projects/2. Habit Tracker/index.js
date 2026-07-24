@@ -346,44 +346,53 @@ function completeLesson(topic) {
 // Render Learning Journey
 // ===========================================
 
+let expandedPhaseIndex = 0;
+
 function renderRoadmap() {
   topicList.innerHTML = "";
 
-  roadmap.forEach((phase) => {
-    // Phase Heading
+  roadmap.forEach((phase, phaseIndex) => {
+    const phaseItem = document.createElement("li");
 
-    const phaseHeading = document.createElement("li");
+    phaseItem.className = "phase-item";
 
-    phaseHeading.style.background = "#3776AB";
+    const phaseToggle = document.createElement("button");
 
-    phaseHeading.style.color = "white";
+    phaseToggle.type = "button";
 
-    phaseHeading.style.fontWeight = "bold";
+    phaseToggle.className = "phase-toggle";
 
-    phaseHeading.style.fontSize = "18px";
+    if (expandedPhaseIndex === phaseIndex) {
+      phaseToggle.classList.add("active");
+    }
 
-    phaseHeading.style.cursor = "default";
+    phaseToggle.innerHTML = `
+      <span>${phase.phase} · ${phase.title}</span>
+      <span class="phase-arrow">${expandedPhaseIndex === phaseIndex ? "▾" : "▸"}</span>
+    `;
 
-    phaseHeading.innerHTML = `
+    phaseToggle.onclick = () => {
+      expandedPhaseIndex = expandedPhaseIndex === phaseIndex ? -1 : phaseIndex;
 
-            <div>
+      renderRoadmap();
+    };
 
-                ${phase.phase}
+    const phaseContent = document.createElement("div");
 
-                <br>
+    phaseContent.className = "phase-content";
 
-                <small>${phase.title}</small>
+    if (expandedPhaseIndex !== phaseIndex) {
+      phaseContent.classList.add("hidden");
+    }
 
-            </div>
+    const lessonsList = document.createElement("ul");
 
-        `;
-
-    topicList.appendChild(phaseHeading);
-
-    // Lessons
+    lessonsList.className = "phase-lessons";
 
     phase.lessons.forEach((topic) => {
       const li = document.createElement("li");
+
+      li.className = "lesson-row";
 
       const info = document.createElement("div");
 
@@ -411,8 +420,6 @@ function renderRoadmap() {
 
       const actions = document.createElement("div");
 
-      // Learn Button
-
       const learnBtn = document.createElement("button");
 
       learnBtn.textContent = "Learn";
@@ -422,8 +429,6 @@ function renderRoadmap() {
       learnBtn.onclick = () => {
         learnLesson(topic);
       };
-
-      // Complete Button
 
       const completeBtn = document.createElement("button");
 
@@ -435,8 +440,16 @@ function renderRoadmap() {
         completeBtn.disabled = true;
       }
 
+      if (!phaseCompleted(phaseIndex)) {
+        completeBtn.disabled = true;
+
+        learnBtn.disabled = true;
+      }
+
       completeBtn.onclick = () => {
         completeLesson(topic);
+
+        celebrateProgress();
       };
 
       actions.appendChild(learnBtn);
@@ -447,9 +460,19 @@ function renderRoadmap() {
 
       li.appendChild(actions);
 
-      topicList.appendChild(li);
+      lessonsList.appendChild(li);
     });
+
+    phaseContent.appendChild(lessonsList);
+
+    phaseItem.appendChild(phaseToggle);
+
+    phaseItem.appendChild(phaseContent);
+
+    topicList.appendChild(phaseItem);
   });
+
+  updateDashboard();
 }
 
 // ===========================================
@@ -631,120 +654,6 @@ function phaseMessage(index) {
 
   ("🔒 Complete the previous phase first.");
 }
-
-// ===========================================
-// Override Render Roadmap
-// ===========================================
-
-const originalRender = renderRoadmap;
-
-renderRoadmap = function () {
-  topicList.innerHTML = "";
-
-  roadmap.forEach((phase, phaseIndex) => {
-    const phaseHeading = document.createElement("li");
-
-    phaseHeading.style.background = "#3776AB";
-
-    phaseHeading.style.color = "white";
-
-    phaseHeading.style.fontWeight = "bold";
-
-    phaseHeading.innerHTML = `
-
-        <div>
-
-        ${phase.phase}
-
-        <br>
-
-        <small>
-
-        ${phase.title}
-
-        </small>
-
-        </div>
-
-        `;
-
-    topicList.appendChild(phaseHeading);
-
-    phase.lessons.forEach((topic) => {
-      const li = document.createElement("li");
-
-      const info = document.createElement("div");
-
-      info.className = "topic-info";
-
-      const check = document.createElement("input");
-
-      check.type = "checkbox";
-
-      check.disabled = true;
-
-      check.checked = completedLessons[topic] || false;
-
-      const span = document.createElement("span");
-
-      span.textContent = topic;
-
-      if (completedLessons[topic]) {
-        span.classList.add("completed");
-      }
-
-      info.appendChild(check);
-
-      info.appendChild(span);
-
-      const actions = document.createElement("div");
-
-      const learnBtn = document.createElement("button");
-
-      learnBtn.className = "learnBtn";
-
-      learnBtn.textContent = "Learn";
-
-      learnBtn.onclick = () => {
-        learnLesson(topic);
-      };
-
-      const completeBtn = document.createElement("button");
-
-      completeBtn.className = "completeBtn";
-
-      completeBtn.textContent = completedLessons[topic] ? "Done" : "Complete";
-
-      if (completedLessons[topic]) {
-        completeBtn.disabled = true;
-      }
-
-      if (!phaseCompleted(phaseIndex)) {
-        completeBtn.disabled = true;
-
-        learnBtn.disabled = true;
-      }
-
-      completeBtn.onclick = () => {
-        completeLesson(topic);
-
-        celebrateProgress();
-      };
-
-      actions.appendChild(learnBtn);
-
-      actions.appendChild(completeBtn);
-
-      li.appendChild(info);
-
-      li.appendChild(actions);
-
-      topicList.appendChild(li);
-    });
-  });
-
-  updateDashboard();
-};
 
 renderRoadmap();
 

@@ -229,27 +229,105 @@ section p {
   list-style: none;
 
   margin-top: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
 }
 
-#topicList li {
+.phase-item {
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+
+  background: #f7f8fa;
+}
+
+.phase-toggle {
+  width: 100%;
+
+  border: none;
+
+  background: #3776ab;
+
+  color: white;
+
+  padding: 18px;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
   display: flex;
 
   justify-content: space-between;
 
   align-items: center;
 
-  padding: 18px;
+  text-align: left;
+}
 
-  margin-bottom: 12px;
+.phase-toggle:hover {
+  background: #2f6795;
 
-  border-radius: 12px;
+  transform: none;
+}
 
-  background: #f7f8fa;
+.phase-toggle.active {
+  background: #2f6795;
+}
+
+.phase-arrow {
+  font-size: 20px;
+
+  transition: transform 0.2s ease;
+}
+
+.phase-toggle.active .phase-arrow {
+  transform: rotate(90deg);
+}
+
+.phase-content {
+  padding: 12px;
+}
+
+.phase-content.hidden {
+  display: none;
+}
+
+.phase-lessons {
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.lesson-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 14px 10px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
 
   transition: 0.25s;
 }
 
-#topicList li:hover {
+.lesson-row:hover {
   background: #edf5fb;
 }
 
@@ -259,6 +337,8 @@ section p {
   align-items: center;
 
   gap: 15px;
+
+  flex: 1;
 }
 
 .topic-info span {
@@ -397,12 +477,29 @@ footer {
   border: 1px solid #555;
 }
 
-.dark #topicList li {
+.dark .phase-item {
   background: #273549;
+
+  border-color: #475569;
 }
 
-.dark #topicList li:hover {
+.dark .lesson-row {
+  background: #1f2937;
+
+  border-color: #475569;
+}
+
+.dark .lesson-row:hover {
   background: #31425a;
+}
+
+.dark .phase-toggle {
+  background: #1e3a5f;
+}
+
+.dark .phase-toggle:hover,
+.dark .phase-toggle.active {
+  background: #274c74;
 }
 
 .dark .progress {
