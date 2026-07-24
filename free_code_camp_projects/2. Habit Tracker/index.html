@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonPath AI | Learning Journey</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div>
+          <h1>🐍 PythonPath AI</h1>
+
+          <p class="subtitle">
+            Learning Journey:
+            <strong>Mastering Python Coming from JavaScript</strong>
+          </p>
+        </div>
+
+        <button id="darkModeBtn">🌙 Dark Mode</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- ================= Dashboard ================= -->
+
+      <section class="dashboard">
+        <div class="card">
+          <h3>⭐ XP</h3>
+
+          <p id="xp">0 XP</p>
+        </div>
+
+        <div class="card">
+          <h3>🏆 Level</h3>
+
+          <p id="level">Beginner</p>
+        </div>
+
+        <div class="card">
+          <h3>🔥 Learning Streak</h3>
+
+          <p id="streak">0 Days</p>
+        </div>
+
+        <div class="card">
+          <h3>📚 Sections Completed</h3>
+
+          <p id="completed">0 / 24</p>
+        </div>
+      </section>
+
+      <!-- ================= Progress ================= -->
+
+      <section class="progress-card">
+        <h2>Overall Learning Journey Progress</h2>
+
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+
+        <p id="progressText">0% Complete</p>
+      </section>
+
+      <!-- ================= Learning Journey ================= -->
+
+      <section class="roadmap">
+        <h2>📚 Learning Journey</h2>
+
+        <p>
+          This roadmap was generated using AI planning techniques. Complete each
+          section in order.
+        </p>
+
+        <ul id="topicList"></ul>
+      </section>
+
+      <!-- ================= AI Prompt ================= -->
+
+      <section class="prompt-card">
+        <h2>🤖 Section AI Prompt</h2>
+
+        <p>
+          Select a lesson and use the prompt below with ChatGPT or another AI
+          assistant.
+        </p>
+
+        <h3 id="promptTitle">No lesson selected</h3>
+
+        <textarea id="promptText" readonly> </textarea>
+
+        <button id="copyPrompt">📋 Copy Prompt</button>
+      </section>
+
+      <!-- ================= Coding Challenge ================= -->
+
+      <section class="challenge-card">
+        <h2>💻 Verification Challenge</h2>
+
+        <p id="challenge">Select a lesson to receive a coding challenge.</p>
+      </section>
+
+      <!-- ================= Notes ================= -->
+
+      <section class="notes-card">
+        <h2>📝 Learning Notes</h2>
+
+        <textarea
+          id="notes"
+          placeholder="Summarise what you learnt from this lesson..."
+        >
+        </textarea>
+
+        <button id="saveNotes">Save Notes</button>
+      </section>
+
+      <!-- ================= Reflection ================= -->
+
+      <section class="reflection-card">
+        <h2>📖 Reflection</h2>
+
+        <textarea
+          id="reflection"
+          placeholder="How has today's lesson improved your understanding of Python?"
+        >
+        </textarea>
+
+        <button id="saveReflection">Save Reflection</button>
+      </section>
+
+      <!-- ================= Footer ================= -->
+
+      <footer>
+        <p>PythonPath AI | AI Learning Companion | HTML • CSS • JavaScript</p>
+
+        <p>
+          Demonstration Project:
+
+          <strong>Using AI to Learn New Skills</strong>
+        </p>
+      </footer>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
