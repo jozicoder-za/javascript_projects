@@ -15,6 +15,7 @@ const progressText = document.getElementById("progressText");
 
 const xpDisplay = document.getElementById("xp");
 const levelDisplay = document.getElementById("level");
+const levelValueDisplay = document.getElementById("levelValue");
 const streakDisplay = document.getElementById("streak");
 const completedDisplay = document.getElementById("completed");
 
@@ -40,6 +41,13 @@ const darkModeBtn = document.getElementById("darkModeBtn");
 let xp = Number(localStorage.getItem("xp")) || 0;
 
 let streak = Number(localStorage.getItem("streak")) || 0;
+
+const validModes = ["Beginner", "Advance", "Quiz Mode", "Tutor Mode"];
+
+let selectedMode =
+  validModes.includes(localStorage.getItem("learningMode"))
+    ? localStorage.getItem("learningMode")
+    : "Beginner";
 
 // ===========================================
 // Learning Journey
@@ -287,7 +295,10 @@ function updateDashboard() {
 
   streakDisplay.textContent = streak + " Days";
 
-  levelDisplay.textContent = getLevel();
+  levelDisplay.value = selectedMode;
+
+  levelValueDisplay.textContent =
+    selectedMode === "Beginner" ? getLevel() : selectedMode;
 
   completedDisplay.textContent = completedCount + " / " + totalLessons;
 }
@@ -571,6 +582,18 @@ copyPrompt.addEventListener("click", () => {
   navigator.clipboard.writeText(promptText.value);
 
   alert("📋 AI Prompt copied.");
+});
+
+// ===========================================
+// Learning Mode Selector
+// ===========================================
+
+levelDisplay.addEventListener("change", () => {
+  selectedMode = levelDisplay.value;
+
+  localStorage.setItem("learningMode", selectedMode);
+
+  updateDashboard();
 });
 
 // ===========================================

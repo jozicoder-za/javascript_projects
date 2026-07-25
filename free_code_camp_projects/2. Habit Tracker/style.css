@@ -158,6 +158,32 @@ button:hover {
   font-weight: bold;
 }
 
+.mode-select {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: 1px solid #d0d7de;
+
+  border-radius: 10px;
+
+  font-size: 1rem;
+
+  background: #f8fafc;
+
+  color: #222;
+
+  margin-bottom: 10px;
+}
+
+.level-value {
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  color: #3776ab;
+}
+
 /* ===============================
    Sections
 ================================ */
