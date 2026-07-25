@@ -44,10 +44,11 @@ let streak = Number(localStorage.getItem("streak")) || 0;
 
 const validModes = ["Beginner", "Advance", "Quiz Mode", "Tutor Mode"];
 
-let selectedMode =
-  validModes.includes(localStorage.getItem("learningMode"))
-    ? localStorage.getItem("learningMode")
-    : "Beginner";
+let selectedMode = validModes.includes(localStorage.getItem("learningMode"))
+  ? localStorage.getItem("learningMode")
+  : "Beginner";
+
+let currentTopic = null;
 
 // ===========================================
 // Learning Journey
@@ -136,7 +137,63 @@ let completedLessons =
 // AI Prompt Template
 // ===========================================
 
-function generatePrompt(topic) {
+function generatePrompt(topic, mode = selectedMode) {
+  if (mode === "Advance") {
+    return `I'm building on my Python foundation and want a more advanced learning experience.
+
+I am currently studying:
+
+${topic}
+
+Please help me by:
+
+1. Explaining the topic at an intermediate-to-advanced level.
+
+2. Highlighting the most important Python-specific concepts involved.
+
+3. Comparing the Python approach with the JavaScript equivalent.
+
+4. Showing one more challenging example.
+
+5. Giving me one practical exercise that pushes my understanding further.
+
+Do NOT provide the full solution unless I ask.
+
+Use concise but detailed explanations.`;
+  }
+
+  if (mode === "Quiz Mode") {
+    return `I want to learn ${topic} through quiz-style practice.
+
+Please:
+
+1. Create 5 short quiz questions about this topic.
+
+2. Make the questions progressively harder.
+
+3. Include the correct answers after the questions.
+
+4. Add one brief explanation for each answer.
+
+5. Keep the questions focused on Python concepts and common mistakes.`;
+  }
+
+  if (mode === "Tutor Mode") {
+    return `Act as my tutor while I learn ${topic}.
+
+Please:
+
+1. Explain the topic in a beginner-friendly way.
+
+2. Break it into small, easy-to-follow steps.
+
+3. Compare it to JavaScript where helpful.
+
+4. Provide one worked example.
+
+5. End with one practice exercise and hints instead of the full solution.`;
+  }
+
   return `I'm beginning to learn Python coming from JavaScript.
 
 I am currently studying:
@@ -308,11 +365,22 @@ function updateDashboard() {
 // ===========================================
 
 function learnLesson(topic) {
+  currentTopic = topic;
+
   promptTitle.textContent = topic;
 
-  promptText.value = generatePrompt(topic);
+  promptText.value = generatePrompt(topic, selectedMode);
 
-  challenge.textContent = challenges[topic] || "No challenge available.";
+  const modeChallenge =
+    selectedMode === "Advance"
+      ? `Apply ${topic} in a more challenging Python exercise.`
+      : selectedMode === "Quiz Mode"
+        ? `Create a short quiz about ${topic}.`
+        : selectedMode === "Tutor Mode"
+          ? `Teach ${topic} step by step as if guiding a beginner.`
+          : challenges[topic] || "No challenge available.";
+
+  challenge.textContent = modeChallenge;
 
   // Scroll to Prompt
 
@@ -594,6 +662,10 @@ levelDisplay.addEventListener("change", () => {
   localStorage.setItem("learningMode", selectedMode);
 
   updateDashboard();
+
+  if (currentTopic) {
+    learnLesson(currentTopic);
+  }
 });
 
 // ===========================================
