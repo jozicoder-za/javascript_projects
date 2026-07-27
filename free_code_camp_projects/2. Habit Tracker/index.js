@@ -32,6 +32,14 @@ const saveReflection = document.getElementById("saveReflection");
 
 const copyPrompt = document.getElementById("copyPrompt");
 
+const languageBtn = document.getElementById("languageBtn");
+const languageModal = document.getElementById("languageModal");
+const targetLanguageInput = document.getElementById("targetLanguage");
+const sourceLanguageInput = document.getElementById("sourceLanguage");
+const saveLanguages = document.getElementById("saveLanguages");
+const cancelLanguages = document.getElementById("cancelLanguages");
+const learningJourneyText = document.getElementById("learningJourneyText");
+
 const darkModeBtn = document.getElementById("darkModeBtn");
 
 // ===========================================
@@ -49,6 +57,9 @@ let selectedMode = validModes.includes(localStorage.getItem("learningMode"))
   : "Beginner";
 
 let currentTopic = null;
+
+let targetLanguage = localStorage.getItem("targetLanguage") || "Python";
+let sourceLanguage = localStorage.getItem("sourceLanguage") || "JavaScript";
 
 // ===========================================
 // Learning Journey
@@ -137,9 +148,56 @@ let completedLessons =
 // AI Prompt Template
 // ===========================================
 
+function formatLearningJourney() {
+  return `Mastering ${targetLanguage} Coming from ${sourceLanguage}`;
+}
+
+function generateCorePrompt(topic) {
+  return `# Learning Journey Example: Mastering ${targetLanguage} Coming from ${sourceLanguage}
+
+**End Goal: Develop proficiency in ${targetLanguage} for real-world development while building on experience with ${sourceLanguage}.**
+
+## Phase 1: Language Fundamentals
+- Prerequisite: Basic programming knowledge in ${sourceLanguage}
+- Learning Steps:
+  1. ${targetLanguage} syntax basics and differences from ${sourceLanguage}
+  2. Understanding static typing vs. dynamic typing
+  3. ${targetLanguage} variable declarations and primitive types
+  4. Control structures and how they differ from ${sourceLanguage}
+  5. Verification: Write a simple program converting a ${sourceLanguage} script to ${targetLanguage}
+
+## Phase 2: Object-Oriented Programming in ${targetLanguage}
+- Prerequisite: Understand ${targetLanguage} syntax basics
+- Learning Steps:
+  1. Class structure and declaration
+  2. Constructors, methods, and fields
+  3. Access modifiers (public, private, protected)
+  4. Inheritance and interfaces
+  5. Verification: Design a class hierarchy implementing a simple concept
+
+## Phase 3: ${targetLanguage}-Specific Features
+- Prerequisite: OOP understanding in ${targetLanguage}
+- Learning Steps:
+  1. Collections Framework (vs. ${sourceLanguage} collections)
+  2. Exception handling
+  3. Generics
+  4. Lambda expressions and functional interfaces
+  5. Verification: Refactor code to use appropriate collections and lambda expressions
+
+## Phase 4: ${targetLanguage} Ecosystem and Tooling
+- Prerequisite: Core ${targetLanguage} knowledge
+- Learning Steps:
+  1. Build tools (Maven/Gradle)
+  2. Testing frameworks (JUnit)
+  3. ${targetLanguage} standard libraries
+  4. Common third-party libraries
+  5. Verification: Create a project with proper structure, dependencies, and tests
+`;
+}
+
 function generatePrompt(topic, mode = selectedMode) {
   if (mode === "Advance") {
-    return `I'm building on my Python foundation and want a more advanced learning experience.
+    return `I'm building on my ${targetLanguage} foundation and want a more advanced learning experience.
 
 I am currently studying:
 
@@ -149,9 +207,9 @@ Please help me by:
 
 1. Explaining the topic at an intermediate-to-advanced level.
 
-2. Highlighting the most important Python-specific concepts involved.
+2. Highlighting the most important ${targetLanguage}-specific concepts involved.
 
-3. Comparing the Python approach with the JavaScript equivalent.
+3. Comparing the ${targetLanguage} approach with the ${sourceLanguage} equivalent.
 
 4. Showing one more challenging example.
 
@@ -175,7 +233,7 @@ Please:
 
 4. Add one brief explanation for each answer.
 
-5. Keep the questions focused on Python concepts and common mistakes.`;
+5. Keep the questions focused on ${targetLanguage} concepts and common mistakes for ${sourceLanguage} learners.`;
   }
 
   if (mode === "Tutor Mode") {
@@ -187,14 +245,14 @@ Please:
 
 2. Break it into small, easy-to-follow steps.
 
-3. Compare it to JavaScript where helpful.
+3. Compare it to ${sourceLanguage} where helpful.
 
 4. Provide one worked example.
 
 5. End with one practice exercise and hints instead of the full solution.`;
   }
 
-  return `I'm beginning to learn Python coming from JavaScript.
+  return `${generateCorePrompt()}
 
 I am currently studying:
 
@@ -202,15 +260,15 @@ ${topic}
 
 Before diving in, could you:
 
-1. List the key technical terms I should know in Python that don't exist in JavaScript.
+1. List the key technical terms I should know in ${targetLanguage} that don't exist in ${sourceLanguage}.
 
 2. Provide a brief explanation of each term.
 
 3. Show how these terms relate to each other.
 
-4. Compare this topic with the equivalent concept in JavaScript.
+4. Compare this topic with the equivalent concept in ${sourceLanguage}.
 
-5. Explain the common mistakes JavaScript developers make when learning this topic.
+5. Explain the common mistakes ${sourceLanguage} developers make when learning this topic.
 
 6. Give me two beginner examples.
 
@@ -346,7 +404,7 @@ function updateDashboard() {
   progressBar.style.width = percentage + "%";
 
   progressText.textContent =
-    percentage + "% of your Python Learning Journey Complete";
+    percentage + "% of your " + targetLanguage + " Learning Journey Complete";
 
   xpDisplay.textContent = xp + " XP";
 
@@ -373,7 +431,7 @@ function learnLesson(topic) {
 
   const modeChallenge =
     selectedMode === "Advance"
-      ? `Apply ${topic} in a more challenging Python exercise.`
+      ? `Apply ${topic} in a more challenging ${targetLanguage} exercise.`
       : selectedMode === "Quiz Mode"
         ? `Create a short quiz about ${topic}.`
         : selectedMode === "Tutor Mode"
@@ -564,10 +622,45 @@ function showQuote() {
   console.log("Today's Motivation:", quotes[random]);
 }
 
+function updateLearningJourneyText() {
+  learningJourneyText.textContent = formatLearningJourney();
+}
+
+function showLanguageModal() {
+  targetLanguageInput.value = targetLanguage;
+  sourceLanguageInput.value = sourceLanguage;
+  languageModal.classList.remove("hidden");
+}
+
+function hideLanguageModal() {
+  languageModal.classList.add("hidden");
+}
+
+function saveLanguageSelection() {
+  const target = targetLanguageInput.value.trim() || "Python";
+  const source = sourceLanguageInput.value.trim() || "JavaScript";
+
+  targetLanguage = target;
+  sourceLanguage = source;
+
+  localStorage.setItem("targetLanguage", targetLanguage);
+  localStorage.setItem("sourceLanguage", sourceLanguage);
+
+  updateLearningJourneyText();
+  updateDashboard();
+
+  if (currentTopic) {
+    learnLesson(currentTopic);
+  }
+
+  hideLanguageModal();
+}
+
 // ===========================================
 // Initialize Dashboard
 // ===========================================
 
+updateLearningJourneyText();
 updateDashboard();
 
 renderRoadmap();
@@ -650,6 +743,16 @@ copyPrompt.addEventListener("click", () => {
   navigator.clipboard.writeText(promptText.value);
 
   alert("📋 AI Prompt copied.");
+});
+
+languageBtn.addEventListener("click", showLanguageModal);
+saveLanguages.addEventListener("click", saveLanguageSelection);
+cancelLanguages.addEventListener("click", hideLanguageModal);
+
+languageModal.addEventListener("click", (event) => {
+  if (event.target === languageModal) {
+    hideLanguageModal();
+  }
 });
 
 // ===========================================
