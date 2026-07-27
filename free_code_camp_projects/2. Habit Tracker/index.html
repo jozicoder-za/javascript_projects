@@ -14,13 +14,34 @@
 
           <p class="subtitle">
             Learning Journey:
-            <strong>Mastering Python Coming from JavaScript</strong>
+            <strong id="learningJourneyText">Mastering Python Coming from JavaScript</strong>
           </p>
         </div>
 
-        <button id="darkModeBtn">🌙 Dark Mode</button>
+        <div class="button-group">
+          <button id="languageBtn">🔧 Set Languages</button>
+          <button id="darkModeBtn">🌙 Dark Mode</button>
+        </div>
       </div>
     </header>
+
+    <div id="languageModal" class="modal-overlay hidden">
+      <div class="modal">
+        <h2>Set your learning path</h2>
+        <p>Please tell us the language you want to learn and the language you are coming from.</p>
+
+        <label for="targetLanguage">Language to learn</label>
+        <input id="targetLanguage" type="text" placeholder="Python" />
+
+        <label for="sourceLanguage">Language coming from</label>
+        <input id="sourceLanguage" type="text" placeholder="JavaScript" />
+
+        <div class="modal-actions">
+          <button id="saveLanguages">Save</button>
+          <button id="cancelLanguages" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
 
     <main class="container">
       <!-- ================= Dashboard ================= -->
