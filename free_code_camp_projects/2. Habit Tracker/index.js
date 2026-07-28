@@ -8,7 +8,7 @@
 // DOM Elements
 // ===========================================
 
-const topicList = document.getElementById("topicList");
+const topicList = document.getElementById("toplicList") || document.getElementById("topicList");
 
 const progressBar = document.getElementById("progressBar");
 const progressText = document.getElementById("progressText");
@@ -65,77 +65,78 @@ let sourceLanguage = localStorage.getItem("sourceLanguage") || "JavaScript";
 // Learning Journey
 // ===========================================
 
-let roadmap = JSON.parse(localStorage.getItem("roadmap")) || [
-  {
-    phase: "Phase 1",
-    title: "Language Fundamentals",
+let roadmap = [];
 
-    lessons: [
-      "JavaScript vs Python Syntax",
+function buildRoadmap() {
+  return [
+    {
+      phase: "Phase 1",
+      title: `Language Fundamentals for ${targetLanguage}`,
+      lessons: [
+        `${sourceLanguage} vs ${targetLanguage} Syntax`,
+        `Typing and Variables in ${targetLanguage}`,
+        `${targetLanguage} Control Flow and Functions`,
+        `${sourceLanguage} to ${targetLanguage} Comparison`,
+        "Phase 1 Verification Project",
+      ],
+    },
+    {
+      phase: "Phase 2",
+      title: `Object-Oriented Programming in ${targetLanguage}`,
+      lessons: [
+        `Classes in ${targetLanguage}`,
+        `Constructors and Initializers`,
+        `Methods and Instance Behavior`,
+        `Inheritance and Interfaces`,
+        "Phase 2 Verification Project",
+      ],
+    },
+    {
+      phase: "Phase 3",
+      title: `${targetLanguage} Features and Style`,
+      lessons: [
+        `${targetLanguage} Collections and Data Structures`,
+        `Exception Handling in ${targetLanguage}`,
+        `Modules and Packages`,
+        `${targetLanguage} Comprehensions and Iteration`,
+        "Phase 3 Verification Project",
+      ],
+    },
+    {
+      phase: "Phase 4",
+      title: `${targetLanguage} Ecosystem and Tooling`,
+      lessons: [
+        `${targetLanguage} Environment Setup`,
+        `Package Management for ${targetLanguage}`,
+        `Testing with ${targetLanguage}`,
+        `${targetLanguage} Standard Library`,
+        "Phase 4 Verification Project",
+      ],
+    },
+  ];
+}
 
-      "Static vs Dynamic Typing",
+function refreshRoadmap() {
+  roadmap = buildRoadmap();
 
-      "Variables and Primitive Types",
+  const preservedLessons = Object.fromEntries(
+    Object.entries(completedLessons).filter(([lesson]) =>
+      roadmap.some((phase) => phase.lessons.includes(lesson)),
+    ),
+  );
 
-      "Control Structures",
+  completedLessons = preservedLessons;
 
-      "Phase 1 Verification Project",
-    ],
-  },
+  localStorage.setItem("roadmap", JSON.stringify(roadmap));
 
-  {
-    phase: "Phase 2",
-    title: "Object-Oriented Programming",
+  totalLessons = roadmap.reduce(
+    (total, phase) => total + phase.lessons.length,
+    0,
+  );
 
-    lessons: [
-      "Classes",
+  renderRoadmap();
+}
 
-      "Constructors",
-
-      "Methods",
-
-      "Inheritance",
-
-      "Phase 2 Verification Project",
-    ],
-  },
-
-  {
-    phase: "Phase 3",
-    title: "Python Features",
-
-    lessons: [
-      "Lists vs Arrays",
-
-      "Dictionaries",
-
-      "Exception Handling",
-
-      "List Comprehensions",
-
-      "Lambda Functions",
-
-      "Phase 3 Verification Project",
-    ],
-  },
-
-  {
-    phase: "Phase 4",
-    title: "Python Ecosystem",
-
-    lessons: [
-      "Virtual Environments",
-
-      "pip",
-
-      "Pytest",
-
-      "Python Standard Library",
-
-      "Phase 4 Verification Project",
-    ],
-  },
-];
 
 // ===========================================
 // Lesson Progress
@@ -350,11 +351,7 @@ const quotes = [
 // Total Lessons
 // ===========================================
 
-const totalLessons = roadmap.reduce(
-  (total, phase) => total + phase.lessons.length,
-
-  0,
-);
+let totalLessons = 0;
 
 /* ======================================================
    PythonPath AI
@@ -379,11 +376,11 @@ function saveData() {
 // ===========================================
 
 function getLevel() {
-  if (xp >= 2000) return "Python Master";
+  if (xp >= 2000) return `${targetLanguage} Master`;
 
-  if (xp >= 1500) return "Python Professional";
+  if (xp >= 1500) return `${targetLanguage} Professional`;
 
-  if (xp >= 1000) return "Python Explorer";
+  if (xp >= 1000) return `${targetLanguage} Explorer`;
 
   if (xp >= 750) return "Intermediate";
 
@@ -436,7 +433,8 @@ function learnLesson(topic) {
         ? `Create a short quiz about ${topic}.`
         : selectedMode === "Tutor Mode"
           ? `Teach ${topic} step by step as if guiding a beginner.`
-          : challenges[topic] || "No challenge available.";
+          : challenges[topic] ||
+            `Build a small ${targetLanguage} project that practices ${topic} and compares it with ${sourceLanguage}.`;
 
   challenge.textContent = modeChallenge;
 
@@ -647,7 +645,7 @@ function saveLanguageSelection() {
   localStorage.setItem("sourceLanguage", sourceLanguage);
 
   updateLearningJourneyText();
-  updateDashboard();
+  refreshRoadmap();
 
   if (currentTopic) {
     learnLesson(currentTopic);
@@ -661,9 +659,7 @@ function saveLanguageSelection() {
 // ===========================================
 
 updateLearningJourneyText();
-updateDashboard();
-
-renderRoadmap();
+refreshRoadmap();
 
 showQuote();
 
@@ -861,7 +857,7 @@ renderRoadmap();
 
 console.log("🐍 Welcome to PythonPath AI");
 
-console.log("Learning Journey: Mastering Python from JavaScript");
+console.log(`Learning Journey: Mastering ${targetLanguage} from ${sourceLanguage}`);
 
 /* ======================================================
    PythonPath AI
@@ -1031,9 +1027,9 @@ console.log(`
 
 Learning Journey Dashboard
 
-Mastering Python
+Mastering ${targetLanguage}
 
-Coming from JavaScript
+Coming from ${sourceLanguage}
 
 =====================================
 
