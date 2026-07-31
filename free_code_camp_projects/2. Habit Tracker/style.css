@@ -125,6 +125,51 @@ button:hover {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
+/* AI modal specific sizing: make the modal box occupy ~65% of viewport height
+   and allow scrolling inside the modal while preventing background scroll */
+.ai-modal {
+  width: min(900px, 96%);
+  max-width: 900px;
+  height: 65vh;
+  max-height: 65vh;
+  border-radius: 14px;
+  padding: 18px 22px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ai-content {
+  overflow: auto;
+  flex: 1 1 auto;
+  padding-right: 8px;
+}
+
+.ai-quiz fieldset {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.ai-quiz .quiz-choice {
+  display: block;
+  margin: 6px 0;
+}
+
+/* Prevent background scrolling when modal is open */
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
 .modal h2 {
   margin-bottom: 12px;
   color: #1f2937;
