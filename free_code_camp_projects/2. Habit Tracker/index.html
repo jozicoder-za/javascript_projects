@@ -123,8 +123,29 @@
 
         <textarea id="promptText" readonly> </textarea>
 
-        <button id="copyPrompt">📋 Copy Prompt</button>
+        <button id="generateLessonBtn">🤖 Generate Lesson</button>
       </section>
+
+      <!-- ================= AI Assistant Modal ================= -->
+
+      <div id="aiModal" class="modal-overlay hidden">
+        <div class="modal ai-modal">
+          <div class="modal-header">
+            <h2 id="aiModalTitle">AI Assistant</h2>
+            <button id="closeAiModal" class="close-btn">✖</button>
+          </div>
+
+          <div id="aiContent" class="ai-content">
+            <div id="aiGeneratedContent"></div>
+
+            <div id="aiQuiz" class="ai-quiz"></div>
+          </div>
+
+          <div class="modal-actions">
+            <button id="closeAiModalFooter">Close</button>
+          </div>
+        </div>
+      </div>
 
       <!-- ================= Coding Challenge ================= -->
 
