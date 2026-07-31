@@ -30,7 +30,14 @@ const reflection = document.getElementById("reflection");
 const saveNotes = document.getElementById("saveNotes");
 const saveReflection = document.getElementById("saveReflection");
 
-const copyPrompt = document.getElementById("copyPrompt");
+const generateLessonBtn = document.getElementById("generateLessonBtn");
+
+// AI Assistant modal elements
+const aiModal = document.getElementById("aiModal");
+const closeAiModal = document.getElementById("closeAiModal");
+const closeAiModalFooter = document.getElementById("closeAiModalFooter");
+const aiGeneratedContent = document.getElementById("aiGeneratedContent");
+const aiQuiz = document.getElementById("aiQuiz");
 
 const languageBtn = document.getElementById("languageBtn");
 const languageModal = document.getElementById("languageModal");
@@ -729,17 +736,144 @@ reflection.addEventListener("input", () => {
 // Copy AI Prompt
 // ===========================================
 
-copyPrompt.addEventListener("click", () => {
-  if (promptText.value === "") {
-    alert("Please select a lesson first.");
+function showAIModal() {
+  aiModal.classList.remove("hidden");
+}
 
+function hideAIModal() {
+  aiModal.classList.add("hidden");
+  aiGeneratedContent.innerHTML = "";
+  aiQuiz.innerHTML = "";
+}
+
+async function generateAI(prompt) {
+  // Configure this endpoint to point to your backend AI proxy.
+  // If `AI_API_ENDPOINT` is empty, the function will simulate a response.
+  const AI_API_ENDPOINT = "";
+
+  if (!prompt) {
+    alert("Please select a lesson first.");
     return;
   }
 
-  navigator.clipboard.writeText(promptText.value);
+  showAIModal();
 
-  alert("📋 AI Prompt copied.");
-});
+  aiGeneratedContent.innerHTML = "<p>Generating lesson...</p>";
+
+  try {
+    let result;
+
+    if (AI_API_ENDPOINT) {
+      const res = await fetch(AI_API_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt }),
+      });
+
+      result = await res.json();
+    } else {
+      // Simulation fallback for offline/demo use
+      const lines = prompt.split("\n").slice(0, 10);
+
+      result = {
+        content: `<h3>${promptTitle.textContent}</h3><p>${lines.join(" ")}</p><p>This is a simulated lesson. Connect a backend AI endpoint for richer content.</p>`,
+        quiz: [
+          {
+            id: 1,
+            question: `What is one key idea from ${promptTitle.textContent}?`,
+            choices: ["A", "B", "C", "D"],
+            answer: 0,
+          },
+          {
+            id: 2,
+            question: `True or False: Practicing small exercises helps learning.`,
+            choices: ["True", "False"],
+            answer: 0,
+          },
+        ],
+      };
+    }
+
+    renderAIResult(result);
+  } catch (err) {
+    aiGeneratedContent.innerHTML = `<p>Error generating lesson: ${err.message}</p>`;
+  }
+}
+
+function renderAIResult(result) {
+  aiGeneratedContent.innerHTML = result.content || "<p>No content returned.</p>";
+
+  // Render quiz
+  aiQuiz.innerHTML = "";
+
+  if (result.quiz && result.quiz.length) {
+    const form = document.createElement("form");
+
+    result.quiz.forEach((q, idx) => {
+      const fieldset = document.createElement("fieldset");
+
+      const legend = document.createElement("legend");
+
+      legend.textContent = `${idx + 1}. ${q.question}`;
+
+      fieldset.appendChild(legend);
+
+      q.choices.forEach((choice, cIdx) => {
+        const label = document.createElement("label");
+
+        label.className = "quiz-choice";
+
+        const input = document.createElement("input");
+
+        input.type = "radio";
+
+        input.name = `q-${q.id}`;
+
+        input.value = cIdx;
+
+        label.appendChild(input);
+
+        label.appendChild(document.createTextNode(" " + choice));
+
+        fieldset.appendChild(label);
+      });
+
+      form.appendChild(fieldset);
+    });
+
+    const submit = document.createElement("button");
+
+    submit.type = "button";
+
+    submit.textContent = "Submit Quiz";
+
+    submit.addEventListener("click", () => {
+      let score = 0;
+
+      result.quiz.forEach((q) => {
+        const sel = form.querySelector(`input[name=\`q-${q.id}\`]:checked`);
+
+        if (sel && Number(sel.value) === q.answer) score++;
+      });
+
+      alert(`Quiz completed. Score: ${score} / ${result.quiz.length}`);
+    });
+
+    form.appendChild(submit);
+
+    aiQuiz.appendChild(form);
+  }
+}
+
+// Wire modal close handlers
+if (aiModal) {
+  aiModal.addEventListener("click", (e) => {
+    if (e.target === aiModal) hideAIModal();
+  });
+}
+
+if (closeAiModal) closeAiModal.addEventListener("click", hideAIModal);
+if (closeAiModalFooter) closeAiModalFooter.addEventListener("click", hideAIModal);
 
 languageBtn.addEventListener("click", showLanguageModal);
 saveLanguages.addEventListener("click", saveLanguageSelection);
@@ -796,6 +930,18 @@ darkModeBtn.addEventListener("click", () => {
     darkModeBtn.textContent = "🌙 Dark Mode";
   }
 });
+
+// Generate lesson with AI assistant
+if (generateLessonBtn) {
+  generateLessonBtn.addEventListener("click", () => {
+    if (!currentTopic) {
+      alert("Please select a lesson first.");
+      return;
+    }
+
+    generateAI(promptText.value);
+  });
+}
 
 // ===========================================
 // Learning Progress Messages
