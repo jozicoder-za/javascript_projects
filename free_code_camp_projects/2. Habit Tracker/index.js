@@ -738,10 +738,12 @@ reflection.addEventListener("input", () => {
 
 function showAIModal() {
   aiModal.classList.remove("hidden");
+  document.body.classList.add("no-scroll");
 }
 
 function hideAIModal() {
   aiModal.classList.add("hidden");
+  document.body.classList.remove("no-scroll");
   aiGeneratedContent.innerHTML = "";
   aiQuiz.innerHTML = "";
 }
