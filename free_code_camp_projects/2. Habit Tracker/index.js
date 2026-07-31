@@ -8,7 +8,8 @@
 // DOM Elements
 // ===========================================
 
-const topicList = document.getElementById("toplicList") || document.getElementById("topicList");
+const topicList =
+  document.getElementById("toplicList") || document.getElementById("topicList");
 
 const progressBar = document.getElementById("progressBar");
 const progressText = document.getElementById("progressText");
@@ -143,7 +144,6 @@ function refreshRoadmap() {
 
   renderRoadmap();
 }
-
 
 // ===========================================
 // Lesson Progress
@@ -801,7 +801,8 @@ async function generateAI(prompt) {
 }
 
 function renderAIResult(result) {
-  aiGeneratedContent.innerHTML = result.content || "<p>No content returned.</p>";
+  aiGeneratedContent.innerHTML =
+    result.content || "<p>No content returned.</p>";
 
   // Render quiz
   aiQuiz.innerHTML = "";
@@ -873,7 +874,8 @@ if (aiModal) {
 }
 
 if (closeAiModal) closeAiModal.addEventListener("click", hideAIModal);
-if (closeAiModalFooter) closeAiModalFooter.addEventListener("click", hideAIModal);
+if (closeAiModalFooter)
+  closeAiModalFooter.addEventListener("click", hideAIModal);
 
 languageBtn.addEventListener("click", showLanguageModal);
 saveLanguages.addEventListener("click", saveLanguageSelection);
@@ -1003,7 +1005,9 @@ renderRoadmap();
 
 console.log("🐍 Welcome to PythonPath AI");
 
-console.log(`Learning Journey: Mastering ${targetLanguage} from ${sourceLanguage}`);
+console.log(
+  `Learning Journey: Mastering ${targetLanguage} from ${sourceLanguage}`,
+);
 
 /* ======================================================
    PythonPath AI
