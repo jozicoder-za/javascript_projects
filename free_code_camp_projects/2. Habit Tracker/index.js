@@ -680,57 +680,53 @@ showQuote();
 // Load Saved Notes
 // ===========================================
 
-notes.value = localStorage.getItem("notes") || "";
+if (notes) {
+  notes.value = localStorage.getItem("notes") || "";
+}
 
-reflection.value = localStorage.getItem("reflection") || "";
+if (reflection) {
+  reflection.value = localStorage.getItem("reflection") || "";
+}
 
 // ===========================================
 // Save Notes
 // ===========================================
 
-saveNotes.addEventListener("click", () => {
-  localStorage.setItem(
-    "notes",
+if (saveNotes && notes) {
+  saveNotes.addEventListener("click", () => {
+    localStorage.setItem("notes", notes.value);
 
-    notes.value,
-  );
-
-  alert("✅ Learning notes saved.");
-});
+    alert("✅ Learning notes saved.");
+  });
+}
 
 // ===========================================
 // Save Reflection
 // ===========================================
 
-saveReflection.addEventListener("click", () => {
-  localStorage.setItem(
-    "reflection",
+if (saveReflection && reflection) {
+  saveReflection.addEventListener("click", () => {
+    localStorage.setItem("reflection", reflection.value);
 
-    reflection.value,
-  );
-
-  alert("✅ Reflection saved.");
-});
+    alert("✅ Reflection saved.");
+  });
+}
 
 // ===========================================
 // Auto Save
 // ===========================================
 
-notes.addEventListener("input", () => {
-  localStorage.setItem(
-    "notes",
+if (notes) {
+  notes.addEventListener("input", () => {
+    localStorage.setItem("notes", notes.value);
+  });
+}
 
-    notes.value,
-  );
-});
-
-reflection.addEventListener("input", () => {
-  localStorage.setItem(
-    "reflection",
-
-    reflection.value,
-  );
-});
+if (reflection) {
+  reflection.addEventListener("input", () => {
+    localStorage.setItem("reflection", reflection.value);
+  });
+}
 
 // ===========================================
 // Copy AI Prompt
