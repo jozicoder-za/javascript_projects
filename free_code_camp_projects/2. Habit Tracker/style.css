@@ -221,11 +221,6 @@ button:hover {
   font-weight: bold;
 }
 
-  color: #222;
-
-  font-weight: bold;
-}
-
 #darkModeBtn:hover {
   background: #ffde66;
 }
@@ -341,6 +336,127 @@ section h2 {
 
 section p {
   margin-bottom: 15px;
+}
+
+.resource-list {
+  display: grid;
+  gap: 14px;
+}
+
+.resource-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  background: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.resource-card:hover,
+.resource-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+  border-color: #3776ab;
+  background: white;
+}
+
+.resource-logo {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.04em;
+}
+
+.freecodecamp {
+  background: linear-gradient(135deg, #0a0a23, #3b82f6);
+}
+
+.mdn {
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+}
+
+.odin {
+  background: linear-gradient(135deg, #14532d, #4ade80);
+}
+
+.resource-copy h3 {
+  color: #0f172a;
+  margin-bottom: 4px;
+  font-size: 1.02rem;
+}
+
+.resource-copy p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.resource-modal {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) translateX(12px);
+  opacity: 0;
+  pointer-events: none;
+  width: min(260px, calc(100% - 26px));
+  padding: 14px 16px;
+  background: white;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+  transition: all 0.25s ease;
+  z-index: 3;
+}
+
+.resource-card:hover .resource-modal,
+.resource-card:focus-within .resource-modal {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.resource-modal h4 {
+  color: #3776ab;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.resource-modal p {
+  margin: 0;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .resource-card {
+    flex-wrap: wrap;
+  }
+
+  .resource-modal {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    opacity: 1;
+    width: 100%;
+    margin-top: 8px;
+    pointer-events: auto;
+    display: none;
+  }
+
+  .resource-card:hover .resource-modal,
+  .resource-card:focus-within .resource-modal {
+    display: block;
+  }
 }
 
 /* ===============================
