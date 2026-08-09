@@ -147,6 +147,25 @@
         </div>
       </div>
 
+      <!-- ================= Resource Details Modal (large) ================= -->
+      <div id="resourceOverlay" class="modal-overlay hidden">
+        <div class="modal resource-modal-box">
+          <div class="modal-header">
+            <h2 id="resourceTitle">Resource</h2>
+            <button id="closeResourceModal" class="close-btn">✖</button>
+          </div>
+
+          <div id="resourceContent" class="resource-content">
+            <!-- Populated dynamically -->
+          </div>
+
+          <div class="modal-actions">
+            <button id="resourceOpenBtn">Open Website</button>
+            <button id="resourceCloseFooter">Close</button>
+          </div>
+        </div>
+      </div>
+
       <!-- ================= Coding Challenge ================= -->
 
       <section class="challenge-card">
@@ -169,6 +188,8 @@
           <a
             class="resource-card"
             href="https://www.freecodecamp.org/"
+            data-twitter="https://twitter.com/freeCodeCamp"
+            data-website="https://www.freecodecamp.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -199,6 +220,8 @@
           <a
             class="resource-card"
             href="https://developer.mozilla.org/"
+            data-twitter="https://twitter.com/MozillaDevNet"
+            data-website="https://developer.mozilla.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -226,6 +249,8 @@
           <a
             class="resource-card"
             href="https://www.theodinproject.com/"
+            data-twitter="https://twitter.com/TheOdinProject"
+            data-website="https://www.theodinproject.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
