@@ -139,6 +139,67 @@ button:hover {
   flex-direction: column;
 }
 
+/* Large resource details modal */
+.resource-modal-box {
+  width: min(1100px, 98%);
+  max-width: 1100px;
+  height: 80vh;
+  max-height: 80vh;
+  border-radius: 16px;
+  padding: 20px 26px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-content {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.resource-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+}
+
+.resource-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resource-meta p {
+  color: #334155;
+}
+
+.resource-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.resource-links a {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid #e2e8f0;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .ai-modal .modal-header {
   display: flex;
   justify-content: space-between;
