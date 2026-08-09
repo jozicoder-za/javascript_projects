@@ -885,6 +885,82 @@ languageModal.addEventListener("click", (event) => {
   }
 });
 
+// ================= Resource Details Modal =================
+
+const resourceOverlay = document.getElementById("resourceOverlay");
+const resourceContent = document.getElementById("resourceContent");
+const resourceTitle = document.getElementById("resourceTitle");
+const resourceCloseBtn = document.getElementById("closeResourceModal");
+const resourceCloseFooter = document.getElementById("resourceCloseFooter");
+const resourceOpenBtn = document.getElementById("resourceOpenBtn");
+
+function openResourceModal(card) {
+  const title = card.querySelector(".resource-copy h3").textContent;
+  const descEl = card.querySelector(".resource-modal p");
+  const desc = descEl ? descEl.textContent.trim() : "";
+  const img = card.querySelector(".resource-logo img")
+    ? card.querySelector(".resource-logo img").src
+    : "";
+  const website = card.dataset.website || card.href || "";
+  const twitter = card.dataset.twitter || "";
+
+  resourceTitle.textContent = title;
+
+  resourceContent.innerHTML = `
+    <img src="${img}" alt="${title} logo" />
+    <div class="resource-meta">
+      <p>${desc}</p>
+      <div class="resource-links">
+        <a id="resourceWebsite" href="${website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
+        ${twitter ? `<a id="resourceTwitter" href="${twitter}" target="_blank" rel="noopener noreferrer">Twitter</a>` : ""}
+      </div>
+      <p style="margin-top:8px;color:#64748b;font-size:0.9rem;">More: social profiles and official docs linked above.</p>
+    </div>
+  `;
+
+  resourceOpenBtn.onclick = () => {
+    if (website) window.open(website, "_blank", "noopener");
+  };
+
+  resourceOverlay.classList.remove("hidden");
+  document.body.classList.add("no-scroll");
+}
+
+function closeResourceModal() {
+  resourceOverlay.classList.add("hidden");
+  document.body.classList.remove("no-scroll");
+  resourceContent.innerHTML = "";
+}
+
+// Attach click handlers to resource cards
+document.querySelectorAll(".resource-card").forEach((card) => {
+  card.addEventListener("click", (e) => {
+    // If user is trying to open external link via Ctrl/Cmd click, allow it
+    if (e.ctrlKey || e.metaKey) return;
+
+    e.preventDefault();
+    openResourceModal(card);
+  });
+});
+
+if (resourceOverlay) {
+  resourceOverlay.addEventListener("click", (e) => {
+    if (e.target === resourceOverlay) closeResourceModal();
+  });
+}
+
+if (resourceCloseBtn) resourceCloseBtn.addEventListener("click", closeResourceModal);
+if (resourceCloseFooter) resourceCloseFooter.addEventListener("click", closeResourceModal);
+
+// Close modal on Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    if (!resourceOverlay.classList.contains("hidden")) closeResourceModal();
+    if (!aiModal.classList.contains("hidden")) hideAIModal();
+    if (!languageModal.classList.contains("hidden")) hideLanguageModal();
+  }
+});
+
 // ===========================================
 // Learning Mode Selector
 // ===========================================
