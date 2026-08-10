@@ -918,18 +918,25 @@ function openResourceModal(card) {
     </div>
   `;
 
-  resourceOpenBtn.onclick = () => {
-    if (website) window.open(website, "_blank", "noopener");
-  };
-
   resourceOverlay.classList.remove("hidden");
+  requestAnimationFrame(() => resourceOverlay.classList.add("show"));
   document.body.classList.add("no-scroll");
 }
 
 function closeResourceModal() {
-  resourceOverlay.classList.add("hidden");
+  resourceOverlay.classList.remove("show");
   document.body.classList.remove("no-scroll");
-  resourceContent.innerHTML = "";
+  resourceOverlay.addEventListener(
+    "transitionend",
+    function cleanup(event) {
+      if (event.target === resourceOverlay) {
+        resourceOverlay.classList.add("hidden");
+        resourceContent.innerHTML = "";
+        resourceOverlay.removeEventListener("transitionend", cleanup);
+      }
+    },
+    { once: true },
+  );
 }
 
 // Attach click handlers to resource cards
