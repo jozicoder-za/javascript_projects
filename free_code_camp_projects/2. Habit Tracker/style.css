@@ -145,11 +145,27 @@ button:hover {
   max-width: 1100px;
   height: 80vh;
   max-height: 80vh;
-  border-radius: 16px;
-  padding: 20px 26px;
+  border-radius: 20px;
+  padding: 24px;
   overflow: auto;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(180deg, #1e293b 0%, #111827 100%);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  color: #f8fafc;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.resource-modal-box .modal-header h2 {
+  margin: 0;
+  color: #e2e8f0;
 }
 
 .resource-content {
@@ -162,20 +178,22 @@ button:hover {
 .resource-content img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  padding: 8px;
+  border-radius: 16px;
+  background: #0f172a;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 10px;
 }
 
 .resource-meta {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-.resource-meta p {
-  color: #334155;
+.resource-meta p,
+.resource-meta li,
+.resource-meta span {
+  color: #cbd5e1;
 }
 
 .resource-links {
@@ -185,19 +203,40 @@ button:hover {
 }
 
 .resource-links a {
-  background: #f1f5f9;
-  color: #0f172a;
-  padding: 8px 12px;
-  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.18);
+  color: #f8fafc;
+  padding: 10px 14px;
+  border-radius: 12px;
   text-decoration: none;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.resource-links a:hover,
+.resource-links a:focus-visible {
+  background: rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
 }
 
 .close-btn {
-  background: transparent;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   font-size: 20px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
   cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.04);
 }
 
 .ai-modal .modal-header {
