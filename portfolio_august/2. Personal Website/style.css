@@ -1,0 +1,8 @@
+body {
+  background: #e9e6e6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
