@@ -21,3 +21,5 @@ function watchStart() {
   }
   timer = setInterval(stopwatch, 1000);
 }
+
+const startEl = document.getElementById("startEl");
