@@ -14,3 +14,10 @@ function stopwatch() {
     }
   }
 }
+
+function watchStart() {
+  if (timer !== null) {
+    clearInterval(timer);
+  }
+  timer = setInterval(stopwatch, 1000);
+}
