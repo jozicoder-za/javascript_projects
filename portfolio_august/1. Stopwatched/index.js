@@ -23,3 +23,8 @@ function watchStart() {
 }
 
 const startEl = document.getElementById("startEl");
+
+startEl.addEventListener("click", () => {
+  console.log("Start button clicked");
+  watchStart();
+});
