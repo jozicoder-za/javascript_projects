@@ -29,3 +29,10 @@ startEl.addEventListener("click", () => {
   console.log("Start button clicked");
   watchStart();
 });
+
+function watchStop() {
+  clearInterval(timer);
+  timer = null;
+}
+
+// continue on 16:51
