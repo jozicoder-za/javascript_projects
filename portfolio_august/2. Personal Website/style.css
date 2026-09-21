@@ -6,3 +6,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links li {
+  list-style: none;
+  gap: 20px;
+}
