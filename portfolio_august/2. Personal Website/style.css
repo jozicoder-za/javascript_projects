@@ -27,3 +27,7 @@ body {
 .links li a:hover {
   text-decoration: underline;
 }
+
+.avatar img {
+  width: 40%;
+}
