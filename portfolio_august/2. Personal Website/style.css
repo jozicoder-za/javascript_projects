@@ -31,3 +31,9 @@ body {
 .avatar img {
   width: 40%;
 }
+
+.about-me {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
