@@ -41,4 +41,15 @@ body {
 .portfolio {
   display: flex;
   justify-content: space-around;
+  margin-top: 50px;
+}
+
+.portfolio-1,
+.portfolio-2,
+.portfolio-3 {
+  width: 30%;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
 }
