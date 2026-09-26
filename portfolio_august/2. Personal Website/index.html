@@ -3,63 +3,144 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Website</title>
+    <meta name="theme-color" content="#f1f3ed" />
+    <meta name="description" content="The portfolio of Coding Maniac, a self-taught front-end developer." />
+    <title>Coding Maniac | Front-End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="navbar">
-      <div class="logo">
-        <h2>Coding Maniac</h2>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Coding Maniac home">
+        <span class="wordmark-mark">CM</span>
+        <span>Coding Maniac</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="quick-jump-trigger" type="button" aria-label="Open quick navigation" aria-keyshortcuts="Control+K Meta+K">
+        <span class="search-mark" aria-hidden="true"></span>
+        <span class="quick-jump-label">Quick jump</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero page-width" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Independent front-end developer</p>
+          <h1 id="hero-title">Thoughtful code.<br /><span>Human-sized</span> ideas.</h1>
+          <p class="hero-intro">I’m Coding Maniac, a self-taught front-end developer who turns curious ideas into clear, useful web experiences.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="#about">A little about me <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hero-note"><span>01</span> Design-minded development, from first sketch to final detail.</p>
+        </div>
+        <div class="hero-art" aria-label="Portrait of the developer">
+          <div class="art-ring art-ring-back"></div>
+          <div class="art-ring art-ring-front"></div>
+          <div class="portrait-frame"><img src="./media/user.png" alt="Coding Maniac" /></div>
+          <span class="art-sticker">MADE<br />ON THE<br />INTERNET <span>✳</span></span>
+          <span class="art-caption">Curiosity, made visible.</span>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span> Scroll to explore</a>
+      </section>
+
+      <section class="about-section section-pad" id="about" aria-labelledby="about-title">
+        <div class="page-width about-layout">
+          <div class="section-marker"><span>01 / ABOUT</span><i></i></div>
+          <div class="about-copy">
+            <p class="eyebrow">A builder who stays curious</p>
+            <h2 id="about-title">Good work starts<br />with <span>good questions.</span></h2>
+            <div class="about-bottom">
+              <p class="about-lead">Hi, I’m Coding Maniac. Nice to meet you.</p>
+              <p>I’m passionate about building excellent software that improves the lives of the people who use it. I enjoy shaping the details that make a digital experience feel intuitive, and I’m always learning about what’s next, from modern front-end tools to emerging AI.</p>
+            </div>
+          </div>
+          <div class="about-aside"><span class="aside-number">01—04</span><span>Ideas become<br />interfaces here.</span><span class="aside-spark" aria-hidden="true">✳</span></div>
+        </div>
+      </section>
+
+      <section class="skills-section section-pad" id="skills" aria-labelledby="skills-title">
+        <div class="page-width">
+          <div class="section-heading">
+            <div class="section-marker"><span>02 / TOOLKIT</span><i></i></div>
+            <div><p class="eyebrow">Things I like to work with</p><h2 id="skills-title">A practical <span>toolkit.</span></h2></div>
+            <p class="section-aside">The right tool is the one that makes the experience better.</p>
+          </div>
+          <div class="skill-list" aria-label="Skills and areas of interest">
+            <div class="skill-item"><span class="skill-index">01</span><span class="skill-symbol symbol-html">&lt;/&gt;</span><span>HTML</span><span class="skill-kind">Structure</span></div>
+            <div class="skill-item"><span class="skill-index">02</span><span class="skill-symbol symbol-css">✳</span><span>CSS</span><span class="skill-kind">Visual systems</span></div>
+            <div class="skill-item"><span class="skill-index">03</span><span class="skill-symbol symbol-js">JS</span><span>JavaScript</span><span class="skill-kind">Interaction</span></div>
+            <div class="skill-item"><span class="skill-index">04</span><span class="skill-symbol symbol-react">◉</span><span>React</span><span class="skill-kind">Interfaces</span></div>
+            <div class="skill-item"><span class="skill-index">05</span><span class="skill-symbol symbol-git">⌘</span><span>Git &amp; GitHub</span><span class="skill-kind">Collaboration</span></div>
+            <div class="skill-item"><span class="skill-index">06</span><span class="skill-symbol symbol-ui">◫</span><span>Responsive UI</span><span class="skill-kind">Every screen</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section section-pad" id="work" aria-labelledby="work-title">
+        <div class="page-width">
+          <div class="section-heading work-heading">
+            <div class="section-marker"><span>03 / SELECTED WORK</span><i></i></div>
+            <div><p class="eyebrow">Small set, lots of intention</p><h2 id="work-title">Made to be <span>useful.</span></h2></div>
+            <p class="section-aside">A few concepts and builds from my front-end practice.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card project-chat">
+              <div class="project-preview chat-preview" aria-hidden="true"><div class="preview-top"><i></i><i></i><i></i><span>messages</span></div><div class="chat-person"><b></b><span></span><span></span></div><div class="chat-bubble bubble-one"></div><div class="chat-bubble bubble-two"></div><div class="chat-input"><i></i></div><span class="preview-index">01</span></div>
+              <div class="project-info"><div><p class="project-type">INTERFACE / CONCEPT</p><h3>Chat App</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+            </article>
+            <article class="project-card project-weather">
+              <div class="project-preview weather-preview" aria-hidden="true"><div class="weather-top">WEDNESDAY <span>↗</span></div><div class="weather-place">Somewhere<br />nice</div><div class="weather-bottom"><span>24°</span><i>☼</i><small>Sunny spells</small></div><span class="preview-index">02</span></div>
+              <div class="project-info"><div><p class="project-type">DASHBOARD / CONCEPT</p><h3>Weather App</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+            </article>
+            <article class="project-card project-commerce">
+              <div class="project-preview shop-preview" aria-hidden="true"><div class="shop-nav"><b>goods.</b><span>NEW / OBJECTS / ABOUT</span><i>↗</i></div><div class="shop-product"><div class="product-shape"></div><div class="product-label">EVERYDAY<br />CERAMICS <span>$24</span></div></div><span class="preview-index">03</span></div>
+              <div class="project-info"><div><p class="project-type">ONLINE STORE / CONCEPT</p><h3>Commerce App</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section-pad" id="contact" aria-labelledby="contact-title">
+        <div class="page-width contact-layout">
+          <div class="section-marker"><span>04 / CONTACT</span><i></i></div>
+          <div class="contact-copy"><p class="eyebrow">Have something in mind?</p><h2 id="contact-title">Let’s make<br /><span>it matter.</span></h2><p>Tell me a little about what you’re building. I’ll help turn the first thought into a clear brief you can share.</p></div>
+          <form class="contact-form">
+            <label for="contact-name">Your name</label>
+            <input id="contact-name" name="name" autocomplete="name" placeholder="Name" required />
+            <label for="contact-email">Your email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            <label for="contact-message">A few details</label>
+            <textarea id="contact-message" name="message" rows="3" placeholder="What would you like to make?" required></textarea>
+            <button class="button button-light" type="submit">Share project brief <span aria-hidden="true">↗</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-width"><a class="wordmark" href="#home"><span class="wordmark-mark">CM</span><span>Coding Maniac</span></a><p>Made with curiosity. <span>© <span id="year"></span></span></p><a href="#home" class="back-top">Back to top ↑</a></footer>
+
+    <dialog class="quick-jump" aria-labelledby="quick-jump-title">
+      <div class="palette-search"><span class="search-mark" aria-hidden="true"></span><label class="visually-hidden" for="quick-jump-search">Find a section</label><input id="quick-jump-search" type="search" placeholder="Where would you like to go?" autocomplete="off" /><kbd>ESC</kbd></div>
+      <p id="quick-jump-title" class="palette-label">JUMP TO</p>
+      <div class="palette-options">
+        <a href="#home" data-command="home start intro"><span>Home</span><kbd>⌂</kbd></a>
+        <a href="#about" data-command="about story me"><span>About</span><kbd>01</kbd></a>
+        <a href="#skills" data-command="skills toolkit tools"><span>Skills</span><kbd>02</kbd></a>
+        <a href="#work" data-command="work projects portfolio"><span>Work</span><kbd>03</kbd></a>
+        <a href="#contact" data-command="contact brief message"><span>Contact</span><kbd>04</kbd></a>
       </div>
-      <ul class="links">
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-    <div class="about-me">
-      <div class="avatar">
-        <img src="./media/user.png" alt="" />
-      </div>
-      <div class="personal-info">
-        <p>
-          I am a self taught fron-end developer with extensive experience on
-          building modern web application. Astute learner with keen interest on
-          emerging technologies like Artificial Technology.
-        </p>
-      </div>
-    </div>
-    <div class="portfolio">
-      <div class="portfolio-1">
-        <h3>Chat App</h3>
-        <figure>
-          <img src="#" alt="" />
-          <figcaption>Portfolio - 1</figcaption>
-        </figure>
-      </div>
-      <div class="portfolio-2">
-        <h3>Weather App</h3>
-        <figure>
-          <img src="#" alt="" />
-          <figcaption>Portfolio - 2</figcaption>
-        </figure>
-      </div>
-      <div class="portfolio-3">
-        <h3>Commerce App</h3>
-        <figure>
-          <img src="#" alt="" />
-          <figcaption>Portfolio - 3</figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="footer">
-      <p>Copyright &copy; 2024 Coding Maniac</p>
-      <div class="socials">
-        <a href="#"><img src="./media/facebook.png" alt="" />Twitter</a>
-        <a href="#"><img src="./media/twitter.png" alt="" />LinkedIn</a>
-        <a href="#"><img src="./media/instagram.png" alt="" />Github</a>
-      </div>
-    </div>
+      <p class="palette-hint">Navigate the portfolio <span>↵</span></p>
+    </dialog>
     <script src="index.js"></script>
   </body>
 </html>
