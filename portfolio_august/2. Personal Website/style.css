@@ -1,4 +1,4 @@
- :root {
+:root {
   --ink: #e7f7ff;
   --muted: #a9c5d2;
   --navy: #071827;
@@ -63,7 +63,9 @@ body {
   font-weight: 600;
   padding: 0.65rem 0.8rem;
   text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .links li a:hover,
@@ -94,9 +96,6 @@ body {
 }
 
 .avatar img {
-  border: 3px solid var(--cyan);
-  border-radius: 50%;
-  box-shadow: 0 0 28px rgba(66, 232, 210, 0.25);
   width: 40%;
 }
 
