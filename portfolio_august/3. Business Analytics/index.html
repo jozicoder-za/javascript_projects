@@ -126,10 +126,23 @@
           <label for="filter-end-date">End date:</label>
           <input type="date" id="filter-end-date" name="filter-end-date" />
           <button id="apply-date-filters" type="button">Apply Filters</button>
+          <button type="button" id="clear-date-filters">Clear Filters</button>
         </div>
         <div id="date-range-sales-container">
           <h3>Sales for Selected Period</h3>
           <p id="date-range-total-sales">Total Sales: R0.00</p>
+        </div>
+        <div id="filtered-records-container">
+          <h3>Matching Records</h3>
+          <p id="filtered-record-count">Records:0</p>
+        </div>
+        <div id="filtered-average-sales-container">
+          <h3>Average Sales</h3>
+          <p id="filtered-average-sales">Average Sales: R0.00</p>
+        </div>
+        <div id="top-product-container">
+          <h3>Top Selling Product</h3>
+          <p id="top-selling-product">Product: None</p>
         </div>
       </section>
       <section id="settings">
