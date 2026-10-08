@@ -690,6 +690,16 @@
               <option value="60">Every 60 minutes</option>
             </select>
           </div>
+          <div id="decimal-format-setting-container">
+            <h4>Decimal Places</h4>
+            <label for="decimal-places-select"> Choose decimal places: </label>
+            <select name="decimal-places" id="decimal-places-select">
+              <option value="0">0 decimal places</option>
+              <option value="1">1 decimal places</option>
+              <option value="2" selected>2 decimal places</option>
+              <option value="3">3 decimal places</option>
+            </select>
+          </div>
           <div id="settings-actions">
             <button type="button" id="save-settings-button">
               Save Settings
@@ -698,6 +708,9 @@
               Reset Settings
             </button>
           </div>
+          <p id="rest-settings-message" role="status" aria-live="polite">
+            Settings have not been reset
+          </p>
           <p id="settings-status" role="status" aria-live="polite">
             Your Settings have not been saved
           </p>
