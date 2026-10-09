@@ -700,6 +700,26 @@
               <option value="3">3 decimal places</option>
             </select>
           </div>
+          <div id="negative-values-setting-container">
+            <h4>Negative Values</h4>
+            <label for="negative-values-select"
+              >Choose how negative values are displayed:</label
+            >
+            <select name="negative-values" id="negative-values">
+              <option value="minus">-R 100.00</option>
+              <option value="parentheses">(R 100.00)</option>
+            </select>
+          </div>
+          <div id="table-rows-setting-container">
+            <h4>Table Rows</h4>
+            <label for="table-rows-select">Rows shown per page:</label>
+            <select name="table-rows" id="table-rows-select">
+              <option value="10">10 rows</option>
+              <option value="25">25 rows</option>
+              <option value="50">50 rows</option>
+              <option value="100">100 rows</option>
+            </select>
+          </div>
           <div id="settings-actions">
             <button type="button" id="save-settings-button">
               Save Settings
@@ -714,6 +734,7 @@
           <p id="settings-status" role="status" aria-live="polite">
             Your Settings have not been saved
           </p>
+          <!-- continue with step 176-->
         </div>
       </section>
     </main>
