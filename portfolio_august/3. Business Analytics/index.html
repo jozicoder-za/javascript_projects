@@ -737,6 +737,26 @@
               <option value="list">List</option>
             </select>
           </div>
+          <div id="default-section-setting-container">
+            <h4>Default Section</h4>
+            <label for="default-section-select"
+              >Choose section to open first:</label
+            >
+            <select name="default-section" id="default-section-select">
+              <option value="dashboard">Dashboard</option>
+              <option value="upload">Upload Data</option>
+              <option value="reports">Reports</option>
+              <option value="settings">Settings</option>
+            </select>
+          </div>
+          <div id="auto-load-setting-container">
+            <h4>Auto-Load Dashboard</h4>
+            <label for="auto-load-select">Load saved data automatically</label>
+            <select name="auto-load" id="auto-load-select">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
           <div id="settings-actions">
             <button type="button" id="save-settings-button">
               Save Settings
@@ -751,7 +771,7 @@
           <p id="settings-status" role="status" aria-live="polite">
             Your Settings have not been saved
           </p>
-          <!-- continue with step 176-->
+          <!-- continue with step 182-->
         </div>
       </section>
     </main>
