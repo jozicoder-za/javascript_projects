@@ -711,19 +711,30 @@
           <div id="visual-preferences-container">
             <h4>Visual Preferences</h4>
             <p>Customize the appearance and layout of your dashboard.</p>
+            <div id="theme-setting-container">
+              <h4>Dashboard Theme</h4>
+              <label for="theme-select">Choose theme:</label>
+              <select name="theme" id="theme-select">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+            <div id="chart-display-setting-container">
+              <h4>Chart Display</h4>
+              <label for="chart-type-select">Choose Chart Type:</label>
+              <select name="chart-type" id="chart-type-select">
+                <option value="line">Line Chart</option>
+                <option value="bar">Bar Chart</option>
+                <option value="pie">Pie Chart</option>
+              </select>
+            </div>
+            <!--Start with step 208-->
           </div>
           <h4>Data Loading Preferences</h4>
           <p>Configure how DataDash loads and processes your data.</p>
           <h4>Notification Preferences</h4>
           <p>Choose which status messages appear while using DataDash.</p>
-          <div id="theme-setting-container">
-            <h4>Dashboard Theme</h4>
-            <label for="theme-select">Choose theme:</label>
-            <select name="theme" id="theme-select">
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
-          </div>
+
           <div id="refresh-setting-container">
             <h4>Dashboard Refresh</h4>
             <label for="refresh-interval-select"> Refresh interval: </label>
@@ -736,15 +747,6 @@
             </select>
           </div>
 
-          <div id="chart-display-setting-container">
-            <h4>Chart Display</h4>
-            <label for="chart-type-select">Choose Chart Type:</label>
-            <select name="chart-type" id="chart-type-select">
-              <option value="line">Line Chart</option>
-              <option value="bar">Bar Chart</option>
-              <option value="pie">Pie Chart</option>
-            </select>
-          </div>
           <div id="dashboard-layout-setting-container">
             <h4>Dashboard Layout</h4>
             <label for="dashboard-layout-select">Choose layout:</label>
