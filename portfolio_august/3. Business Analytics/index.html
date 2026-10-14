@@ -655,6 +655,37 @@
           <div id="data-display-preferences-container">
             <h4>Data Display Preferences</h4>
             <p>Configure how numbers, dates, tables, and charts appear.</p>
+            <div id="currency-setting-container">
+              <h4>Currency</h4>
+              <label for="currency-select">Choose currency:</label>
+              <select name="currency-select" id="currency-select">
+                <option value="ZAR">South African Rand (ZAR)</option>
+                <option value="USD">US Dollar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">British Pound (GBP)</option>
+              </select>
+            </div>
+            <div id="date-format-setting-container">
+              <h4>Date Format</h4>
+              <label for="date-format-select">Choose date format:</label>
+              <select name="date-format" id="date-format-select">
+                <option value="dd-mm-yyyy">DD-MM-YYYY</option>
+                <option value="mm-dd-yyyy">MM-DD-YYYY</option>
+                <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+              </select>
+            </div>
+            <div id="decimal-format-setting-container">
+              <h4>Decimal Places</h4>
+              <label for="decimal-places-select">
+                Choose decimal places:
+              </label>
+              <select name="decimal-places" id="decimal-places-select">
+                <option value="0">0 decimal places</option>
+                <option value="1">1 decimal places</option>
+                <option value="2" selected>2 decimal places</option>
+                <option value="3">3 decimal places</option>
+              </select>
+            </div>
           </div>
           <!--continue start with step 200 -->
           <h4>Data Display Preferences</h4>
@@ -665,25 +696,6 @@
           <p>Configure how DataDash loads and processes your data.</p>
           <h4>Notification Preferences</h4>
           <p>Choose which status messages appear while using DataDash.</p>
-          <div id="currency-setting-container">
-            <h4>Currency</h4>
-            <label for="currency-select">Choose currency:</label>
-            <select name="currency-select" id="currency-select">
-              <option value="ZAR">South African Rand (ZAR)</option>
-              <option value="USD">US Dollar (USD)</option>
-              <option value="EUR">Euro (EUR)</option>
-              <option value="GBP">British Pound (GBP)</option>
-            </select>
-          </div>
-          <div id="date-format-setting-container">
-            <h4>Date Format</h4>
-            <label for="date-format-select">Choose date format:</label>
-            <select name="date-format" id="date-format-select">
-              <option value="dd-mm-yyyy">DD-MM-YYYY</option>
-              <option value="mm-dd-yyyy">MM-DD-YYYY</option>
-              <option value="yyyy-mm-dd">YYYY-MM-DD</option>
-            </select>
-          </div>
           <div id="theme-setting-container">
             <h4>Dashboard Theme</h4>
             <label for="theme-select">Choose theme:</label>
@@ -701,16 +713,6 @@
               <option value="15">Every 15 minutes</option>
               <option value="30">Every 30 minutes</option>
               <option value="60">Every 60 minutes</option>
-            </select>
-          </div>
-          <div id="decimal-format-setting-container">
-            <h4>Decimal Places</h4>
-            <label for="decimal-places-select"> Choose decimal places: </label>
-            <select name="decimal-places" id="decimal-places-select">
-              <option value="0">0 decimal places</option>
-              <option value="1">1 decimal places</option>
-              <option value="2" selected>2 decimal places</option>
-              <option value="3">3 decimal places</option>
             </select>
           </div>
           <div id="negative-values-setting-container">
