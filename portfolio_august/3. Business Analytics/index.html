@@ -686,12 +686,32 @@
                 <option value="3">3 decimal places</option>
               </select>
             </div>
+            <div id="negative-values-setting-container">
+              <h4>Negative Values</h4>
+              <label for="negative-values-select"
+                >Choose how negative values are displayed:</label
+              >
+              <select name="negative-values" id="negative-values">
+                <option value="minus">-R 100.00</option>
+                <option value="parentheses">(R 100.00)</option>
+              </select>
+            </div>
+            <div id="table-rows-setting-container">
+              <h4>Table Rows</h4>
+              <label for="table-rows-select">Rows shown per page:</label>
+              <select name="table-rows" id="table-rows-select">
+                <option value="10">10 rows</option>
+                <option value="25">25 rows</option>
+                <option value="50">50 rows</option>
+                <option value="100">100 rows</option>
+              </select>
+            </div>
           </div>
           <!--continue start with step 200 -->
-          <h4>Data Display Preferences</h4>
-          <p>Configure how numbers, dates, tables, and charts appears.</p>
-          <h4>Visual Preferences</h4>
-          <p>Customize the appearance and layout of your dashboard.</p>
+          <div id="visual-preferences-container">
+            <h4>Visual Preferences</h4>
+            <p>Customize the appearance and layout of your dashboard.</p>
+          </div>
           <h4>Data Loading Preferences</h4>
           <p>Configure how DataDash loads and processes your data.</p>
           <h4>Notification Preferences</h4>
@@ -715,26 +735,7 @@
               <option value="60">Every 60 minutes</option>
             </select>
           </div>
-          <div id="negative-values-setting-container">
-            <h4>Negative Values</h4>
-            <label for="negative-values-select"
-              >Choose how negative values are displayed:</label
-            >
-            <select name="negative-values" id="negative-values">
-              <option value="minus">-R 100.00</option>
-              <option value="parentheses">(R 100.00)</option>
-            </select>
-          </div>
-          <div id="table-rows-setting-container">
-            <h4>Table Rows</h4>
-            <label for="table-rows-select">Rows shown per page:</label>
-            <select name="table-rows" id="table-rows-select">
-              <option value="10">10 rows</option>
-              <option value="25">25 rows</option>
-              <option value="50">50 rows</option>
-              <option value="100">100 rows</option>
-            </select>
-          </div>
+
           <div id="chart-display-setting-container">
             <h4>Chart Display</h4>
             <label for="chart-type-select">Choose Chart Type:</label>
