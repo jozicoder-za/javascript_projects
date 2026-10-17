@@ -762,8 +762,37 @@
               </select>
             </div>
           </div>
-          <h4>Notification Preferences</h4>
-          <p>Choose which status messages appear while using DataDash.</p>
+          <div id="notification-preferences-container">
+            <h4>Notification Preferences</h4>
+            <p>Choose which status messages appear while using DataDash.</p>
+            <div id="error-message-setting-container">
+              <h4>Error Messages</h4>
+              <label for="show-error-messages-select">
+                Show error messages:
+              </label>
+              <select
+                name="show-error-messages"
+                id="show-error-messages-select"
+              >
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div id="success-message-setting-container">
+              <h4>Success Messages</h4>
+              <label for="show-success-messages-select">
+                Show success messages:
+              </label>
+              <select
+                name="show-success-messages"
+                id="show-success-messages-select"
+              >
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <!--Start with step 215-->
+          </div>
 
           <div id="default-section-setting-container">
             <h4>Default Section</h4>
@@ -874,29 +903,7 @@
               <option value="no">No</option>
             </select>
           </div>
-          <div id="error-message-setting-container">
-            <h4>Error Messages</h4>
-            <label for="show-error-messages-select">
-              Show error messages:
-            </label>
-            <select name="show-error-messages" id="show-error-messages-select">
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
-          <div id="success-message-setting-container">
-            <h4>Success Messages</h4>
-            <label for="show-success-messages-select">
-              Show success messages:
-            </label>
-            <select
-              name="show-success-messages"
-              id="show-success-messages-select"
-            >
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
+
           <div id="settings-actions">
             <button type="button" id="save-settings-button">
               Save Settings
