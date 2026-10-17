@@ -740,21 +740,30 @@
           <div id="data-loading-preferences-container">
             <h4>Data Loading Preferences</h4>
             <p>Configure how DataDash loads and processes your data.</p>
+            <div id="refresh-setting-container">
+              <h4>Dashboard Refresh</h4>
+              <label for="refresh-interval-select"> Refresh interval: </label>
+              <select name="refresh-interval" id="refresh-interval-select">
+                <option value="0">Manual</option>
+                <option value="5">Every 5 minutes</option>
+                <option value="15">Every 15 minutes</option>
+                <option value="30">Every 30 minutes</option>
+                <option value="60">Every 60 minutes</option>
+              </select>
+            </div>
+            <div id="auto-load-setting-container">
+              <h4>Auto-Load Dashboard</h4>
+              <label for="auto-load-select"
+                >Load saved data automatically</label
+              >
+              <select name="auto-load" id="auto-load-select">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
           </div>
           <h4>Notification Preferences</h4>
           <p>Choose which status messages appear while using DataDash.</p>
-
-          <div id="refresh-setting-container">
-            <h4>Dashboard Refresh</h4>
-            <label for="refresh-interval-select"> Refresh interval: </label>
-            <select name="refresh-interval" id="refresh-interval-select">
-              <option value="0">Manual</option>
-              <option value="5">Every 5 minutes</option>
-              <option value="15">Every 15 minutes</option>
-              <option value="30">Every 30 minutes</option>
-              <option value="60">Every 60 minutes</option>
-            </select>
-          </div>
 
           <div id="default-section-setting-container">
             <h4>Default Section</h4>
@@ -768,14 +777,7 @@
               <option value="settings">Settings</option>
             </select>
           </div>
-          <div id="auto-load-setting-container">
-            <h4>Auto-Load Dashboard</h4>
-            <label for="auto-load-select">Load saved data automatically</label>
-            <select name="auto-load" id="auto-load-select">
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
+
           <div id="charts-visibility-setting-container">
             <h4>Chart Visibility</h4>
             <label for="show-charts-select">Show Charts:</label>
