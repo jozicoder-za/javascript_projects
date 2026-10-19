@@ -870,8 +870,29 @@
                 <option value="no">No</option>
               </select>
             </div>
+            <div id="dashboard-description-visibility-setting-container">
+              <h4>Dashboard Description Visibility</h4>
+              <label for="show-dashboard-description-select">
+                Show dashboard description:
+              </label>
+              <select
+                name="show-dashboard-description"
+                id="show-dashboard-description-select"
+              >
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div id="footer-visibility-setting-container">
+              <h4>Footer Visibility</h4>
+              <label for="show-footer-select">Show dashboard footer:</label>
+              <select name="show-footer-select" id="show-footer-select">
+                <option value="yes">Yes</option>
+                <option value="">Yes</option>
+              </select>
+            </div>
           </div>
-
+          <!--start with step 228-->
           <div id="default-section-setting-container">
             <h4>Default Section</h4>
             <label for="default-section-select"
@@ -882,28 +903,6 @@
               <option value="upload">Upload Data</option>
               <option value="reports">Reports</option>
               <option value="settings">Settings</option>
-            </select>
-          </div>
-
-          <div id="dashboard-description-visibility-setting-container">
-            <h4>Dashboard Description Visibility</h4>
-            <label for="show-dashboard-description-select">
-              Show dashboard description:
-            </label>
-            <select
-              name="show-dashboard-description"
-              id="show-dashboard-description-select"
-            >
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
-          <div id="footer-visibility-setting-container">
-            <h4>Footer Visibility</h4>
-            <label for="show-footer-select">Show dashboard footer:</label>
-            <select name="show-footer-select" id="show-footer-select">
-              <option value="yes">Yes</option>
-              <option value="">Yes</option>
             </select>
           </div>
 
@@ -921,7 +920,6 @@
           <p id="settings-status" role="status" aria-live="polite">
             Your Settings have not been saved
           </p>
-          <!-- continue with step 182-->
         </div>
       </section>
     </main>
