@@ -949,30 +949,46 @@
                 <option value="GBP">British Pound (GBP)</option>
               </select>
             </div>
-          </div>
-          <div id="default-section-setting-container">
-            <h4>Default Section</h4>
-            <label for="default-section-select"
-              >Choose section to open first:</label
-            >
-            <select name="default-section" id="default-section-select">
-              <option value="dashboard">Dashboard</option>
-              <option value="upload">Upload Data</option>
-              <option value="reports">Reports</option>
-              <option value="settings">Settings</option>
-            </select>
-          </div>
-          <div id="default-date-format-setting-container">
-            <label for="default-date-format-select">
-              Default date format:
-            </label>
-            <select id="default-date-format-select" name="default-date-format">
-              <option value="YYYY-MM-DD">YYYY-MM-DD</option>
-              <option value="DD/MM/YYYY">DD/MM/YYYY</option>
-              <option value="MM/DD/YYYY">MM/DD/YYYY</option>
-            </select>
+            <div id="default-section-setting-container">
+              <h4>Default Section</h4>
+              <label for="default-section-select"
+                >Choose section to open first:</label
+              >
+              <select name="default-section" id="default-section-select">
+                <option value="dashboard">Dashboard</option>
+                <option value="upload">Upload Data</option>
+                <option value="reports">Reports</option>
+                <option value="settings">Settings</option>
+              </select>
+            </div>
+            <div id="default-date-format-setting-container">
+              <label for="default-date-format-select">
+                Default date format:
+              </label>
+              <select
+                id="default-date-format-select"
+                name="default-date-format"
+              >
+                <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+              </select>
+            </div>
+            <div id="default-number-format-setting-container">
+              <label id="default-number-format-select">
+                Default number format:
+              </label>
+              <select
+                id="default-number-format-select"
+                name="default-number-format"
+              >
+                <option value="standard">Standard (1,234.56)</option>
+                <option value="comma-decimal">Comma decimal (1.234,56)</option>
+              </select>
+            </div>
           </div>
 
+          <!--Start at step 235-->
           <div id="settings-actions">
             <button type="button" id="save-settings-button">
               Save Settings
