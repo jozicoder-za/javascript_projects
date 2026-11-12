@@ -24,4 +24,15 @@ h3 {
 
 h4 {
   color: #456789;
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+a {
+  color: #2563eb;
 }
