@@ -42,9 +42,12 @@ a:hover {
   text-decoration: underline;
 }
 
-#dashboard {
+main {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
 }
+
+/* continue with correcting from 3. Intro Visibility - incorrect ID */
