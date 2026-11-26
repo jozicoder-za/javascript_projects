@@ -50,4 +50,6 @@ main {
   box-sizing: border-box;
 }
 
-/* continue with correcting from 3. Intro Visibility - incorrect ID */
+main > header {
+  background-color: #ffffff;
+}
