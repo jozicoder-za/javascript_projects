@@ -52,4 +52,15 @@ main {
 
 main > header {
   background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+main > header nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 15px 0 0 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
