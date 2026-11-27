@@ -89,3 +89,10 @@ main > section {
   border-radius: 7px;
   margin-bottom: 22px;
 }
+
+#metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 22px 0 26px 0;
+}
