@@ -76,3 +76,9 @@ main > header nav a {
     background-color 0.3s ease,
     color 0.3s ease;
 }
+
+main > header nav a:hover {
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+}
